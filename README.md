@@ -164,6 +164,26 @@ flowchart TD
 
 ---
 
+## 📸 Dashboard Screenshots & Digital Twin Interface
+
+The core functionality of the platform lies in the seamless integration between the **OPD Queue Management System** and the **Patient Digital Twin Simulator**.
+
+### 1. Patient Digital Twin Simulator
+
+![Digital Twin Simulator Interface](assets/simulator.png)
+
+**Digital Twin Application:**
+When a clinician selects a patient from the queue, the **Digital Twin Engine** is activated. It aggregates historical health records and real-time symptoms to establish a baseline physiological state (e.g., Heart Rate, Blood Pressure, BMI). The system generates a localized, simulated virtual model of the patient. Clinicians can then interact with this twin by configuring **Simulation Scenarios** (e.g., predicting disease progression over 3 months or testing the impact of a medication), allowing for risk-free, predictive medical analysis before real-world intervention.
+
+### 2. Interactive OPD Queue Management
+
+![OPD Queue Management](assets/queue_management.png)
+
+**Queue Integration & Triage:**
+The OPD Dashboard provides real-time tracking of patient flow. As patients are added with their active symptoms, the background AI engine continuously stratifies their risk levels (Critical, High, Medium, Low). The queue dynamically auto-sorts based on predicted urgency rather than mere arrival time. Each patient's queue entry is seamlessly linked to their unique Digital Twin, maintaining a continuous state sync and ensuring high-risk patients are prioritized.
+
+---
+
 ## 🗄️ Dataset Information
 
 The system is trained and validated on robust, anonymized clinical datasets (e.g., MIMIC-III/IV synthetically augmented, or proprietary placeholder data).
