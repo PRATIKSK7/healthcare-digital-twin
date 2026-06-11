@@ -18,6 +18,10 @@
 
 ---
 
+> **Architecture Overview:** *A fault-tolerant, microservices-driven Healthcare Digital Twin architecture engineered with distributed PyTorch inference engines, and multivariate time-series forecasting via stacked LSTMs and SHAP-explained XGBoost pipelines for continuous biometric simulation.*
+
+---
+
 ## 📑 Executive Summary
 
 The **Advanced AI Healthcare Dashboard** is a state-of-the-art predictive health analytics platform that harnesses the power of **Digital Twin Technology**. By creating a virtual, dynamically updating representation of patients, the system enables healthcare professionals to simulate treatment outcomes, predict disease progression, and formulate proactive medical interventions. Engineered with a robust ML pipeline and a microservices architecture, this platform redefines clinical decision-making by transitioning from reactive treatment to proactive, personalized healthcare.
