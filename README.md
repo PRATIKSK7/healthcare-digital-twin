@@ -12,7 +12,7 @@
 
 *An Enterprise-Grade, AI-Powered Digital Twin Platform for Predictive Healthcare Analytics and Clinical Decision Support.*
 
-![Project Banner](https://via.placeholder.com/1200x400/0f172a/38bdf8?text=Advanced+AI+Healthcare+Dashboard+%7C+Digital+Twin+Technology)
+![Project Banner](assets/banner.png)
 
 </div>
 
