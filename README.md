@@ -375,16 +375,23 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👨‍💻 Author Section
 
-<div align="center">
+**Pratik S Kanoj**
 
-### Pratik S Kanoj
 **Artificial Intelligence & Data Science Engineer**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pratik-s-kanoj-a81432300/)
+I am a passionate AI Engineer specializing in Machine Learning, Healthcare AI, and full-stack integration. I build robust, production-ready AI systems that solve real-world problems. My expertise lies in taking complex Deep Learning architectures and deploying them into scalable, user-centric web applications.
 
-*Specializing in Artificial Intelligence, Machine Learning, Deep Learning, Healthcare AI, Digital Twin Technology, MLOps, Predictive Analytics, Generative AI, and AI Research.*
+**Technical Expertise:**
+- **AI & Data Science:** Artificial Intelligence, Machine Learning, Deep Learning, Healthcare AI, Generative AI, MLOps, Data Science.
+- **Backend & Cloud:** Python, FastAPI, Docker, RESTful APIs.
+- **Frontend:** React, JavaScript, HTML, CSS.
 
-</div>
+**Connect with me:**
+- 💼 **LinkedIn:** [Pratik S Kanoj](https://www.linkedin.com/in/pratik-s-kanoj-a81432300/)
+- 🐙 **GitHub:** [github.com/PRATIKSK7](https://github.com/PRATIKSK7)
+- ✉️ **Email:** [pratiksk0077@gmail.com](mailto:pratiksk0077@gmail.com)
+
+*If you found this project interesting or helpful, please consider giving it a ⭐ on GitHub!*
 
 ---
 <div align="center">
