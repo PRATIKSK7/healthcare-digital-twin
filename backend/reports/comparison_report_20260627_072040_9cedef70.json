@@ -1,0 +1,172 @@
+{
+    "version": "20260627_072040_9cedef70",
+    "champion_model": "StackingEnsemble",
+    "calibration_method": "sigmoid",
+    "arena_results": {
+        "LogisticRegression": {
+            "accuracy": 0.5790671095396264,
+            "f1_macro": 0.5707685876403028,
+            "precision": 0.5714918866670707,
+            "recall": 0.579004329004329,
+            "roc_auc": 0.8559404521745634
+        },
+        "SVC": {
+            "accuracy": 0.7731704703739419,
+            "f1_macro": 0.7733342014513783,
+            "precision": 0.7813582098002646,
+            "recall": 0.7731299708043894,
+            "roc_auc": 0.9607076700451772
+        },
+        "RandomForest": {
+            "accuracy": 0.8615271973999072,
+            "f1_macro": 0.8626192556164991,
+            "precision": 0.8663291128352818,
+            "recall": 0.8615977046209604,
+            "roc_auc": 0.9824618754398919
+        },
+        "ExtraTrees": {
+            "accuracy": 0.8658737812064716,
+            "f1_macro": 0.8652596746550292,
+            "precision": 0.8672774935480893,
+            "recall": 0.8659518775797844,
+            "roc_auc": 0.9847915492515504
+        },
+        "GradientBoosting": {
+            "accuracy": 0.8178863530840387,
+            "f1_macro": 0.8189132155769893,
+            "precision": 0.8216047819210105,
+            "recall": 0.8180308064028994,
+            "roc_auc": 0.9652523442075512
+        },
+        "HistGradientBoosting": {
+            "accuracy": 0.8495374834815529,
+            "f1_macro": 0.8500204528165941,
+            "precision": 0.8543097900429445,
+            "recall": 0.8495922681969192,
+            "roc_auc": 0.9765755082505415
+        },
+        "MLP": {
+            "accuracy": 0.866970248937462,
+            "f1_macro": 0.8660538436530202,
+            "precision": 0.8680508248329614,
+            "recall": 0.8670592972918554,
+            "roc_auc": 0.9721584989207925
+        },
+        "XGBoost": {
+            "accuracy": 0.8298867816707739,
+            "f1_macro": 0.8300618265031338,
+            "precision": 0.8333654411336364,
+            "recall": 0.8299859055673009,
+            "roc_auc": 0.9743362252187863
+        },
+        "LightGBM": {
+            "accuracy": 0.8505982356512732,
+            "f1_macro": 0.8514076147947715,
+            "precision": 0.8548307421725884,
+            "recall": 0.8506241820195308,
+            "roc_auc": 0.9796964580846036
+        },
+        "CatBoost": {
+            "accuracy": 0.8789742490803243,
+            "f1_macro": 0.8791493350260383,
+            "precision": 0.8828645666179981,
+            "recall": 0.8788885533071581,
+            "roc_auc": 0.9857077119132501
+        },
+        "VotingEnsemble": {
+            "accuracy": 0.886603092967606,
+            "f1_macro": 0.8864105067836666,
+            "precision": 0.888562667308686,
+            "recall": 0.8866153226618344,
+            "roc_auc": 0.9880109720673932
+        },
+        "StackingEnsemble": {
+            "accuracy": 0.9062466516661308,
+            "f1_macro": 0.9063102426152772,
+            "precision": 0.9085944995882463,
+            "recall": 0.9063726970703715,
+            "roc_auc": 0.9910984187693185
+        }
+    },
+    "final_test_metrics": {
+        "test_accuracy": 0.5540540540540541,
+        "test_precision_macro": 0.5047619047619047,
+        "test_recall_macro": 0.4267161410018553,
+        "test_f1_macro": 0.436889191925453,
+        "test_roc_auc_ovr": 0.7989484368984522
+    },
+    "confusion_matrix": [
+        [
+            1,
+            5,
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        [
+            2,
+            3,
+            0,
+            2,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            1,
+            3,
+            0,
+            3,
+            0
+        ],
+        [
+            0,
+            1,
+            2,
+            28,
+            0,
+            2,
+            0
+        ],
+        [
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            1,
+            0,
+            3,
+            6,
+            0,
+            1,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6
+        ]
+    ],
+    "classes": [
+        "Arrhythmia",
+        "Atrial Fibrillation",
+        "Coronary Artery Disease",
+        "Healthy",
+        "Heart Failure",
+        "Hypertension",
+        "Respiratory Failure"
+    ]
+}

@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+catboost_info/
+node_modules/
+.DS_Store
+scratch/
+train.log
+*.log
+.env

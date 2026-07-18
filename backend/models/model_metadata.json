@@ -1,0 +1,16 @@
+{
+    "model_version": "v2",
+    "rmse": 9.464565414999537,
+    "mae": 7.191318713683155,
+    "r2": 0.8469923618250691,
+    "best_params": {
+        "random_strength": 0.1,
+        "learning_rate": 0.01,
+        "l2_leaf_reg": 10,
+        "iterations": 1500,
+        "depth": 6,
+        "bagging_temperature": 1.0
+    },
+    "training_samples": 24000,
+    "features": 41
+}

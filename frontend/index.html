@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Parvati Clinic – AI Healthcare Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:#1e293b}
+::-webkit-scrollbar-thumb{background:#475569;border-radius:3px}
+input,select{outline:none;font-family:inherit}
+input:focus,select:focus{border-color:#06b6d4!important;box-shadow:0 0 0 2px #06b6d433}
+button{font-family:inherit}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.card{background:#1e293b;border-radius:12px;padding:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.badge{padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;display:inline-block}
+.pill{padding:5px 12px;border-radius:20px;font-size:12px;cursor:pointer;border:1px solid #334155;background:transparent;color:#94a3b8;transition:all .15s}
+.pill.on{background:#06b6d4;color:#0f172a;border-color:#06b6d4;font-weight:700}
+.pill:hover:not(.on){border-color:#06b6d4;color:#06b6d4}
+table{width:100%;border-collapse:collapse}
+th{color:#06b6d4;padding:14px;text-align:left;font-size:12px;font-weight:700;background:#0f172a;white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid #1e293b;font-size:13px}
+.inp{width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:10px 12px;color:#f1f5f9;font-size:14px}
+.btn-primary{background:linear-gradient(135deg,#06b6d4,#3b82f6);border:none;border-radius:8px;color:#fff;font-weight:700;cursor:pointer;padding:11px 18px;font-size:14px;transition:opacity .2s}
+.btn-primary:hover{opacity:.9}
+.btn-sm{padding:4px 10px;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;border:none}
+@media(max-width:900px){.grid2,.grid3,.grid4{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header style="background:linear-gradient(135deg,#1e3a5f,#0f2744);border-bottom:1px solid #1e40af;padding:0 24px">
+  <div style="max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px">
+    <div style="display:flex;align-items:center;gap:16px">
+      <div style="width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,#06b6d4,#3b82f6);display:flex;align-items:center;justify-content:center;font-size:24px">🏥</div>
+      <div>
+        <div style="font-size:22px;font-weight:800;color:#fff;letter-spacing:1px">PARVATI CLINIC</div>
+        <div style="font-size:12px;color:#94a3b8">AI-Powered Healthcare Dashboard</div>
+      </div>
+    </div>
+    <div id="clock" style="background:#06b6d4;color:#0f172a;padding:8px 16px;border-radius:8px;font-weight:700;font-size:13px">🟢 Loading...</div>
+  </div>
+</header>
+
+<!-- TABS NAV -->
+<nav style="background:#1e293b;border-bottom:1px solid #334155;padding:0 24px;overflow-x:auto">
+  <div style="max-width:1400px;margin:0 auto;display:flex;gap:4px;min-width:fit-content">
+    <button class="nav-tab active" onclick="showTab(0,this)">🏠 Overview</button>
+    <button class="nav-tab" onclick="showTab(1,this)">🤖 AI Intake</button>
+    <button class="nav-tab" onclick="showTab(2,this)">📊 Model Performance</button>
+    <button class="nav-tab" onclick="showTab(3,this)">📈 Analytics</button>
+    <button class="nav-tab" onclick="showTab(4,this)">📋 Patient Queue</button>
+    <button class="nav-tab" onclick="showTab(5,this)" style="color:#a78bfa;border-bottom:2px solid transparent">🧬 Digital Twin</button>
+  </div>
+</nav>
+<style>
+.nav-tab{padding:14px 18px;background:transparent;border:none;cursor:pointer;color:#64748b;font-weight:500;border-bottom:2px solid transparent;font-size:13px;white-space:nowrap;transition:all .2s;font-family:inherit}
+.nav-tab.active{color:#06b6d4;font-weight:700;border-bottom:2px solid #06b6d4}
+.nav-tab:hover:not(.active){color:#94a3b8}
+</style>
+
+<main style="max-width:1400px;margin:0 auto;padding:24px">
+
+<!-- TAB 0: OVERVIEW -->
+<div id="tab0" class="tab-content active">
+  <h2 style="color:#f1f5f9;margin-bottom:20px;font-size:20px">📊 Emergency Triage Dataset — 25,000+ Synthetic Patient Records</h2>
+  <div class="grid4" style="margin-bottom:28px">
+    <div class="card" style="border-left:4px solid #06b6d4"><div style="font-size:26px">👥</div><div style="font-size:28px;font-weight:800;color:#06b6d4;margin-top:4px">25,000+</div><div style="color:#94a3b8;font-size:13px">Patient Records</div></div>
+    <div class="card" style="border-left:4px solid #10b981"><div style="font-size:26px">📋</div><div style="font-size:28px;font-weight:800;color:#10b981;margin-top:4px">22</div><div style="color:#94a3b8;font-size:13px">Clinical Features</div></div>
+    <div class="card" style="border-left:4px solid #f59e0b"><div style="font-size:26px">🩺</div><div style="font-size:28px;font-weight:800;color:#f59e0b;margin-top:4px">28</div><div style="color:#94a3b8;font-size:13px">Unique Symptoms</div></div>
+    <div class="card" style="border-left:4px solid #8b5cf6"><div style="font-size:26px">🤖</div><div style="font-size:28px;font-weight:800;color:#8b5cf6;margin-top:4px">R² = 0.92</div><div style="color:#94a3b8;font-size:13px">Champion Model</div><div style="color:#64748b;font-size:11px;margin-top:2px">CatBoostRegressor</div></div>
+  </div>
+  <div class="grid2" style="margin-bottom:20px">
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">🚨 Severity Score Distribution</h3><canvas id="severityDistChart" height="200"></canvas></div>
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">👤 Age Distribution</h3><canvas id="ageChart" height="200"></canvas></div>
+  </div>
+  <div class="card" style="margin-bottom:20px"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">🩺 Symptom Frequency (Top 10)</h3><canvas id="symFreqOverview" height="120"></canvas></div>
+  <div class="card">
+    <h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">📊 Key Dataset Statistics</h3>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px" id="symCards"></div>
+  </div>
+</div>
+
+<!-- TAB 1: AI PREDICTOR -->
+<div id="tab1" class="tab-content">
+  <div class="grid2">
+    <div>
+      <h2 style="color:#f1f5f9;margin-bottom:20px;font-size:20px">🤖 AI Emergency Triage Assessment</h2>
+      <div class="card">
+        <div style="margin-bottom:16px">
+          <label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Patient Name</label>
+          <input type="text" id="pName" placeholder="Full Name" class="inp"/>
+        </div>
+        <div class="grid2" style="margin-bottom:16px">
+          <div><label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Age</label><input type="number" id="pAge" placeholder="e.g. 45" class="inp"/></div>
+          <div><label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Gender</label><select id="pGender" class="inp"><option>Male</option><option>Female</option><option>Other</option></select></div>
+        </div>
+        <div class="grid2" style="margin-bottom:16px">
+          <div><label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Heart Rate (bpm)</label><input type="number" id="pHr" placeholder="e.g. 75" class="inp"/></div>
+          <div><label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Systolic BP</label><input type="number" id="pSbp" placeholder="e.g. 120" class="inp"/></div>
+        </div>
+        <div class="grid2" style="margin-bottom:16px">
+          <div><label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Smoking</label><select id="pSmoking" class="inp"><option value="false">No</option><option value="true">Yes</option></select></div>
+          <div><label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:block">Symptom Duration (Days)</label><input type="number" id="pDuration" placeholder="e.g. 5" class="inp"/></div>
+        </div>
+        <div style="margin-bottom:16px">
+          <label style="color:#94a3b8;font-size:12px;margin-bottom:4px;display:flex;justify-content:space-between"><span>Symptom Severity (1-10)</span><span id="pSeverityVal" style="color:#06b6d4;font-weight:bold">5</span></label>
+          <input type="range" id="pSeverity" min="1" max="10" value="5" class="inp" style="padding:0; height:8px; background:#334155; accent-color:#06b6d4;" oninput="document.getElementById('pSeverityVal').textContent=this.value"/>
+        </div>
+        <label style="color:#94a3b8;font-size:12px;margin-bottom:8px;display:block">Symptoms (<span id="symCount">0</span> selected)</label>
+        <div id="symptomPills" style="display:flex;flex-wrap:wrap;gap:8px;max-height:200px;overflow-y:auto;padding:4px;margin-bottom:16px"></div>
+        <div id="aiErr" style="color:#ef4444;font-size:13px;margin-bottom:10px;display:none"></div>
+        <button class="btn-primary" onclick="predict()" id="predictBtn" style="width:100%;padding:14px;font-size:15px">🏥 Assess Triage Priority</button>
+      </div>
+    </div>
+    <div>
+      <h2 style="color:#f1f5f9;margin-bottom:20px;font-size:20px">📋 Prediction Results</h2>
+      <div id="aiResult"><div class="card" style="text-align:center;padding:48px"><div style="font-size:52px;margin-bottom:12px">🩺</div><div style="color:#64748b;font-size:15px">Select symptoms and click Predict to get AI-powered disease predictions</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- TAB 2: MODEL PERFORMANCE -->
+<div id="tab2" class="tab-content">
+  <h2 style="color:#f1f5f9;margin-bottom:8px;font-size:20px">📊 Severity Regression — Model Training Results</h2>
+  <div style="background:#1e293b;border-radius:8px;padding:14px;border-left:4px solid #10b981;margin-bottom:24px;color:#94a3b8;font-size:13px">
+    🧪 <strong style="color:#10b981">Training Note:</strong> Models were trained on 25,000+ latent-variable synthetic emergency triage records using 5-fold cross-validation. CatBoostRegressor demonstrated the best generalization performance and is deployed for real-time severity prediction.
+  </div>
+  <div class="grid4" style="margin-bottom:24px">
+    <div class="card" style="border:2px solid #06b6d4"><div style="color:#06b6d4;font-weight:700;font-size:13px;margin-bottom:14px">📈 Linear Regression</div><div id="lr_m"></div></div>
+    <div class="card" style="border:2px solid #10b981"><div style="color:#10b981;font-weight:700;font-size:13px;margin-bottom:14px">🌲 Random Forest</div><div id="rf_m"></div></div>
+    <div class="card" style="border:2px solid #f59e0b"><div style="color:#f59e0b;font-weight:700;font-size:13px;margin-bottom:14px">⚡ XGBoost</div><div id="xgb_m"></div></div>
+    <div class="card" style="border:2px solid #8b5cf6;position:relative"><div style="position:absolute;top:-10px;right:12px;background:#8b5cf6;color:#fff;font-size:10px;padding:2px 10px;border-radius:10px;font-weight:800">🏆 CHAMPION</div><div style="color:#8b5cf6;font-weight:700;font-size:13px;margin-bottom:14px">🚀 CatBoost</div><div id="cb_m"></div></div>
+  </div>
+  <div class="grid2" style="margin-bottom:20px">
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">RMSE Comparison (Lower = Better)</h3><canvas id="rmseChart" height="200"></canvas></div>
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">R² Score Comparison (Higher = Better)</h3><canvas id="r2Chart" height="200"></canvas></div>
+  </div>
+  <div class="grid2" style="margin-bottom:20px">
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">🎯 CatBoost Feature Importance (Top 10)</h3><canvas id="featureImpChart" height="200"></canvas></div>
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">🔬 SHAP Top Features (Severity Impact)</h3><canvas id="shapChart" height="200"></canvas></div>
+  </div>
+  <div class="card" style="margin-bottom:20px">
+    <h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">📋 Training Configuration</h3>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr)">
+      <div style="padding:12px 16px;border-bottom:1px solid #334155;border-right:1px solid #334155"><div style="color:#64748b;font-size:11px">Dataset</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">25,000+ records</div></div>
+      <div style="padding:12px 16px;border-bottom:1px solid #334155;border-right:1px solid #334155"><div style="color:#64748b;font-size:11px">Validation</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">5-Fold CV</div></div>
+      <div style="padding:12px 16px;border-bottom:1px solid #334155;border-right:1px solid #334155"><div style="color:#64748b;font-size:11px">Feature Count</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">22 features</div></div>
+      <div style="padding:12px 16px;border-bottom:1px solid #334155"><div style="color:#64748b;font-size:11px">Target</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">Severity Score (0–100)</div></div>
+      <div style="padding:12px 16px;border-right:1px solid #334155"><div style="color:#64748b;font-size:11px">Task Type</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">Regression</div></div>
+      <div style="padding:12px 16px;border-right:1px solid #334155"><div style="color:#64748b;font-size:11px">Data Source</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">Latent-Variable Synthetic</div></div>
+      <div style="padding:12px 16px;border-right:1px solid #334155"><div style="color:#64748b;font-size:11px">Best RMSE</div><div style="color:#f1f5f9;font-weight:700;margin-top:2px">6.88</div></div>
+      <div style="padding:12px 16px"><div style="color:#64748b;font-size:11px">Deployed Model</div><div style="color:#8b5cf6;font-weight:700;margin-top:2px">CatBoost (R² = 0.92)</div></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div class="card" style="border-left:3px solid #06b6d4"><div style="font-weight:700;color:#f1f5f9;margin-bottom:8px">📈 Linear Regression</div><div style="color:#64748b;font-size:13px;line-height:1.6">Baseline OLS model. Learns linear coefficients for each feature. Simple and interpretable but unable to capture non-linear symptom interactions. RMSE 12.48, R² 0.73.</div></div>
+    <div class="card" style="border-left:3px solid #10b981"><div style="font-weight:700;color:#f1f5f9;margin-bottom:8px">🌲 Random Forest Regressor</div><div style="color:#64748b;font-size:13px;line-height:1.6">Ensemble of 500 decision trees with bootstrap aggregation. Captures non-linear relationships and feature interactions. n_estimators=500, max_depth=12. RMSE 8.94, R² 0.87.</div></div>
+    <div class="card" style="border-left:3px solid #f59e0b"><div style="font-weight:700;color:#f1f5f9;margin-bottom:8px">⚡ XGBoost Regressor</div><div style="color:#64748b;font-size:13px;line-height:1.6">Gradient-boosted trees with L1/L2 regularization. learning_rate=0.05, n_estimators=800, max_depth=6, subsample=0.8. Strong generalization on structured tabular data. RMSE 7.31, R² 0.91.</div></div>
+    <div class="card" style="border-left:3px solid #8b5cf6;background:linear-gradient(135deg,#1e293b,#1e1b4b)"><div style="font-weight:700;color:#a78bfa;margin-bottom:8px">🚀 CatBoost Regressor <span style="background:#8b5cf6;color:#fff;font-size:10px;padding:2px 8px;border-radius:8px;margin-left:8px">DEPLOYED</span></div><div style="color:#94a3b8;font-size:13px;line-height:1.6">Ordered boosting with symmetric trees and native categorical feature support. iterations=1000, learning_rate=0.03, depth=8, l2_leaf_reg=5. Best generalization with lowest RMSE (6.88) and highest R² (0.92). Deployed for production severity prediction.</div></div>
+  </div>
+</div>
+
+<!-- TAB 3: ANALYTICS -->
+<div id="tab3" class="tab-content">
+  <h2 style="color:#f1f5f9;margin-bottom:20px;font-size:20px">📈 Triage Analytics</h2>
+  <div class="grid2" style="margin-bottom:20px">
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">Priority Category Distribution</h3><canvas id="top10Chart" height="200"></canvas></div>
+    <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">Symptom Frequency Across Dataset</h3><canvas id="symFreqChart" height="200"></canvas></div>
+  </div>
+  <div class="card" style="margin-bottom:20px">
+    <h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">🔥 Symptom–Priority Association Heatmap</h3>
+    <div style="overflow-x:auto" id="heatmap"></div>
+  </div>
+  <div class="card"><h3 style="color:#f1f5f9;margin-bottom:16px;font-size:15px">Severity Score by Age Group</h3><canvas id="allDisChart" height="120"></canvas></div>
+</div>
+
+<!-- TAB 4: PATIENT QUEUE -->
+<div id="tab4" class="tab-content">
+  <h2 style="color:#f1f5f9;margin-bottom:20px;font-size:20px">📋 Interactive OPD Queue Management</h2>
+  <div class="grid3" style="margin-bottom:20px">
+    <div class="card" style="text-align:center;border-bottom:4px solid #3b82f6"><div style="font-size:36px;font-weight:800;color:#3b82f6" id="cntW">0</div><div style="color:#94a3b8;font-size:14px">Waiting Patients</div></div>
+    <div class="card" style="text-align:center;border-bottom:4px solid #f59e0b"><div style="font-size:36px;font-weight:800;color:#f59e0b" id="cntC">0</div><div style="color:#94a3b8;font-size:14px">Currently Consulting</div></div>
+    <div class="card" style="text-align:center;border-bottom:4px solid #22c55e"><div style="font-size:36px;font-weight:800;color:#22c55e" id="cntD">0</div><div style="color:#94a3b8;font-size:14px">Completed Patients</div></div>
+  </div>
+  <!-- Token Legend -->
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center">
+    <span style="color:#94a3b8;font-size:13px;font-weight:600">Token Format:</span>
+    <span style="background:#ef444422;color:#ef4444;border:1px solid #ef444455;padding:4px 12px;border-radius:8px;font-weight:800;font-size:12px">🚨 C001 — Critical</span>
+    <span style="background:#f9731622;color:#f97316;border:1px solid #f9731655;padding:4px 12px;border-radius:8px;font-weight:800;font-size:12px">⚠️ H001 — High</span>
+    <span style="background:#eab30822;color:#eab308;border:1px solid #eab30855;padding:4px 12px;border-radius:8px;font-weight:800;font-size:12px">🔔 M001 — Medium</span>
+    <span style="background:#22c55e22;color:#22c55e;border:1px solid #22c55e55;padding:4px 12px;border-radius:8px;font-weight:800;font-size:12px">✅ L001 — Low</span>
+    <span style="color:#64748b;font-size:12px;margin-left:4px">• Queue auto-sorts: Critical → High → Medium → Low</span>
+  </div>
+
+  <div class="card" style="overflow-x:auto">
+    <table id="queueTable">
+      <thead><tr><th>Token</th><th>Patient Name</th><th>Age</th><th>Symptoms</th><th>Score</th><th>Priority</th><th>Status</th><th>Est. Wait</th><th>Actions</th></tr></thead>
+      <tbody id="queueBody"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- TAB 5: DIGITAL TWIN -->
+<div id="tab5" class="tab-content">
+  <style>
+    .dt-panel{background:#1e293b;border-radius:12px;padding:20px}
+    .dt-stat{background:#0f172a;border-radius:10px;padding:14px;text-align:center}
+    .dt-vital{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#0f172a;border-radius:8px;margin-bottom:8px}
+    .dt-badge{padding:3px 10px;border-radius:12px;font-size:11px;font-weight:700}
+    .dt-timeline-item{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
+    .dt-timeline-dot{width:10px;height:10px;border-radius:50%;margin-top:4px;flex-shrink:0}
+    .dt-twin-btn{background:linear-gradient(135deg,#7c3aed,#4f46e5);border:none;border-radius:8px;color:#fff;font-weight:700;cursor:pointer;padding:10px 18px;font-size:13px;transition:opacity .2s;font-family:inherit}
+    .dt-twin-btn:hover{opacity:.88}
+    .dt-twin-btn:disabled{opacity:.5;cursor:not-allowed}
+    .organ-card{background:#0f172a;border-radius:10px;padding:14px;border:1px solid #334155;transition:border-color .2s}
+    .organ-card:hover{border-color:#7c3aed}
+    .sim-step{background:#0f172a;border-radius:8px;padding:12px;border-left:3px solid #7c3aed;margin-bottom:10px}
+    @keyframes pulse-twin{0%,100%{box-shadow:0 0 0 0 #7c3aed44}50%{box-shadow:0 0 0 8px #7c3aed00}}
+    .twin-live{animation:pulse-twin 2s infinite}
+    @keyframes spin-ring{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    .spin{animation:spin-ring 1.2s linear infinite}
+  </style>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+    <div>
+      <h2 style="color:#f1f5f9;font-size:20px;margin-bottom:4px">🧬 Patient Digital Twin Simulator</h2>
+      <div style="color:#64748b;font-size:13px">Select a patient from the queue → generate their virtual physiological model → run AI-powered health simulations</div>
+    </div>
+    <div style="background:#2d1b69;border:1px solid #7c3aed55;border-radius:10px;padding:8px 16px;font-size:12px;color:#a78bfa;font-weight:700">🟣 DIGITAL TWIN ENGINE v1.0</div>
+  </div>
+
+  <!-- STEP 1: Select patient -->
+  <div class="dt-panel" style="margin-bottom:20px;border-left:4px solid #7c3aed">
+    <h3 style="color:#a78bfa;font-size:14px;font-weight:700;margin-bottom:14px">STEP 1 — Select Patient to Twin</h3>
+    <div style="display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap">
+      <div style="flex:1;min-width:200px">
+        <label style="color:#94a3b8;font-size:12px;margin-bottom:6px;display:block">Choose from Queue</label>
+        <select id="dtPatientSelect" class="inp" onchange="loadTwinPatient()">
+          <option value="">— Select a patient —</option>
+        </select>
+      </div>
+      <div style="flex:1;min-width:200px">
+        <label style="color:#94a3b8;font-size:12px;margin-bottom:6px;display:block">Patient Name</label>
+        <input type="text" id="dtCustomName" placeholder="e.g. Meera Rao" class="inp" readonly/>
+      </div>
+      <div style="display:flex;gap:8px">
+        <div>
+          <label style="color:#94a3b8;font-size:12px;margin-bottom:6px;display:block">Age</label>
+          <input type="number" id="dtAge" placeholder="45" class="inp" style="width:80px" readonly/>
+        </div>
+        <div>
+          <label style="color:#94a3b8;font-size:12px;margin-bottom:6px;display:block">Gender</label>
+          <input type="text" id="dtGender" class="inp" style="width:100px" readonly/>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <label style="color:#94a3b8;font-size:12px;margin-bottom:8px;display:block">Active Symptoms</label>
+      <div id="dtSymPills" style="display:flex;flex-wrap:wrap;gap:8px;max-height:140px;overflow-y:auto;padding:4px"></div>
+    </div>
+  </div>
+
+  <!-- STEP 2: Vitals input -->
+  <div class="dt-panel" style="margin-bottom:20px;border-left:4px solid #06b6d4">
+    <h3 style="color:#06b6d4;font-size:14px;font-weight:700;margin-bottom:14px">STEP 2 — Baseline Vitals (Auto-filled or Override)</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px">
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">❤️ Heart Rate (bpm)</label><input type="number" id="dtHR" placeholder="72" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">🩸 Systolic BP (mmHg)</label><input type="number" id="dtSBP" placeholder="120" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">🩸 Diastolic BP (mmHg)</label><input type="number" id="dtDBP" placeholder="80" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">🌡️ Temperature (°C)</label><input type="number" id="dtTemp" step="0.1" placeholder="37.0" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">🫁 SpO2 (%)</label><input type="number" id="dtSpO2" placeholder="98" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">🍬 Blood Glucose (mg/dL)</label><input type="number" id="dtGlucose" placeholder="95" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">⚖️ BMI</label><input type="number" id="dtBMI" step="0.1" placeholder="23.5" class="inp"/></div>
+      <div><label style="color:#94a3b8;font-size:11px;margin-bottom:4px;display:block">🔬 CRP (mg/L)</label><input type="number" id="dtCRP" step="0.1" placeholder="1.5" class="inp"/></div>
+    </div>
+  </div>
+
+  <!-- STEP 3: Simulation scenario -->
+  <div class="dt-panel" style="margin-bottom:20px;border-left:4px solid #10b981">
+    <h3 style="color:#10b981;font-size:14px;font-weight:700;margin-bottom:14px">STEP 3 — Simulation Scenario</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px">
+      <div>
+        <label style="color:#94a3b8;font-size:12px;margin-bottom:6px;display:block">Scenario Type</label>
+        <select id="dtScenario" class="inp">
+          <option value="progression">📈 Disease Progression (3 months)</option>
+          <option value="treatment">💊 Treatment Response Simulation</option>
+          <option value="stress">🏃 Physiological Stress Test</option>
+          <option value="surgery">🔪 Pre-Surgery Risk Assessment</option>
+          <option value="lifestyle">🥗 Lifestyle Intervention Impact</option>
+          <option value="medication">💉 Medication Interaction Check</option>
+        </select>
+      </div>
+      <div>
+        <label style="color:#94a3b8;font-size:12px;margin-bottom:6px;display:block">API Key (for Claude AI simulation)</label>
+        <input type="password" id="dtApiKey" placeholder="sk-ant-... (optional, uses demo mode if empty)" class="inp"/>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="dt-twin-btn twin-live" id="dtRunBtn" onclick="runDigitalTwin()" style="min-width:200px">🧬 Generate Digital Twin</button>
+      <button onclick="loadDemoTwin()" style="background:transparent;border:1px solid #7c3aed;color:#a78bfa;border-radius:8px;padding:10px 18px;font-size:13px;cursor:pointer;font-family:inherit">⚡ Load Demo (No API Key)</button>
+      <button onclick="resetTwin()" style="background:transparent;border:1px solid #334155;color:#64748b;border-radius:8px;padding:10px 18px;font-size:13px;cursor:pointer;font-family:inherit">🔄 Reset</button>
+    </div>
+    <div id="dtError" style="color:#ef4444;font-size:13px;margin-top:10px;display:none"></div>
+  </div>
+
+  <!-- TWIN OUTPUT -->
+  <div id="dtOutput" style="display:none">
+    <!-- Header bar -->
+    <div style="background:linear-gradient(135deg,#2d1b69,#1e1b4b);border-radius:12px;padding:20px;margin-bottom:20px;border:1px solid #7c3aed55;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px">
+      <div style="display:flex;align-items:center;gap:16px">
+        <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#06b6d4);display:flex;align-items:center;justify-content:center;font-size:28px">🧬</div>
+        <div>
+          <div id="dtTwinName" style="color:#fff;font-size:18px;font-weight:800"></div>
+          <div id="dtTwinMeta" style="color:#a78bfa;font-size:12px;margin-top:2px"></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap" id="dtRiskBadges"></div>
+    </div>
+
+    <!-- 4 stat cards -->
+    <div class="grid4" style="margin-bottom:20px" id="dtStatCards"></div>
+
+    <!-- Vitals + Organ Systems -->
+    <div class="grid2" style="margin-bottom:20px">
+      <div class="dt-panel">
+        <h3 style="color:#f1f5f9;font-size:14px;font-weight:700;margin-bottom:14px">📊 Live Vitals Status</h3>
+        <div id="dtVitalsDisplay"></div>
+      </div>
+      <div class="dt-panel">
+        <h3 style="color:#f1f5f9;font-size:14px;font-weight:700;margin-bottom:14px">🫀 Organ System Health</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px" id="dtOrganGrid"></div>
+      </div>
+    </div>
+
+    <!-- Interactive Treatment Sandbox -->
+    <div class="dt-panel" style="margin-bottom:20px;border-left:4px solid #3b82f6">
+      <h3 style="color:#3b82f6;font-size:14px;font-weight:700;margin-bottom:14px">🧪 Interactive Treatment Sandbox</h3>
+      <div style="color:#94a3b8;font-size:13px;margin-bottom:14px">Apply interventions to see real-time updates to vital signs, clinical risk, and the queue severity score.</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap" id="dtSandboxInterventions">
+        <button class="dt-twin-btn" style="background:#2563eb" onclick="applyTreatment('Oxygen Therapy', 'Standard')">💨 Oxygen Therapy</button>
+        <button class="dt-twin-btn" style="background:#059669" onclick="applyTreatment('IV Fluids', '500ml Bolus')">💧 IV Fluids</button>
+        <button class="dt-twin-btn" style="background:#dc2626" onclick="applyTreatment('Vasopressors', 'Low Dose')">💉 Vasopressors</button>
+        <button class="dt-twin-btn" style="background:#d97706" onclick="applyTreatment('Antipyretics', 'Paracetamol 1g')">💊 Antipyretics</button>
+        <button class="dt-twin-btn" style="background:#7c3aed" onclick="applyTreatment('Bronchodilators', 'Nebulized')">🌬️ Bronchodilators</button>
+      </div>
+    </div>
+
+    <!-- AI Clinical Narrative -->
+    <div class="dt-panel" style="margin-bottom:20px">
+      <h3 style="color:#f1f5f9;font-size:14px;font-weight:700;margin-bottom:14px">🤖 AI Clinical Narrative</h3>
+      <div id="dtNarrative" style="color:#94a3b8;font-size:13px;line-height:1.7"></div>
+    </div>
+
+    <!-- Recommendations -->
+    <div class="dt-panel" style="margin-bottom:20px;border-left:4px solid #10b981">
+      <h3 style="color:#10b981;font-size:14px;font-weight:700;margin-bottom:14px">✅ Twin-Derived Clinical Recommendations</h3>
+      <div id="dtRecommendations" style="display:grid;grid-template-columns:1fr 1fr;gap:10px"></div>
+    </div>
+
+    <!-- Vital trend chart -->
+    <div class="dt-panel">
+      <h3 style="color:#f1f5f9;font-size:14px;font-weight:700;margin-bottom:14px">📈 Projected Vital Trends (90-Day Simulation)</h3>
+      <canvas id="dtTrendChart" height="120"></canvas>
+    </div>
+  </div>
+
+  <!-- Loading state -->
+  <div id="dtLoading" style="display:none;text-align:center;padding:60px">
+    <div style="font-size:48px;margin-bottom:16px">
+      <span style="display:inline-block" class="spin">⚙️</span>
+    </div>
+    <div style="color:#a78bfa;font-size:16px;font-weight:700">Building Digital Twin...</div>
+    <div style="color:#64748b;font-size:13px;margin-top:8px" id="dtLoadMsg">Initializing physiological model</div>
+  </div>
+</div>
+</main>
+
+<footer style="text-align:center;padding:20px 24px;color:#334155;font-size:12px;border-top:1px solid #1e293b;margin-top:40px">
+  Parvati Clinic AI Dashboard • Final Year Project • Chart.js + CatBoost Regression + 4 ML Algorithms (LR · RF · XGB · CB) • 25,000+ Triage Records
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// GLOBAL APPLICATION STATE — Single source of truth for all mutable state
+// ═══════════════════════════════════════════════════════════════════════════
+const appState = {
+  // ── Patient Queue (OPD) ─────────────────────────────────────────────────
+  patientQueue: [
+    {id:1,name:"Ravi Kumar",age:58,gender:"Male",symptoms:["chest pain","shortness of breath"],status:"Waiting",token:"C001",priority:"Critical",severityScore:94.2,timestamp:Date.now()-50000},
+    {id:2,name:"Priya Sharma",age:34,gender:"Female",symptoms:["fever","cough","fatigue"],status:"Consulting",token:"H001",priority:"High",severityScore:78.5,timestamp:Date.now()-40000},
+    {id:3,name:"Arjun Mehta",age:72,gender:"Male",symptoms:["tremors","dizziness"],status:"Waiting",token:"C002",priority:"Critical",severityScore:85.4,timestamp:Date.now()-30000},
+    {id:4,name:"Sunita Devi",age:28,gender:"Female",symptoms:["headache","nausea","rash"],status:"Waiting",token:"M001",priority:"Medium",severityScore:55.0,timestamp:Date.now()-20000},
+    {id:5,name:"Kiran Patel",age:45,gender:"Male",symptoms:["cough"],status:"Waiting",token:"L001",priority:"Low",severityScore:24.1,timestamp:Date.now()-10000},
+  ],
+
+  // ── AI Intake / Predictor ───────────────────────────────────────────────
+  currentPatient: null,   // The patient currently being assessed in the AI Intake tab
+  prediction: null,       // Latest prediction result (also stored on currentPatient.prediction)
+
+  // ── Digital Twin ────────────────────────────────────────────────────────
+  selectedPatient: null,  // The patient loaded into the Digital Twin simulator
+};
+
+// ─── STATIC DATA ──────────────────────────────────────────────────────────
+const ALL_SYMPTOMS=["abdominal pain","anxiety","appetite loss","back pain","blurred vision","chest pain","cough","depression","diarrhea","dizziness","fatigue","fever","headache","insomnia","joint pain","muscle pain","nausea","rash","runny nose","shortness of breath","sneezing","sore throat","sweating","swelling","tremors","vomiting","weight gain","weight loss"];
+const ALL_DISEASES=["Allergy","Anemia","Anxiety","Arthritis","Asthma","Bronchitis","COVID-19","Chronic Kidney Disease","Common Cold","Dementia","Depression","Dermatitis","Diabetes","Epilepsy","Food Poisoning","Gastritis","Heart Disease","Hypertension","IBS","Influenza","Liver Disease","Migraine","Obesity","Parkinson's","Pneumonia","Sinusitis","Stroke","Thyroid Disorder","Tuberculosis","Ulcer"];
+const DISEASE_SYMPTOM_MAP={"Allergy":["sneezing","runny nose","rash","cough"],"Asthma":["shortness of breath","cough","chest pain"],"COVID-19":["fever","cough","shortness of breath","fatigue"],"Common Cold":["runny nose","sneezing","sore throat","cough","headache"],"Heart Disease":["chest pain","shortness of breath","fatigue","swelling"],"Diabetes":["weight loss","blurred vision","fatigue"],"Hypertension":["headache","dizziness","blurred vision","chest pain"],"Influenza":["fever","muscle pain","fatigue","cough","sore throat"],"Migraine":["headache","nausea","blurred vision"],"Pneumonia":["fever","cough","shortness of breath","chest pain"]};
+
+// ─── TRIAGE-SPECIFIC DATA ─────────────────────────────────────────────────
+const SYM_FREQ={"chest pain":6210,"shortness of breath":5890,fever:5780,fatigue:5620,headache:5410,dizziness:5180,nausea:4950,cough:4720,"muscle pain":4580,sweating:4320};
+const MODEL_RESULTS={
+  "Linear Regression":{rmse:12.48,mae:9.61,r2:0.73,color:"#06b6d4"},
+  "Random Forest":{rmse:8.94,mae:6.92,r2:0.87,color:"#10b981"},
+  "XGBoost":{rmse:7.31,mae:5.88,r2:0.91,color:"#f59e0b"},
+  "CatBoost":{rmse:6.88,mae:5.45,r2:0.92,color:"#8b5cf6"}
+};
+const CATBOOST_FEATURE_IMP={"symptom_severity":0.182,"symptom_count":0.156,"chest_pain":0.134,"shortness_of_breath":0.118,"heart_rate":0.097,"systolic_bp":0.082,"age":0.068,"fever":0.054,"smoking":0.042,"symptom_duration":0.038};
+const SHAP_FEATURES={"symptom_severity":4.82,"chest_pain":3.91,"shortness_of_breath":3.64,"symptom_count":3.12,"heart_rate":2.88,"systolic_bp":2.41,"age":1.95,"fever":1.72,"tremors":1.58,"smoking":1.34};
+const PRIORITY_DIST={Critical:4125,High:6250,Medium:8750,Low:5875};
+const SEVERITY_DIST={"0-10":1250,"10-20":2150,"20-30":3100,"30-40":3850,"40-50":4200,"50-60":3900,"60-70":2800,"70-80":1950,"80-90":1200,"90-100":600};
+const AGE_SEVERITY={"<18":32.4,"18-30":38.1,"30-45":45.6,"45-60":54.2,"60+":67.8};
+
+// ─── CHART THEMING ────────────────────────────────────────────────────────
+const CTIP={backgroundColor:"#0f172a",borderColor:"#334155",borderWidth:1,titleColor:"#f1f5f9",bodyColor:"#94a3b8"};
+const CLEG={color:"#94a3b8",font:{size:11}};
+const CGRID={color:"#334155"};
+function hsl(i,n=15){return `hsl(${200+i*(140/n)},70%,55%)`;}
+
+// ─── QUEUE CONSTANTS ──────────────────────────────────────────────────────
+const PC={Critical:"#ef4444",High:"#f97316",Medium:"#eab308",Low:"#22c55e"};
+const SC={Waiting:"#3b82f6",Consulting:"#f59e0b",Completed:"#22c55e"};
+const PRIORITY_ORDER={Critical:1,High:2,Medium:3,Low:4};
+const TOKEN_PREFIX={Critical:"C",High:"H",Medium:"M",Low:"L"};
+const TOKEN_COUNTERS={Critical:3,High:2,Medium:2,Low:2};
+const TOKEN_ICON={Critical:"🚨",High:"⚠️",Medium:"🔔",Low:"✅"};
+const WAIT_MINS={Critical:0,High:10,Medium:20,Low:35};
+
+// ─── CLOCK ────────────────────────────────────────────────────────────────
+setInterval(()=>{const n=new Date();document.getElementById("clock").textContent=`🟢 ${n.toLocaleDateString()} ${n.toLocaleTimeString()}`;},1000);
+
+// ─── TABS ─────────────────────────────────────────────────────────────────
+function showTab(i,btn){
+  document.querySelectorAll(".tab-content").forEach(t=>t.classList.remove("active"));
+  document.querySelectorAll(".nav-tab").forEach(b=>b.classList.remove("active"));
+  document.getElementById("tab"+i).classList.add("active");
+  btn.classList.add("active");
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TAB 0: OVERVIEW CHARTS
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Severity Distribution
+new Chart(document.getElementById("severityDistChart"),{type:"bar",data:{labels:Object.keys(SEVERITY_DIST),datasets:[{label:"Patients",data:Object.values(SEVERITY_DIST),backgroundColor:Object.keys(SEVERITY_DIST).map((_,i)=>{const colors=["#22c55e","#22c55e","#86efac","#eab308","#eab308","#f59e0b","#f97316","#ef4444","#ef4444","#dc2626"];return colors[i];}),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{title:{display:true,text:"Severity Score Range",color:"#64748b"},ticks:{color:"#64748b"},grid:CGRID},y:{title:{display:true,text:"Patient Count",color:"#64748b"},ticks:{color:"#64748b"},grid:CGRID}}}});
+
+// Age Distribution
+new Chart(document.getElementById("ageChart"),{type:"bar",data:{labels:["<18","18-30","30-45","45-60","60+"],datasets:[{label:"Patients",data:[3750,5625,6250,5625,3750],backgroundColor:"#06b6d4",borderRadius:6},{label:"Avg Severity",data:[32.4,38.1,45.6,54.2,67.8],backgroundColor:"#f59e0b",borderRadius:6,yAxisID:"y1"}]},options:{responsive:true,plugins:{legend:{labels:CLEG},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID},y:{ticks:{color:"#64748b"},grid:CGRID,title:{display:true,text:"Count",color:"#64748b"}},y1:{position:"right",ticks:{color:"#f59e0b"},grid:{drawOnChartArea:false},title:{display:true,text:"Avg Severity",color:"#f59e0b"}}}}});
+
+// Symptom Frequency Overview
+const sfOver=Object.entries(SYM_FREQ).sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById("symFreqOverview"),{type:"bar",data:{labels:sfOver.map(([n])=>n),datasets:[{data:sfOver.map(([,v])=>v),backgroundColor:sfOver.map((_,i)=>hsl(i,10)),borderRadius:4}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b",font:{size:10},maxRotation:35},grid:CGRID},y:{ticks:{color:"#64748b"},grid:CGRID}}}});
+
+// Dataset stat cards
+const sc2=document.getElementById("symCards");
+const statCards=[
+  {label:"Mean Severity",value:"48.6",color:"#06b6d4"},{label:"Median Severity",value:"46.2",color:"#10b981"},
+  {label:"Std Deviation",value:"22.4",color:"#f59e0b"},{label:"Avg Symptoms",value:"3.8",color:"#8b5cf6"},
+  {label:"Avg Age",value:"42.5y",color:"#ec4899"}
+];
+statCards.forEach(s=>{sc2.innerHTML+=`<div style="background:#0f172a;border-radius:8px;padding:12px;text-align:center"><div style="font-size:20px;font-weight:800;color:${s.color}">${s.value}</div><div style="font-size:11px;color:#94a3b8;margin-top:4px">${s.label}</div></div>`;});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TAB 2: MODEL PERFORMANCE CHARTS
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Regression metric bars
+function mBar(label,val,unit,color,maxVal){
+  const pct = (val/maxVal)*100;
+  return `<div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;margin-bottom:3px"><span style="color:#64748b;font-size:11px;text-transform:uppercase">${label}</span><span style="color:${color};font-weight:700;font-size:12px">${val}${unit}</span></div><div style="height:4px;background:#334155;border-radius:2px"><div style="height:100%;width:${pct}%;background:${color};border-radius:2px"></div></div></div>`;
+}
+[["lr","Linear Regression"],["rf","Random Forest"],["xgb","XGBoost"],["cb","CatBoost"]].forEach(([id,name])=>{
+  const m=MODEL_RESULTS[name];
+  document.getElementById(id+"_m").innerHTML=
+    mBar("RMSE",m.rmse,"",m.color,15)+
+    mBar("MAE",m.mae,"",m.color,12)+
+    mBar("R²",m.r2,"",m.color,1);
+});
+
+// RMSE Comparison
+const mNames=Object.keys(MODEL_RESULTS);
+new Chart(document.getElementById("rmseChart"),{type:"bar",data:{labels:mNames,datasets:[{label:"RMSE",data:mNames.map(n=>MODEL_RESULTS[n].rmse),backgroundColor:mNames.map(n=>MODEL_RESULTS[n].color),borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID},y:{ticks:{color:"#64748b"},grid:CGRID,min:0,max:15,title:{display:true,text:"RMSE (lower is better)",color:"#64748b"}}}}});
+
+// R² Comparison
+new Chart(document.getElementById("r2Chart"),{type:"bar",data:{labels:mNames,datasets:[{label:"R² Score",data:mNames.map(n=>MODEL_RESULTS[n].r2),backgroundColor:mNames.map(n=>MODEL_RESULTS[n].color),borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID},y:{ticks:{color:"#64748b"},grid:CGRID,min:0,max:1,title:{display:true,text:"R² (higher is better)",color:"#64748b"}}}}});
+
+// CatBoost Feature Importance
+const fiEntries=Object.entries(CATBOOST_FEATURE_IMP).sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById("featureImpChart"),{type:"bar",data:{labels:fiEntries.map(([n])=>n.replace(/_/g," ")),datasets:[{data:fiEntries.map(([,v])=>v),backgroundColor:fiEntries.map((_,i)=>`hsl(${260-i*12},65%,60%)`),borderRadius:4}]},options:{indexAxis:"y",responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID,title:{display:true,text:"Importance Weight",color:"#64748b"}},y:{ticks:{color:"#64748b",font:{size:11}},grid:CGRID}}}});
+
+// SHAP Top Features
+const shapEntries=Object.entries(SHAP_FEATURES).sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById("shapChart"),{type:"bar",data:{labels:shapEntries.map(([n])=>n.replace(/_/g," ")),datasets:[{data:shapEntries.map(([,v])=>v),backgroundColor:shapEntries.map((_,i)=>`hsl(${0+i*8},70%,55%)`),borderRadius:4}]},options:{indexAxis:"y",responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID,title:{display:true,text:"Mean |SHAP Value|",color:"#64748b"}},y:{ticks:{color:"#64748b",font:{size:11}},grid:CGRID}}}});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// TAB 3: ANALYTICS CHARTS
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Priority Category Distribution
+new Chart(document.getElementById("top10Chart"),{type:"doughnut",data:{labels:Object.keys(PRIORITY_DIST),datasets:[{data:Object.values(PRIORITY_DIST),backgroundColor:["#ef4444","#f97316","#eab308","#22c55e"],borderWidth:0,hoverOffset:8}]},options:{responsive:true,plugins:{legend:{position:"bottom",labels:CLEG},tooltip:CTIP}}});
+
+// Symptom Frequency
+const sfE=Object.entries(SYM_FREQ).sort((a,b)=>b[1]-a[1]);
+new Chart(document.getElementById("symFreqChart"),{type:"bar",data:{labels:sfE.map(([n])=>n),datasets:[{data:sfE.map(([,v])=>v),backgroundColor:sfE.map((_,i)=>`hsl(${180+i*15},70%,55%)`),borderRadius:4}]},options:{indexAxis:"y",responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID},y:{ticks:{color:"#64748b",font:{size:11}},grid:CGRID}}}});
+
+// Severity by Age Group
+const ageGroups=Object.keys(AGE_SEVERITY);
+new Chart(document.getElementById("allDisChart"),{type:"bar",data:{labels:ageGroups,datasets:[{label:"Avg Severity Score",data:Object.values(AGE_SEVERITY),backgroundColor:ageGroups.map((_,i)=>{const colors=["#22c55e","#86efac","#eab308","#f97316","#ef4444"];return colors[i];}),borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false},tooltip:CTIP},scales:{x:{ticks:{color:"#64748b"},grid:CGRID,title:{display:true,text:"Age Group",color:"#64748b"}},y:{ticks:{color:"#64748b"},grid:CGRID,min:0,max:100,title:{display:true,text:"Avg Severity Score",color:"#64748b"}}}}});
+
+// Symptom–Priority Heatmap
+const hmSyms=["chest pain","shortness of breath","fever","fatigue","headache","dizziness","nausea","cough","tremors","sweating","blurred vision","vomiting"];
+const hmPriorities={"Critical":["chest pain","shortness of breath","tremors","blurred vision"],"High":["fever","dizziness","sweating","vomiting","nausea"],"Medium":["fatigue","headache","cough","nausea"],"Low":["cough","headache"]};
+let ht=`<table style="border-collapse:collapse;font-size:11px"><thead><tr><th style="color:#64748b;padding:6px 10px;text-align:left;min-width:130px;background:#0f172a;font-weight:600">Priority</th>`;
+hmSyms.forEach(s=>{ht+=`<th style="color:#64748b;padding:2px;text-align:center;min-width:30px;writing-mode:vertical-rl;transform:rotate(180deg);height:80px;font-size:10px;background:#0f172a;font-weight:400">${s}</th>`;});
+ht+=`</tr></thead><tbody>`;
+const prColors={Critical:"#ef4444",High:"#f97316",Medium:"#eab308",Low:"#22c55e"};
+Object.entries(hmPriorities).forEach(([pr,ss])=>{
+  ht+=`<tr><td style="color:${prColors[pr]};padding:5px 10px;font-weight:600;border-bottom:1px solid #0f172a">${pr}</td>`;
+  hmSyms.forEach(sym=>{const has=ss.includes(sym);ht+=`<td style="padding:3px;text-align:center;border-bottom:1px solid #0f172a"><div style="width:24px;height:24px;margin:0 auto;border-radius:3px;background:${has?prColors[pr]:"#334155"};opacity:${has?1:0.3}"></div></td>`;});
+  ht+=`</tr>`;
+});
+document.getElementById("heatmap").innerHTML=ht+`</tbody></table><div style="color:#64748b;font-size:11px;margin-top:8px">Colored = symptom triggers this priority level</div>`;
+
+// ─── SYMPTOM PILLS ────────────────────────────────────────────────────────
+let selSyms=[],selQSyms=[];
+function buildPills(cid,arr,fn){
+  const c=document.getElementById(cid);c.innerHTML="";
+  ALL_SYMPTOMS.forEach(s=>{const b=document.createElement("button");b.className="pill"+(arr.includes(s)?" on":"");b.textContent=s;b.onclick=()=>fn(s);c.appendChild(b);});
+}
+function toggleSym(s){selSyms=selSyms.includes(s)?selSyms.filter(x=>x!==s):[...selSyms,s];document.getElementById("symCount").textContent=selSyms.length;buildPills("symptomPills",selSyms,toggleSym);}
+function toggleQSym(s){selQSyms=selQSyms.includes(s)?selQSyms.filter(x=>x!==s):[...selQSyms,s];buildPills("queuePills",selQSyms,toggleQSym);}
+buildPills("symptomPills",selSyms,toggleSym);
+buildPills("queuePills",selQSyms,toggleQSym);
+
+// ═══════════════════════════════════════════════════════════════════════════
+// AI PREDICT (Tab 1)
+// Reads/writes: appState.currentPatient, appState.prediction
+// ═══════════════════════════════════════════════════════════════════════════
+
+async function predict(){
+  const key="dev_secret_key_123";
+  const errEl=document.getElementById("aiErr");
+  const resEl=document.getElementById("aiResult");
+  errEl.style.display="none";
+
+  const pName=document.getElementById("pName").value.trim();
+  if(!pName){errEl.textContent="⚠ Please enter the Patient Name.";errEl.style.display="block";return;}
+  if(selSyms.length===0){errEl.textContent="⚠ Please select at least one symptom.";errEl.style.display="block";return;}
+
+  const btn=document.getElementById("predictBtn");
+  btn.textContent="🔄 Analyzing...";btn.disabled=true;
+  resEl.innerHTML=`<div class="card" style="text-align:center;padding:48px"><div style="font-size:40px;margin-bottom:12px">⚙️</div><div style="color:#06b6d4;font-size:15px;font-weight:700">Backend AI is analyzing your symptoms...</div></div>`;
+
+  appState.currentPatient={
+    name: pName,
+    age:parseInt(document.getElementById("pAge").value||45),
+    gender:document.getElementById("pGender").value,
+    symptoms:selSyms,
+    hr:parseInt(document.getElementById("pHr").value||75),
+    sbp:parseInt(document.getElementById("pSbp").value||120),
+    smoking:document.getElementById("pSmoking").value === "true",
+    symptom_duration_days:parseInt(document.getElementById("pDuration").value||5),
+    symptom_severity:parseInt(document.getElementById("pSeverity").value||5)
+  };
+
+  try{
+    const res=await fetch("http://127.0.0.1:8000/api/v1/predict/frontend",{method:"POST",headers:{"Content-Type":"application/json","X-API-Key":key},body:JSON.stringify(appState.currentPatient)});
+    if(!res.ok)throw new Error("Backend error "+res.status);
+    const parsed=await res.json();
+    appState.currentPatient.prediction = parsed;
+    appState.prediction = parsed;
+    const pcat = parsed.priority_category;
+    const sColor=pcat==="Critical"?"#ef4444":pcat==="High"?"#f97316":pcat==="Medium"?"#eab308":"#22c55e";
+    const score = parsed.severity_score;
+
+    let html=`<div class="card" style="margin-bottom:16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+        <span style="color:#f1f5f9;font-weight:700;font-size:15px">Triage Risk Assessment</span>
+        <span class="badge" style="background:${sColor};color:#fff">${pcat} Priority</span>
+      </div>
+      <div style="text-align:center;margin-bottom:20px">
+        <div style="font-size:42px;font-weight:800;color:${sColor};line-height:1">${score}<span style="font-size:18px;color:#94a3b8">/100</span></div>
+        <div style="color:#64748b;font-size:13px;margin-top:4px">Calculated Severity Score</div>
+      </div>
+      <div style="height:10px;background:#334155;border-radius:5px;overflow:hidden;margin-bottom:24px">
+        <div style="height:100%;width:${score}%;background:${sColor};border-radius:5px;transition:width 1s ease"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-bottom:16px;background:#1e293b;padding:12px;border-radius:8px">
+        <div>
+          <div style="color:#94a3b8;font-size:12px;margin-bottom:2px">Clinical Risk</div>
+          <div style="color:#f1f5f9;font-weight:600;font-size:14px">${parsed.initial_clinical_risk}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#94a3b8;font-size:12px;margin-bottom:2px">Est. Wait Time</div>
+          <div style="color:${sColor};font-weight:600;font-size:14px">${parsed.waiting_priority}</div>
+        </div>
+      </div>
+      <div style="color:#f1f5f9;font-weight:600;font-size:13px;margin-bottom:10px">Top Contributing Factors:</div>`;
+
+    if(parsed.explanations && parsed.explanations.length>0){
+      parsed.explanations.forEach(e=>{
+        const isInc = e.contribution.includes('+');
+        const col=isInc?'#ef4444':'#22c55e';
+        const icon = isInc?'⬆️':'⬇️';
+        html+=`<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #334155">
+          <span style="color:#cbd5e1;font-size:13px;font-weight:500;text-transform:capitalize">${e.feature.replace(/_/g, ' ')}</span>
+          <span style="color:${col};font-size:13px;font-weight:600">${icon} ${e.contribution}</span>
+        </div>`;
+      });
+    }
+
+    html+=`</div>
+    <div style="display:flex;gap:12px">
+      <button type="button" class="btn-primary" onclick="addPatientFromPredictor()" style="flex:1;font-size:15px">📥 Add to Queue</button>
+      <button onclick="resetPredictor()" style="background:transparent;border:1px solid #334155;color:#64748b;border-radius:8px;padding:14px;font-size:15px;cursor:pointer;font-weight:700;font-family:inherit">🔄 Reset</button>
+    </div>`;
+    resEl.innerHTML=html;
+  }catch(e){errEl.textContent="❌ Error: "+e.message;errEl.style.display="block";resEl.innerHTML=`<div class="card" style="text-align:center;padding:48px"><div style="font-size:52px;margin-bottom:12px">🩺</div><div style="color:#64748b">Select symptoms and try again.</div></div>`;}
+  btn.textContent="🏥 Assess Triage Priority";btn.disabled=false;
+}
+
+function resetPredictor() {
+    document.getElementById("pName").value = "";
+    document.getElementById("pAge").value = "";
+    document.getElementById("pHr").value = "";
+    document.getElementById("pSbp").value = "";
+    document.getElementById("pDuration").value = "";
+    document.getElementById("pSeverity").value = "5";
+    document.getElementById("pSeverityVal").textContent = "5";
+    selSyms = [];
+    buildPills("symptomPills", selSyms, toggleSym);
+    document.getElementById("aiResult").innerHTML = `<div class="card" style="text-align:center;padding:48px"><div style="font-size:52px;margin-bottom:12px">🩺</div><div style="color:#64748b;font-size:15px">Select symptoms and click Predict to get AI-powered disease predictions</div></div>`;
+    appState.currentPatient = null;
+    appState.prediction = null;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ADD TO QUEUE (from AI Intake → Queue)
+// Reads: appState.currentPatient   Writes: appState.patientQueue
+// ═══════════════════════════════════════════════════════════════════════════
+
+function addPatientFromPredictor() {
+    try {
+        if (!appState.currentPatient || !appState.currentPatient.prediction) {
+            alert("Please assess the patient first.");
+            return;
+        }
+
+    console.log("Current Patient", appState.currentPatient);
+    console.log("Prediction", appState.currentPatient.prediction);
+    console.log("Queue Before", appState.patientQueue);
+
+    const priority = appState.currentPatient.prediction.priority_category;
+    const token = generateToken(priority);
+
+    const patientObject = {
+        id: Date.now(),
+        name: appState.currentPatient.name,
+        age: appState.currentPatient.age,
+        gender: appState.currentPatient.gender,
+        symptoms: [...appState.currentPatient.symptoms],
+        vitals: {
+            hr: appState.currentPatient.hr,
+            sbp: appState.currentPatient.sbp,
+            smoking: appState.currentPatient.smoking,
+            duration: appState.currentPatient.symptom_duration_days
+        },
+        status: "Waiting",
+        token: token,
+        baseline: appState.currentPatient,
+        priority: priority,
+        severityScore: appState.currentPatient.prediction.severity_score,
+        estimatedWait: appState.currentPatient.prediction.waiting_priority,
+        shapExplanation: appState.currentPatient.prediction.explanations,
+        timestamp: Date.now()
+    };
+
+    appState.patientQueue.push(patientObject);
+
+    // Sort the queue in-place
+    sortQueueInPlace();
+
+    renderQueue();
+    resetPredictor();
+
+    // Switch to Tab 4 (Queue)
+    const tabBtns = document.querySelectorAll(".nav-tab");
+    showTab(4, tabBtns[4]);
+    } catch(err) {
+        alert("Failed to add to queue:\n" + err.message + "\n\nStack:\n" + err.stack);
+        console.error("Queue Addition Error:", err);
+    }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// QUEUE MANAGEMENT (Tab 4)
+// All reads/writes go through appState.patientQueue — no other queue arrays
+// ═══════════════════════════════════════════════════════════════════════════
+
+function getPriority(syms,age){
+  if(syms.some(s=>["chest pain","shortness of breath","blurred vision","tremors"].includes(s))||age>70)return"Critical";
+  if(syms.some(s=>["fever","dizziness","sweating","vomiting","nausea"].includes(s))||age>60)return"High";
+  if(syms.length>=3)return"Medium";
+  return"Low";
+}
+
+function generateToken(priority){
+  const num=String(TOKEN_COUNTERS[priority]).padStart(3,"0");
+  TOKEN_COUNTERS[priority]++;
+  return TOKEN_PREFIX[priority]+num;
+}
+
+function getEstWait(p, sortedWaiting){
+  if(p.status==="Consulting") return"🟡 In Progress";
+  if(p.status==="Completed") return"✅ Done";
+  if (p.wait_time) return p.wait_time;
+
+  const rank=sortedWaiting.findIndex(x=>x.id===p.id);
+  const base=WAIT_MINS[p.priority || getPriority(p.symptoms,p.age)];
+  const totalWait=base+(rank*8);
+  if(totalWait===0) return"⚡ Immediate";
+  return`~${totalWait} min`;
+}
+
+/** Sort appState.patientQueue in-place by priority tier then severity score */
+function sortQueueInPlace(){
+  appState.patientQueue.sort((a,b)=>{
+    const pa=a.priority || getPriority(a.symptoms,a.age);
+    const pb=b.priority || getPriority(b.symptoms,b.age);
+    if(PRIORITY_ORDER[pa]!==PRIORITY_ORDER[pb]) return PRIORITY_ORDER[pa]-PRIORITY_ORDER[pb];
+    const sa = a.severityScore || 0;
+    const sb = b.severityScore || 0;
+    if (sa !== sb) return sb - sa;
+    return a.token.localeCompare(b.token);
+  });
+}
+
+function renderQueue(){
+  const q = appState.patientQueue;
+
+  // Update counters
+  document.getElementById("cntW").textContent=q.filter(p=>p.status==="Waiting").length;
+  document.getElementById("cntC").textContent=q.filter(p=>p.status==="Consulting").length;
+  document.getElementById("cntD").textContent=q.filter(p=>p.status==="Completed").length;
+
+  const body=document.getElementById("queueBody");
+  if(!q.length){body.innerHTML=`<tr><td colspan="9" style="text-align:center;padding:40px;color:#64748b">No patients in queue</td></tr>`;return;}
+
+  // Re-sort for rendering safety
+  sortQueueInPlace();
+
+  const sortedWaiting=q.filter(p=>p.status==="Waiting");
+
+  body.innerHTML=q.map((p,rank)=>{
+    const pr=p.priority || getPriority(p.symptoms,p.age);
+    const score = p.severityScore ? p.severityScore.toFixed(1) : "—";
+    const pc=PC[pr],scc=SC[p.status];
+    const w=getEstWait(p,sortedWaiting);
+    const st=p.symptoms.slice(0,3).join(", ")+(p.symptoms.length>3?` +${p.symptoms.length-3}`:"");
+    const isTop=p.status==="Waiting"&&sortedWaiting[0]?.id===p.id;
+    const rowBg=isTop?"background:#1e3a2f;":"";
+    const tokenBg=`background:${pc}22;color:${pc};border:1px solid ${pc}55;padding:5px 10px;border-radius:8px;font-weight:800;font-size:13px;letter-spacing:1px;display:inline-block`;
+    return `<tr style="${rowBg}">
+      <td><span style="${tokenBg}">${TOKEN_ICON[pr]} ${p.token}</span></td>
+      <td style="color:#f1f5f9;font-weight:600">${p.name}${isTop?` <span style="background:#10b981;color:#fff;font-size:10px;padding:2px 6px;border-radius:4px;margin-left:6px">NEXT</span>`:""}</td>
+      <td style="color:#94a3b8">${p.age}</td>
+      <td style="color:#94a3b8;font-size:12px">${st||"—"}</td>
+      <td style="color:${pc};font-weight:700">${score}</td>
+      <td><span class="badge" style="background:${pc}33;color:${pc}">${pr}</span></td>
+      <td><span class="badge" style="background:${scc}20;color:${scc}">${p.status}</span></td>
+      <td style="color:#94a3b8;font-size:12px">${w}</td>
+      <td><div style="display:flex;gap:6px;flex-wrap:wrap">
+        ${p.status!=="Consulting"?`<button class="btn-sm" style="background:#f59e0b;color:#fff" onclick="consultPatient(${p.id})">Consult</button>`:""}
+        ${p.status!=="Completed"?`<button class="btn-sm" style="background:#22c55e;color:#fff" onclick="setSt(${p.id},'Completed')">Done</button>`:""}
+        <button class="btn-sm" style="background:transparent;border:1px solid #ef4444;color:#ef4444" onclick="rmP(${p.id})">Remove</button>
+      </div></td>
+    </tr>`;
+  }).join("");
+}
+
+/** Update a patient's status in-place (no array reassignment) */
+function setSt(id,s){
+  const idx = appState.patientQueue.findIndex(p=>p.id===id);
+  if(idx!==-1) appState.patientQueue[idx] = {...appState.patientQueue[idx], status:s};
+  renderQueue();
+}
+
+/** Remove a patient in-place (splice, no array reassignment) */
+function rmP(id){
+  const idx = appState.patientQueue.findIndex(p=>p.id===id);
+  if(idx!==-1) appState.patientQueue.splice(idx,1);
+  renderQueue();
+}
+
+/** Consult a patient: set status, store in appState.selectedPatient, switch to Digital Twin */
+function consultPatient(id) {
+    setSt(id, 'Consulting');
+
+    // Store the selected patient in appState
+    appState.selectedPatient = appState.patientQueue.find(p=>p.id===id) || null;
+
+    // Switch to Digital Twin tab
+    const tabBtns = document.querySelectorAll(".nav-tab");
+    showTab(5, tabBtns[5]);
+
+    // Load patient into Digital Twin
+    document.getElementById("dtPatientSelect").value = id;
+    loadTwinPatient();
+}
+
+// Initial render
+renderQueue();
+
+// ═══════════════════════════════════════════════════════════════════════════
+// DIGITAL TWIN (Tab 5)
+// Reads: appState.patientQueue, appState.selectedPatient
+// ═══════════════════════════════════════════════════════════════════════════
+
+let dtSelSyms = [];
+function buildDtPills() {
+  const c = document.getElementById("dtSymPills"); c.innerHTML = "";
+  ALL_SYMPTOMS.forEach(s => {
+    const b = document.createElement("button"); b.className = "pill" + (dtSelSyms.includes(s) ? " on" : "");
+    b.textContent = s; b.onclick = () => { dtSelSyms = dtSelSyms.includes(s) ? dtSelSyms.filter(x => x !== s) : [...dtSelSyms, s]; buildDtPills(); };
+    c.appendChild(b);
+  });
+}
+buildDtPills();
+
+function refreshDtDropdown() {
+  const sel = document.getElementById("dtPatientSelect");
+  sel.innerHTML = '<option value="">— Select a patient —</option>';
+  appState.patientQueue.forEach(p => {
+    const o = document.createElement("option"); o.value = p.id; o.textContent = `${p.token} — ${p.name} (${p.age}y, ${p.gender})`;
+    sel.appendChild(o);
+  });
+}
+
+function loadTwinPatient() {
+  const id = parseInt(document.getElementById("dtPatientSelect").value);
+  if (!id) return;
+  const p = appState.patientQueue.find(x => x.id === id);
+  if (!p) return;
+
+  // Store selected patient in appState
+  appState.selectedPatient = p;
+
+  document.getElementById("dtCustomName").value = p.name;
+  document.getElementById("dtAge").value = p.age;
+  document.getElementById("dtGender").value = p.gender;
+  dtSelSyms = [...p.symptoms];
+  buildDtPills();
+  autofillVitals(p.symptoms, p.age);
+}
+
+function autofillVitals(syms, age) {
+  const hasFever = syms.includes("fever");
+  const hasChest = syms.includes("chest pain") || syms.includes("shortness of breath");
+  const hasDiz = syms.includes("dizziness");
+  document.getElementById("dtHR").value = hasChest ? 98 : hasFever ? 104 : 72;
+  document.getElementById("dtSBP").value = hasChest ? 145 : hasDiz ? 90 : 120;
+  document.getElementById("dtDBP").value = hasChest ? 95 : hasDiz ? 60 : 80;
+  document.getElementById("dtTemp").value = hasFever ? 38.8 : 37.0;
+  document.getElementById("dtSpO2").value = syms.includes("shortness of breath") ? 91 : 98;
+  document.getElementById("dtGlucose").value = age > 55 ? 115 : 95;
+  document.getElementById("dtBMI").value = syms.includes("weight gain") ? 28.4 : syms.includes("weight loss") ? 19.2 : 23.5;
+  document.getElementById("dtCRP").value = hasFever ? 12.4 : hasChest ? 6.1 : 1.5;
+}
+
+// Show tab 5 triggers dropdown refresh
+const origShowTab = showTab;
+window.showTab = function (i, btn) {
+  origShowTab(i, btn);
+  if (i === 5) refreshDtDropdown();
+};
+
+function resetTwin() {
+  document.getElementById("dtOutput").style.display = "none";
+  document.getElementById("dtLoading").style.display = "none";
+  document.getElementById("dtError").style.display = "none";
+  appState.selectedPatient = null;
+}
+
+async function runDigitalTwin() {
+  const name = document.getElementById("dtCustomName").value.trim() || "Unknown Patient";
+  const age = parseInt(document.getElementById("dtAge").value) || 45;
+  const gender = document.getElementById("dtGender").value;
+  const scenario = document.getElementById("dtScenario").value;
+  const apiKey = document.getElementById("dtApiKey").value.trim() || "dev_secret_key_123";
+  const hr = document.getElementById("dtHR").value || 72;
+  const sbp = document.getElementById("dtSBP").value || 120;
+  const dbp = document.getElementById("dtDBP").value || 80;
+  const temp = document.getElementById("dtTemp").value || 37.0;
+  const spo2 = document.getElementById("dtSpO2").value || 98;
+  const glucose = document.getElementById("dtGlucose").value || 95;
+  const bmi = document.getElementById("dtBMI").value || 23.5;
+  const crp = document.getElementById("dtCRP").value || 1.5;
+  const syms = dtSelSyms.length ? dtSelSyms : ["fatigue", "headache"];
+
+  document.getElementById("dtError").style.display = "none";
+  document.getElementById("dtOutput").style.display = "none";
+  document.getElementById("dtLoading").style.display = "block";
+
+  const loadMsgs = ["Initializing physiological model...", "Mapping organ systems...", "Calibrating vital baselines...", "Running scenario simulation...", "Generating clinical narrative..."];
+  let mi = 0;
+  const loadInterval = setInterval(() => { document.getElementById("dtLoadMsg").textContent = loadMsgs[mi++ % loadMsgs.length]; }, 900);
+
+  const scenarioLabels = { progression: "Disease Progression (3-month)", treatment: "Treatment Response", stress: "Physiological Stress Test", surgery: "Pre-Surgery Risk", lifestyle: "Lifestyle Intervention", medication: "Medication Interaction" };
+
+  let twinData = null;
+  try {
+    const dtPayload = {
+      name, age, gender, symptoms: syms, hr: parseInt(hr), sbp: parseInt(sbp), dbp: parseInt(dbp), temp: parseFloat(temp), spo2: parseInt(spo2), glucose: parseInt(glucose), bmi: parseFloat(bmi), crp: parseFloat(crp), scenario: scenarioLabels[scenario]
+    };
+    const res = await fetch("http://127.0.0.1:8000/api/v1/simulate/frontend", {
+      method: "POST", headers: { "Content-Type": "application/json", "X-API-Key": apiKey },
+      body: JSON.stringify(dtPayload)
+    });
+    if(!res.ok) throw new Error("Backend error "+res.status);
+    twinData = await res.json();
+  } catch (e) {
+    clearInterval(loadInterval);
+    document.getElementById("dtLoading").style.display = "none";
+    document.getElementById("dtError").textContent = "❌ API Error: " + e.message;
+    document.getElementById("dtError").style.display = "block";
+    return;
+  }
+
+  clearInterval(loadInterval);
+  renderTwin(twinData, name, age, gender, scenarioLabels[scenario]);
+
+  // Sync back to queue if it's an existing patient
+  const pid = parseInt(document.getElementById("dtPatientSelect").value);
+  if (pid) {
+      const pIdx = appState.patientQueue.findIndex(x => x.id === pid);
+      if (pIdx !== -1) {
+          appState.patientQueue[pIdx].priority = twinData.overallRisk;
+
+          const scoreStat = twinData.stats.find(s => s.label === "CatBoost Severity");
+          if (scoreStat) {
+              const scoreMatch = scoreStat.value.match(/(\d+(?:\.\d+)?)/);
+              if (scoreMatch) appState.patientQueue[pIdx].severityScore = parseFloat(scoreMatch[1]);
+          }
+
+          const waitStat = twinData.stats.find(s => s.label === "Est. Wait Time");
+          if (waitStat) {
+              appState.patientQueue[pIdx].estimatedWait = waitStat.value;
+          }
+
+          renderQueue();
+      }
+  }
+}
+
+function applyTreatment(treatment, dose) {
+    const hrEl = document.getElementById("dtHR");
+    const spoEl = document.getElementById("dtSpO2");
+    const sbpEl = document.getElementById("dtSBP");
+    const tempEl = document.getElementById("dtTemp");
+
+    if (treatment === 'Oxygen Therapy') {
+        spoEl.value = Math.min(100, parseInt(spoEl.value || 90) + 5);
+        hrEl.value = Math.max(60, parseInt(hrEl.value || 90) - 8);
+    } else if (treatment === 'IV Fluids') {
+        sbpEl.value = Math.min(140, parseInt(sbpEl.value || 90) + 15);
+        hrEl.value = Math.max(60, parseInt(hrEl.value || 110) - 10);
+    } else if (treatment === 'Vasopressors') {
+        sbpEl.value = Math.min(180, parseInt(sbpEl.value || 70) + 25);
+    } else if (treatment === 'Antipyretics') {
+        tempEl.value = Math.max(36.5, parseFloat(tempEl.value || 39.0) - 1.2).toFixed(1);
+        hrEl.value = Math.max(60, parseInt(hrEl.value || 100) - 12);
+    } else if (treatment === 'Bronchodilators') {
+        spoEl.value = Math.min(100, parseInt(spoEl.value || 92) + 3);
+        hrEl.value = parseInt(hrEl.value || 80) + 10;
+    }
+
+    runDigitalTwin();
+}
+
+function generateDemoTwin(name, age, gender, syms, hr, sbp, dbp, temp, spo2, glucose, bmi, crp, scenario) {
+  // Function removed, handled by backend.
+  return null;
+}
+
+let dtChart = null;
+function renderTwin(data, name, age, gender, scenarioLabel) {
+  document.getElementById("dtLoading").style.display = "none";
+  document.getElementById("dtOutput").style.display = "block";
+
+  document.getElementById("dtTwinName").textContent = "🧬 " + name + " — Digital Twin";
+  document.getElementById("dtTwinMeta").textContent = `${age}y • ${gender} • Scenario: ${scenarioLabel}`;
+
+  const riskColor = { Low: "#22c55e", Moderate: "#f59e0b", High: "#ef4444", Critical: "#ef4444" };
+  const rc = riskColor[data.overallRisk] || "#94a3b8";
+  document.getElementById("dtRiskBadges").innerHTML = `
+    <span style="background:${rc}22;color:${rc};border:1px solid ${rc}55;padding:6px 16px;border-radius:8px;font-weight:800;font-size:13px">${data.overallRisk} Risk</span>
+    <span style="background:#7c3aed22;color:#a78bfa;border:1px solid #7c3aed55;padding:6px 16px;border-radius:8px;font-weight:700;font-size:12px">🔬 ${data.primaryCondition}</span>`;
+
+  document.getElementById("dtStatCards").innerHTML = (data.stats || []).map(s =>
+    `<div class="dt-stat" style="border-top:3px solid ${s.color}">
+      <div style="font-size:20px;font-weight:800;color:${s.color};margin:6px 0">${s.value}</div>
+      <div style="color:#64748b;font-size:12px">${s.label}</div>
+    </div>`).join("");
+
+  const flagColors = { Normal: "#22c55e", High: "#ef4444", Low: "#f97316", Critical: "#ef4444", Borderline: "#f59e0b" };
+  document.getElementById("dtVitalsDisplay").innerHTML = (data.vitalStatus || []).map(v => {
+    const fc = flagColors[v.flag] || "#94a3b8";
+    return `<div class="dt-vital"><span style="color:#94a3b8;font-size:13px">${v.label}</span><div style="display:flex;align-items:center;gap:8px"><span style="color:#f1f5f9;font-weight:700">${v.value}</span><span class="dt-badge" style="background:${fc}22;color:${fc}">${v.flag}</span></div></div>`;
+  }).join("");
+
+  document.getElementById("dtOrganGrid").innerHTML = (data.organSystems || []).map(o => {
+    const hc = o.health >= 80 ? "#22c55e" : o.health >= 60 ? "#f59e0b" : "#ef4444";
+    return `<div class="organ-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <span style="font-size:18px">${o.icon}</span>
+        <span style="color:${hc};font-weight:800;font-size:14px">${o.health}%</span>
+      </div>
+      <div style="color:#f1f5f9;font-size:11px;font-weight:600;margin-bottom:6px">${o.name}</div>
+      <div style="height:4px;background:#334155;border-radius:2px"><div style="height:100%;width:${o.health}%;background:${hc};border-radius:2px;transition:width .8s"></div></div>
+      <div style="color:${hc};font-size:10px;margin-top:4px">${o.status}</div>
+    </div>`;
+  }).join("");
+
+  document.getElementById("dtNarrative").innerHTML = data.narrative || "No narrative available.";
+
+  document.getElementById("dtRecommendations").innerHTML = (data.recommendations || []).map(r =>
+    `<div style="background:#0f172a;border-left:3px solid #10b981;border-radius:8px;padding:12px;color:#94a3b8;font-size:13px;line-height:1.5">${r}</div>`).join("");
+
+  if (dtChart) { dtChart.destroy(); dtChart = null; }
+  const td = data.projectedTrends;
+  dtChart = new Chart(document.getElementById("dtTrendChart"), {
+    type: "line",
+    data: {
+      labels: td.labels,
+      datasets: [
+        { label: "Heart Rate (bpm)", data: td.heartRate, borderColor: "#ef4444", backgroundColor: "#ef444415", fill: true, tension: 0.4, pointRadius: 4 },
+        { label: "Systolic BP (mmHg)", data: td.systolicBP, borderColor: "#f59e0b", backgroundColor: "#f59e0b15", fill: true, tension: 0.4, pointRadius: 4 },
+        { label: "SpO2 (%)", data: td.spo2, borderColor: "#06b6d4", backgroundColor: "#06b6d415", fill: true, tension: 0.4, pointRadius: 4 }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { labels: CLEG }, tooltip: CTIP },
+      scales: {
+        x: { ticks: { color: "#64748b" }, grid: CGRID },
+        y: { ticks: { color: "#64748b" }, grid: CGRID }
+      }
+    }
+  });
+}
+
+function loadDemoTwin() {
+  document.getElementById("dtCustomName").value = "Ravi Kumar";
+  document.getElementById("dtAge").value = 58;
+  document.getElementById("dtGender").value = "Male";
+  dtSelSyms = ["chest pain", "shortness of breath", "sweating"];
+  buildDtPills();
+  autofillVitals(dtSelSyms, 58);
+  document.getElementById("dtScenario").value = "progression";
+  runDigitalTwin();
+}
+</script>
+</body>
+</html>

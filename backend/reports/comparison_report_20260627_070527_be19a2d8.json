@@ -1,0 +1,131 @@
+{
+    "version": "20260627_070527_be19a2d8",
+    "champion_model": "ExtraTrees",
+    "calibration_method": "sigmoid",
+    "arena_results": {
+        "LogisticRegression": {
+            "accuracy": 0.9464694176305611,
+            "f1_macro": 0.9454497640332562,
+            "precision": 0.9470271150139085,
+            "recall": 0.9464665471923537,
+            "roc_auc": 0.9888555026172293
+        },
+        "SVC": {
+            "accuracy": 0.984801902838837,
+            "f1_macro": 0.984696732538167,
+            "precision": 0.9854984614607935,
+            "recall": 0.9848023243184535,
+            "roc_auc": 0.999311123627941
+        },
+        "RandomForest": {
+            "accuracy": 0.9923335029583448,
+            "f1_macro": 0.9923391895239729,
+            "precision": 0.9923538982990511,
+            "recall": 0.9923349082220051,
+            "roc_auc": 0.9999002029644825
+        },
+        "ExtraTrees": {
+            "accuracy": 0.9981168693539045,
+            "f1_macro": 0.9981170970114203,
+            "precision": 0.9981396484041646,
+            "recall": 0.9981161073096557,
+            "roc_auc": 0.9999961012570807
+        },
+        "GradientBoosting": {
+            "accuracy": 0.9786151479801872,
+            "f1_macro": 0.9785290968749168,
+            "precision": 0.9788218958379616,
+            "recall": 0.978615184099055,
+            "roc_auc": 0.9993328815465826
+        },
+        "HistGradientBoosting": {
+            "accuracy": 0.9868191164674848,
+            "f1_macro": 0.986776519756759,
+            "precision": 0.9869007673577522,
+            "recall": 0.9868184533507115,
+            "roc_auc": 0.9998141033982897
+        },
+        "MLP": {
+            "accuracy": 0.9861468566249744,
+            "f1_macro": 0.986045062036314,
+            "precision": 0.9866947734611108,
+            "recall": 0.9861472249375476,
+            "roc_auc": 0.9983510698625252
+        },
+        "XGBoost": {
+            "accuracy": 0.9865502993507042,
+            "f1_macro": 0.9865100830876675,
+            "precision": 0.9866406892023784,
+            "recall": 0.9865504507439992,
+            "roc_auc": 0.999761541900351
+        },
+        "LightGBM": {
+            "accuracy": 0.9857431425860467,
+            "f1_macro": 0.9857063992273764,
+            "precision": 0.9857843932931022,
+            "recall": 0.985744542196155,
+            "roc_auc": 0.9997808076358154
+        },
+        "CatBoost": {
+            "accuracy": 0.9852053455645665,
+            "f1_macro": 0.9851350375110899,
+            "precision": 0.9855560614065615,
+            "recall": 0.9852050070598457,
+            "roc_auc": 0.9997669331481115
+        },
+        "VotingEnsemble": {
+            "accuracy": 0.9915265632442462,
+            "f1_macro": 0.9915120704104221,
+            "precision": 0.9915820560752087,
+            "recall": 0.9915268274139241,
+            "roc_auc": 0.9999377845221421
+        },
+        "StackingEnsemble": {
+            "accuracy": 0.9978479437118445,
+            "f1_macro": 0.9978485032448786,
+            "precision": 0.9978537742040562,
+            "recall": 0.9978481047029435,
+            "roc_auc": 0.9999923344108708
+        }
+    },
+    "final_test_metrics": {
+        "test_accuracy": 0.93,
+        "test_precision_macro": 0.4824561403508772,
+        "test_recall_macro": 0.2625,
+        "test_f1_macro": 0.2647186147186147,
+        "test_roc_auc_ovr": null
+    },
+    "confusion_matrix": [
+        [
+            0,
+            1,
+            0,
+            0
+        ],
+        [
+            0,
+            371,
+            0,
+            0
+        ],
+        [
+            0,
+            19,
+            1,
+            0
+        ],
+        [
+            0,
+            8,
+            0,
+            0
+        ]
+    ],
+    "classes": [
+        "Atrial Fibrillation",
+        "Healthy",
+        "Heart Failure",
+        "Hypertension",
+        "Respiratory Failure"
+    ]
+}

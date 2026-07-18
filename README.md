@@ -12,7 +12,7 @@
 
 *An Enterprise-Grade, AI-Powered Digital Twin Platform for Predictive Healthcare Analytics and Clinical Decision Support.*
 
-![Project Banner](assets/banner.png)
+![Project Banner](https://via.placeholder.com/1200x400/0f172a/38bdf8?text=Advanced+AI+Healthcare+Dashboard+%7C+Digital+Twin+Technology)
 
 </div>
 
@@ -257,26 +257,52 @@ git clone https://github.com/yourusername/healthcare-digital-twin.git
 cd healthcare-digital-twin
 ```
 
-### 3. Backend Setup (FastAPI + AI Models)
+# Healthcare Digital Twin Backend
+
+A production-ready, highly concurrent backend for simulating medical outcomes and predicting disease risk.
+
+## Production Features
+- **Global Auth:** API Key protection across all endpoints via `X-API-Key`.
+- **Rate Limiting:** IP-based rate limiting via SlowAPI to prevent abuse.
+- **Extreme Performance:** Thread-safe singleton models, Async `asyncio.gather()` batching, and sub-1ms LRU Caching.
+- **Security & Logging:** Global exception handlers format all errors cleanly. Automatic profiling on every endpoint (`X-Process-Time` headers).
+- **Containerization:** Lean Dockerfile and Docker Compose setup for instant deployment.
+- **CI/CD:** Automated GitHub Actions pipeline running `pytest` suites.
+
+## Getting Started
+
+### Option 1: Docker (Recommended)
+```bash
+docker-compose up --build
+```
+The API will boot at `http://localhost:8000`.
+
+### Option 2: Local Install
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+uvicorn main:app --reload
 ```
 
-### 4. Frontend Setup (React Dashboard)
-```bash
-cd frontend
-npm install
-npm run dev
+## Authentication
+Every request requires the API Key header (which you can set via `.env`):
+```http
+X-API-Key: dev_secret_key_123
 ```
 
-### 5. Docker Deployment (Recommended)
+## Running Tests
+Integration and Unit tests ensure the pipeline and ML Simulator are behaving perfectly.
 ```bash
-docker-compose up --build -d
+cd backend
+pytest tests/
 ```
+
+## API Endpoints
+Check `http://localhost:8000/docs` for the interactive Swagger documentation.
+- `GET /api/v1/health`: Load-balancer health check.
+- `POST /api/v1/predict/risk`: Standard ML prediction.
+- `POST /api/v1/predict/risk/batch`: Asynchronous batch prediction.
+- `POST /api/v1/simulate/treatment`: Runs the Digital Twin heuristics engine.
 
 ---
 

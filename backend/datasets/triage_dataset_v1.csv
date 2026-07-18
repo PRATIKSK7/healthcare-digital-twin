@@ -1,0 +1,1001 @@
+age,gender,bmi,smoking,heart_rate,systolic_bp,diastolic_bp,respiratory_rate,spO2,temperature,blood_glucose,symptoms,symptom_duration_days,symptom_severity,icu_admission_probability,risk_of_deterioration,emergency_intervention_probability,expected_length_of_stay_days,severity_score
+63.9,Female,26.1,0,143,141,82,29,87,39.3,174,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",1,9,0.899,0.826,1.0,24.1,89.32
+52.5,Female,23.5,0,132,140,83,21,90,38.3,196,"chest pain, shortness of breath, fever, cough, fatigue, confusion, headache",7,6,0.724,0.686,0.93,23.4,78.32
+66.7,Male,29.9,0,138,148,89,27,92,39.2,197,"chest pain, shortness of breath, fever, fatigue",3,10,0.836,0.769,1.0,24.7,83.85
+82.4,Male,36.0,0,134,167,86,26,90,38.2,209,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",5,7,0.812,0.786,1.0,24.3,85.72
+50.8,Female,18.5,0,147,127,69,29,86,40.2,135,"shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",18,8,0.912,0.816,1.0,27.1,93.44
+50.8,Male,28.7,1,129,145,92,24,89,36.7,203,"chest pain, shortness of breath, dizziness, fatigue",28,6,0.654,0.65,1.0,19.3,73.76
+83.4,Female,27.0,0,132,136,91,29,88,38.1,202,"chest pain, fever, cough, dizziness, fatigue, headache",2,10,0.91,0.854,1.0,28.1,93.53
+68.8,Male,32.0,0,147,147,87,29,83,39.3,202,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",11,8,1.0,0.999,1.0,31.7,97.81
+46.5,Male,29.3,1,124,160,95,24,88,37.5,244,"vomiting, fatigue",14,9,0.856,0.846,1.0,24.8,87.8
+64.8,Male,23.5,0,133,147,96,24,89,37.7,190,"chest pain, shortness of breath, dizziness, fatigue",20,9,0.858,0.809,1.0,24.8,88.56
+46.7,Male,26.1,0,112,134,71,20,92,38.2,163,"cough, vomiting, fatigue, confusion, headache",18,8,0.503,0.561,0.717,15.2,60.41
+46.6,Male,23.2,0,105,138,84,22,91,37.6,187,"chest pain, cough, headache",5,4,0.543,0.57,0.718,15.6,59.77
+59.4,Female,34.5,0,103,141,79,25,90,37.0,202,"chest pain, dizziness",30,7,0.675,0.713,0.964,21.4,78.54
+20.6,Male,28.1,0,143,144,89,26,91,39.3,235,"chest pain, fever, cough, dizziness, fatigue, confusion, headache",30,8,0.777,0.759,1.0,24.4,86.12
+24.0,Female,39.4,1,125,130,82,23,90,37.3,197,"chest pain, dizziness, fatigue, confusion, headache",5,9,0.573,0.599,1.0,15.7,69.35
+44.9,Male,27.6,0,112,145,79,20,90,37.3,160,"fatigue, confusion, abdominal pain",5,4,0.538,0.499,0.813,16.3,57.83
+36.8,Male,23.7,0,110,156,83,23,92,38.0,176,"shortness of breath, cough, fatigue, confusion",10,8,0.602,0.559,1.0,19.5,70.16
+60.7,Male,18.9,0,137,134,82,28,87,37.4,131,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",3,8,0.933,0.924,1.0,27.1,97.59
+38.7,Female,18.5,0,92,125,80,22,93,37.7,190,"dizziness, vomiting",11,5,0.404,0.469,0.525,12.6,44.36
+29.6,Male,18.5,0,108,123,83,28,86,38.0,155,"fever, cough, dizziness",6,5,0.639,0.527,1.0,17.9,73.39
+81.4,Male,29.6,0,145,164,92,27,87,38.6,246,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",1,8,0.945,0.928,1.0,29.6,95.12
+50.9,Male,31.1,0,130,142,79,29,89,38.6,181,"shortness of breath, fever, dizziness, vomiting",19,7,0.815,0.711,0.981,22.4,86.88
+56.2,Female,18.5,0,114,131,82,28,88,37.8,143,"chest pain, shortness of breath, cough, vomiting",19,4,0.676,0.61,0.911,19.8,77.16
+29.4,Female,33.4,0,135,142,89,29,86,38.6,195,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",1,7,0.867,0.772,1.0,25.1,89.93
+45.2,Female,25.1,0,112,155,85,22,90,37.8,202,"chest pain, dizziness, fatigue, confusion, headache, abdominal pain",16,7,0.681,0.662,1.0,21.6,73.81
+57.0,Female,28.9,1,149,148,85,31,85,38.2,162,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",3,8,0.99,0.936,1.0,26.6,92.9
+34.3,Male,37.7,0,114,167,96,26,92,38.0,237,dizziness,10,7,0.64,0.617,0.975,18.9,73.47
+61.8,Female,33.4,0,137,162,85,26,90,38.5,223,"chest pain, dizziness, vomiting, fatigue, confusion",8,7,0.883,0.874,1.0,26.9,93.35
+44.2,Male,26.4,0,108,157,84,26,90,37.9,192,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",8,6,0.692,0.692,0.945,21.4,77.8
+49.7,Female,22.7,0,130,126,81,25,90,39.1,172,"chest pain, fever, dizziness, fatigue, confusion",6,10,0.818,0.719,1.0,25.5,82.85
+44.2,Female,18.5,0,127,136,74,23,91,37.8,190,"chest pain, dizziness, fatigue, headache, abdominal pain",21,7,0.581,0.628,0.903,18.4,66.18
+88.3,Male,23.7,0,127,148,71,27,92,38.9,156,"shortness of breath, fever, cough, dizziness, fatigue",10,6,0.707,0.697,1.0,21.1,81.03
+54.8,Male,26.7,0,117,170,87,25,89,37.3,190,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, abdominal pain",5,7,0.821,0.763,1.0,24.8,89.42
+36.0,Female,22.1,1,121,145,79,29,89,38.2,180,"chest pain, shortness of breath, cough, vomiting",12,7,0.857,0.817,1.0,23.4,87.45
+69.8,Male,27.2,0,118,152,86,20,92,37.9,152,"shortness of breath, vomiting, fatigue, confusion, abdominal pain",28,6,0.663,0.645,0.993,18.6,77.32
+33.0,Male,28.5,0,124,113,64,21,91,37.8,154,"chest pain, fever, dizziness, headache",1,6,0.592,0.602,0.854,16.0,72.57
+58.8,Female,26.7,1,153,169,93,29,86,38.8,248,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",7,9,1.0,1.0,1.0,29.7,99.62
+19.7,Male,24.1,1,155,149,93,33,84,39.1,197,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",27,9,1.0,0.952,1.0,32.6,98.23
+31.1,Male,29.0,1,143,141,89,32,86,38.7,197,"shortness of breath, dizziness, fatigue, abdominal pain",16,8,0.955,0.874,1.0,29.2,95.54
+58.5,Male,30.7,0,136,153,85,23,90,37.6,196,"chest pain, shortness of breath, dizziness, fatigue",24,9,0.754,0.793,1.0,22.2,83.38
+68.3,Female,21.5,0,124,170,84,28,88,38.2,168,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",1,5,0.726,0.689,0.954,21.9,81.01
+58.1,Male,36.5,0,117,170,93,28,87,37.3,223,"chest pain, shortness of breath, fever, vomiting, fatigue, confusion, headache",21,7,0.858,0.797,1.0,24.9,87.41
+52.9,Female,27.4,0,119,170,89,24,89,38.1,201,"fever, cough, dizziness, fatigue, confusion, headache",18,8,0.689,0.709,0.856,21.0,74.44
+49.6,Female,28.1,0,105,127,68,23,93,37.3,191,"chest pain, shortness of breath, fever",15,6,0.541,0.592,0.791,18.1,60.25
+28.4,Female,32.2,0,127,153,82,20,88,38.2,172,"chest pain, fever, dizziness, fatigue, confusion, headache",7,8,0.758,0.681,1.0,23.4,80.28
+42.0,Female,29.4,1,128,113,84,27,90,39.1,174,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",1,8,0.84,0.742,1.0,24.0,83.84
+46.7,Male,33.7,0,144,166,94,23,89,38.2,244,"chest pain, cough, dizziness, vomiting, fatigue, headache",10,10,0.802,0.785,1.0,25.3,86.34
+74.0,Male,29.7,1,136,174,95,27,85,37.5,165,"chest pain, shortness of breath, dizziness, fatigue, confusion",4,10,0.926,0.801,1.0,27.2,87.77
+61.2,Male,24.3,0,136,169,91,21,90,37.3,182,"chest pain, shortness of breath, dizziness, vomiting, fatigue, headache",8,10,0.767,0.798,1.0,23.1,86.55
+23.3,Female,30.2,0,122,120,78,30,86,37.8,180,"shortness of breath, dizziness, confusion",13,7,0.757,0.665,1.0,22.6,78.46
+60.8,Female,21.1,0,128,137,71,22,92,38.5,132,"fever, dizziness, confusion, headache",6,8,0.73,0.754,1.0,21.3,85.38
+48.1,Female,28.7,0,151,143,97,31,86,38.7,208,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache",4,7,0.896,0.863,1.0,25.0,94.45
+42.8,Male,27.8,0,132,144,92,24,90,38.1,181,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",10,9,0.806,0.78,1.0,22.4,86.71
+66.0,Female,26.8,0,124,151,89,29,85,37.2,174,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",1,7,0.847,0.775,1.0,25.2,84.02
+73.6,Male,27.2,1,146,144,86,29,85,37.9,172,"shortness of breath, cough, dizziness, fatigue",1,7,0.913,0.859,1.0,25.0,91.02
+71.8,Male,18.5,0,137,159,82,26,89,39.1,219,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",7,6,0.819,0.836,1.0,23.9,86.07
+39.9,Female,24.7,0,122,150,91,26,89,37.5,174,"chest pain, shortness of breath, fever, cough, dizziness, abdominal pain",12,9,0.764,0.686,1.0,20.0,79.6
+49.4,Male,28.6,0,118,161,88,23,89,37.6,165,"chest pain, dizziness, headache",15,5,0.605,0.561,0.95,17.4,72.68
+61.0,Female,29.0,0,127,153,77,28,88,37.5,172,"chest pain, dizziness, confusion, headache",6,6,0.755,0.765,1.0,22.0,82.85
+72.6,Male,21.8,0,131,130,87,28,86,38.0,136,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",17,8,0.819,0.763,0.998,24.0,84.26
+46.4,Male,35.6,0,123,166,89,21,93,37.1,228,"chest pain, dizziness, fatigue, headache",1,6,0.651,0.685,1.0,20.8,75.08
+51.7,Female,22.8,0,119,148,92,31,88,37.3,167,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",27,8,0.831,0.764,1.0,23.2,85.1
+35.1,Female,33.8,0,118,110,74,29,87,39.1,164,"shortness of breath, cough, dizziness, headache",21,8,0.703,0.659,1.0,20.6,78.95
+33.5,Male,30.6,0,103,153,86,23,90,37.5,182,"dizziness, fatigue, confusion",6,9,0.634,0.582,1.0,19.0,69.56
+69.6,Male,24.1,0,123,151,96,27,89,37.7,209,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",1,6,0.758,0.734,1.0,23.2,82.53
+79.4,Female,38.7,0,137,193,97,28,91,38.2,265,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion",9,9,0.968,0.91,1.0,28.4,96.87
+53.7,Male,20.8,0,105,144,79,21,94,38.0,139,"shortness of breath, fever, confusion, abdominal pain",1,6,0.563,0.539,0.991,17.3,64.95
+73.1,Male,33.5,0,130,174,89,23,91,38.0,260,"shortness of breath, fatigue, confusion, headache",14,9,0.786,0.804,1.0,22.1,82.71
+61.5,Male,34.0,0,129,142,77,23,88,38.4,181,"shortness of breath, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",2,10,0.709,0.775,0.966,21.1,80.52
+43.4,Female,24.0,0,139,128,81,25,89,38.2,136,"chest pain, dizziness, vomiting, headache",4,7,0.71,0.645,1.0,19.7,80.63
+61.5,Male,36.4,1,145,150,86,25,87,37.9,176,"chest pain, shortness of breath, fever, cough, confusion, headache",2,10,0.893,0.85,1.0,26.9,93.65
+82.7,Male,26.5,0,126,162,86,27,87,36.9,170,"chest pain, shortness of breath, dizziness",1,8,0.791,0.739,1.0,21.4,82.58
+54.4,Female,29.7,1,148,183,93,34,83,38.4,225,"shortness of breath, dizziness",3,10,0.999,0.933,1.0,28.9,100.0
+83.2,Female,29.6,1,137,158,83,34,82,37.6,179,"chest pain, shortness of breath, cough, dizziness, confusion",1,10,1.0,1.0,1.0,31.2,99.36
+18.0,Male,27.2,0,97,111,78,21,93,38.0,152,"chest pain, fever, fatigue",11,3,0.468,0.431,0.622,14.1,49.67
+69.8,Female,32.9,0,121,129,84,26,88,37.2,162,"chest pain, shortness of breath, dizziness, fatigue, confusion",2,7,0.765,0.808,1.0,22.2,85.05
+56.6,Male,32.8,0,118,172,85,32,86,37.2,276,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue",15,10,0.87,0.899,1.0,25.2,93.43
+49.6,Female,18.5,0,116,140,84,28,88,38.6,191,"shortness of breath, cough, fatigue",11,7,0.717,0.673,1.0,23.2,77.67
+56.7,Female,35.8,0,108,145,80,21,94,37.3,207,"chest pain, dizziness, fatigue",1,3,0.575,0.62,0.912,15.7,68.16
+19.2,Male,18.5,0,115,129,73,16,93,37.8,133,"chest pain, headache",2,7,0.475,0.516,0.84,14.7,57.16
+51.0,Female,34.2,0,146,131,85,23,89,39.0,213,"shortness of breath, fever, dizziness, fatigue, confusion, headache, abdominal pain",11,10,0.882,0.9,1.0,26.6,93.0
+61.4,Male,34.8,1,132,159,80,31,85,39.0,221,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",30,8,0.96,0.917,1.0,28.1,97.77
+81.6,Female,21.5,0,127,157,86,23,91,36.9,175,"shortness of breath, dizziness, fatigue, confusion",4,8,0.715,0.765,1.0,21.1,83.53
+45.7,Male,25.5,0,151,148,85,31,88,38.7,177,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, headache",7,10,0.876,0.817,1.0,26.6,86.84
+40.4,Female,21.4,0,116,130,75,27,90,37.5,143,"dizziness, headache",11,5,0.651,0.61,0.865,19.3,69.53
+46.0,Female,26.7,0,128,153,81,25,90,37.1,149,"chest pain, shortness of breath, cough, dizziness, headache",12,9,0.661,0.606,1.0,20.0,77.1
+71.5,Male,26.2,0,120,150,82,24,91,38.7,197,"shortness of breath, dizziness, fatigue, confusion",29,6,0.69,0.71,0.971,21.1,78.48
+60.9,Female,32.7,1,124,142,83,26,88,38.3,186,"chest pain, dizziness, vomiting, fatigue",7,6,0.78,0.742,1.0,21.8,83.51
+45.5,Male,35.9,0,146,127,88,23,91,38.5,241,"shortness of breath, dizziness, vomiting, fatigue, confusion, headache",2,9,0.923,0.896,1.0,27.0,93.84
+64.2,Female,36.4,0,130,170,91,27,88,37.6,197,"chest pain, shortness of breath, cough, fatigue, confusion, headache",12,9,0.782,0.724,1.0,23.5,84.08
+56.7,Male,24.6,0,133,166,87,29,84,37.8,152,"chest pain, shortness of breath, dizziness, vomiting, confusion, headache",1,10,0.886,0.83,1.0,24.4,90.92
+72.4,Female,26.7,1,125,168,81,32,83,37.1,145,"shortness of breath, cough, dizziness, fatigue",4,9,0.921,0.827,1.0,24.6,90.49
+42.4,Male,18.5,0,109,152,84,26,88,36.9,159,"chest pain, shortness of breath, cough, fatigue",8,6,0.616,0.576,0.942,18.8,71.97
+49.1,Female,23.2,0,116,128,82,25,88,37.6,178,"shortness of breath, dizziness, confusion",10,7,0.709,0.749,0.907,21.1,75.63
+47.9,Female,33.8,0,137,161,81,22,89,37.8,193,"chest pain, dizziness, vomiting, confusion",12,10,0.839,0.791,1.0,23.4,89.91
+28.7,Female,37.7,0,119,160,84,28,90,37.4,197,"chest pain, shortness of breath, vomiting, fatigue",1,8,0.621,0.567,1.0,18.0,70.08
+60.3,Female,20.6,0,111,144,79,22,91,38.0,166,"chest pain, shortness of breath, dizziness, fatigue, confusion",30,4,0.597,0.601,0.847,17.9,68.42
+59.7,Male,24.4,0,127,166,76,31,90,38.5,174,"shortness of breath, dizziness, fatigue, confusion, headache, abdominal pain",2,8,0.856,0.831,1.0,25.4,88.84
+55.1,Female,27.8,0,126,122,79,28,89,38.4,182,"chest pain, fatigue, headache, abdominal pain",1,5,0.711,0.705,0.812,21.8,72.97
+50.8,Male,29.7,0,137,156,82,24,89,37.7,195,"chest pain, shortness of breath, dizziness",11,8,0.75,0.778,1.0,21.6,86.05
+29.5,Female,23.1,1,108,129,82,24,90,37.1,188,headache,22,5,0.591,0.62,0.747,18.3,66.14
+47.4,Female,30.5,0,133,169,91,21,90,37.7,189,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion",7,10,0.837,0.761,1.0,23.5,86.19
+48.8,Male,25.2,0,124,133,89,29,88,37.7,133,"shortness of breath, cough, dizziness",6,7,0.845,0.753,1.0,25.3,89.91
+40.6,Male,27.9,0,119,144,97,29,88,37.4,204,"chest pain, shortness of breath, fever, cough, dizziness, confusion, headache",7,8,0.83,0.824,1.0,25.7,89.87
+52.1,Female,31.3,0,130,141,83,24,85,38.1,192,"shortness of breath, fever, cough, dizziness, fatigue, headache",1,7,0.838,0.804,1.0,23.2,86.01
+62.3,Female,28.0,1,127,154,94,27,89,39.1,195,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",14,7,0.812,0.767,0.964,23.1,79.91
+89.0,Female,25.4,0,126,166,90,24,90,37.7,206,"chest pain, shortness of breath, cough, dizziness, vomiting, confusion, abdominal pain",5,8,0.857,0.856,1.0,26.2,90.17
+58.1,Male,27.3,0,122,142,88,28,89,38.3,201,"fever, confusion, headache",30,5,0.729,0.677,0.919,22.1,79.81
+59.6,Male,27.5,0,121,150,95,31,88,37.4,162,"chest pain, fever, dizziness, fatigue, confusion, headache",1,6,0.803,0.745,1.0,23.6,85.7
+53.7,Female,25.8,0,104,121,73,24,92,38.5,136,"shortness of breath, fever, cough, dizziness, confusion",2,4,0.574,0.553,0.877,16.3,69.02
+20.5,Male,26.4,0,115,133,67,33,87,38.6,160,"fever, cough, dizziness, vomiting, fatigue, headache",5,9,0.671,0.578,1.0,19.5,72.99
+54.5,Male,37.6,0,126,149,82,26,91,39.8,209,"cough, dizziness, fatigue, headache",7,6,0.736,0.652,0.862,22.1,74.59
+56.1,Male,31.4,0,158,147,82,31,87,38.8,211,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",6,10,1.0,0.999,1.0,31.1,99.77
+95.0,Male,26.2,1,158,191,88,37,80,39.4,248,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",5,10,1.0,1.0,1.0,36.5,100.0
+51.5,Female,32.2,0,131,166,101,32,85,37.2,176,"chest pain, shortness of breath, dizziness, vomiting, abdominal pain",1,10,0.909,0.825,1.0,25.3,92.65
+60.4,Female,26.0,0,127,141,78,24,90,37.9,197,"chest pain, shortness of breath, fever, fatigue",18,8,0.729,0.71,1.0,20.4,83.73
+54.4,Female,35.0,1,146,157,89,32,89,39.4,184,"shortness of breath, dizziness, fatigue, headache",7,8,0.963,0.827,1.0,28.0,97.01
+34.0,Female,30.2,0,113,139,75,20,91,37.8,164,"chest pain, confusion",6,4,0.537,0.52,0.708,15.9,61.69
+75.6,Male,27.4,0,135,157,88,25,91,39.0,193,"shortness of breath, dizziness, vomiting, fatigue, confusion, headache",10,8,0.888,0.82,1.0,27.1,91.45
+68.5,Male,30.7,0,124,150,92,24,91,37.7,237,"chest pain, fever, cough, dizziness, fatigue",11,9,0.805,0.805,1.0,24.9,85.67
+69.2,Female,18.6,0,110,139,79,24,90,37.7,162,"chest pain, shortness of breath, dizziness, fatigue, confusion",11,7,0.686,0.715,1.0,21.0,79.34
+38.6,Female,21.2,0,128,140,83,24,92,38.8,186,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",10,7,0.723,0.669,1.0,20.2,80.33
+80.3,Female,20.8,0,136,166,79,31,89,38.8,183,"chest pain, dizziness, fatigue, confusion, headache",3,7,0.898,0.835,1.0,27.6,91.22
+29.8,Male,28.9,1,141,159,90,26,86,37.6,172,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",6,10,0.804,0.772,1.0,22.1,83.49
+65.6,Female,38.4,0,143,163,102,26,86,38.8,263,"chest pain, fever, cough, dizziness, fatigue, headache, abdominal pain",4,9,1.0,1.0,1.0,31.3,99.08
+94.4,Male,41.4,0,140,172,84,26,89,37.7,230,"shortness of breath, dizziness, fatigue, confusion, headache, abdominal pain",10,9,0.913,0.854,1.0,27.0,93.89
+37.2,Female,31.8,0,128,152,91,25,91,37.7,164,"chest pain, fever, cough, dizziness, fatigue",4,6,0.653,0.647,1.0,18.7,75.02
+44.8,Female,31.0,0,129,130,89,25,89,38.6,152,"shortness of breath, cough, dizziness, fatigue, headache",1,8,0.803,0.705,1.0,23.4,83.34
+56.8,Male,18.5,0,138,136,90,25,91,37.7,174,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",11,9,0.77,0.803,1.0,22.8,84.72
+45.9,Male,24.7,0,115,146,86,24,91,38.3,178,"cough, dizziness, fatigue, abdominal pain",3,6,0.672,0.649,0.955,19.4,73.21
+27.1,Female,23.3,1,129,145,92,28,88,37.8,155,"fever, vomiting, fatigue, confusion, abdominal pain",23,5,0.774,0.667,1.0,22.4,80.64
+56.2,Male,24.3,0,121,148,79,26,89,38.1,177,"shortness of breath, cough, vomiting, fatigue, confusion, headache",3,10,0.9,0.843,1.0,26.0,90.37
+35.9,Male,27.0,0,101,128,75,27,92,37.1,188,"chest pain, dizziness, fatigue",30,5,0.48,0.474,0.617,15.3,50.53
+63.5,Male,25.2,0,122,143,86,26,91,36.8,173,"dizziness, fatigue, confusion, headache",4,5,0.687,0.733,1.0,19.4,77.33
+38.5,Female,18.5,0,104,139,81,18,92,37.0,151,"chest pain, shortness of breath, fever, dizziness",1,3,0.398,0.408,0.698,11.6,48.89
+82.9,Male,32.5,0,138,182,91,23,90,38.1,198,"chest pain, shortness of breath, dizziness, fatigue, confusion, abdominal pain",1,10,0.912,0.859,1.0,25.2,93.5
+40.9,Female,21.6,0,124,146,75,30,89,37.3,140,"shortness of breath, cough, dizziness, fatigue",1,9,0.627,0.556,1.0,16.8,74.02
+49.2,Male,29.4,0,96,171,82,18,93,36.8,198,"chest pain, shortness of breath",1,5,0.475,0.488,0.639,13.3,50.02
+69.6,Female,40.4,0,138,184,84,29,84,37.5,222,"chest pain, shortness of breath, dizziness, fatigue, headache",3,9,0.895,0.864,1.0,24.9,94.93
+32.8,Female,22.5,0,108,144,81,22,93,38.5,157,"chest pain, cough, fatigue, confusion",3,4,0.511,0.498,0.574,17.6,53.17
+59.1,Female,18.5,0,129,148,79,23,93,38.4,196,"chest pain, fever, cough, dizziness, fatigue, abdominal pain",1,6,0.651,0.682,0.782,20.7,67.69
+78.5,Male,26.3,0,110,166,77,16,94,37.2,179,"chest pain, dizziness, vomiting, abdominal pain",5,7,0.546,0.618,0.882,17.8,66.01
+26.1,Female,34.6,1,109,140,98,29,86,37.7,211,"shortness of breath, cough, confusion, headache",4,6,0.699,0.654,0.944,19.8,72.14
+58.3,Male,39.8,0,109,135,86,20,90,36.7,199,"chest pain, dizziness, fatigue, headache",8,7,0.601,0.661,0.983,15.9,70.1
+59.7,Male,20.6,0,108,134,84,30,88,38.4,142,"shortness of breath, dizziness, fatigue, confusion",1,7,0.683,0.578,0.81,20.3,72.39
+69.1,Female,31.0,0,149,145,97,24,87,37.7,183,"chest pain, shortness of breath, fatigue, confusion, abdominal pain",23,9,0.884,0.838,1.0,27.2,89.08
+32.7,Male,25.2,0,127,146,89,25,87,37.7,143,"chest pain, shortness of breath, headache, abdominal pain",5,8,0.685,0.703,1.0,19.2,79.59
+31.2,Female,27.4,0,128,153,84,22,88,37.3,189,"cough, dizziness, fatigue, headache",9,8,0.705,0.67,1.0,20.8,78.1
+64.4,Male,43.9,0,116,167,87,18,92,37.5,212,"dizziness, fatigue",1,7,0.704,0.714,1.0,19.2,79.63
+60.3,Female,19.0,0,125,141,85,22,91,38.2,193,"chest pain, dizziness, fatigue",8,7,0.65,0.719,0.873,19.7,74.49
+59.5,Male,29.5,1,132,177,87,25,87,37.5,228,"chest pain, fever, cough",5,10,0.826,0.792,1.0,24.2,82.64
+61.2,Male,30.8,0,137,171,86,34,85,38.4,208,"shortness of breath, cough, dizziness, fatigue, confusion, headache",28,8,0.935,0.858,1.0,24.9,95.76
+42.8,Male,34.5,0,133,157,76,27,89,38.2,212,"shortness of breath, dizziness, vomiting, fatigue, confusion, abdominal pain",25,8,0.78,0.706,1.0,22.2,82.17
+59.2,Male,28.6,0,119,164,87,26,91,37.7,184,"dizziness, fatigue",10,7,0.727,0.698,1.0,20.4,78.98
+60.3,Female,29.8,1,167,164,95,33,85,40.0,205,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache, abdominal pain",18,10,1.0,0.933,1.0,30.3,98.92
+42.1,Male,25.7,0,120,107,75,22,92,37.5,130,"shortness of breath, dizziness, confusion, headache",6,4,0.512,0.549,0.78,14.2,58.86
+88.6,Male,29.6,0,126,143,91,29,85,38.3,196,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion",1,7,0.933,0.861,1.0,27.6,93.55
+63.5,Male,25.9,0,106,150,83,20,91,38.8,143,"shortness of breath, cough, vomiting, confusion, headache, abdominal pain",9,3,0.506,0.473,0.631,14.8,53.03
+33.6,Female,31.7,0,112,137,83,20,92,37.8,243,"shortness of breath, fever, cough, headache",2,7,0.631,0.672,0.775,20.5,70.05
+66.8,Male,25.8,0,125,155,103,26,88,37.4,216,"chest pain, shortness of breath, dizziness, fatigue",12,7,0.845,0.844,1.0,24.3,88.7
+37.5,Male,30.3,1,134,145,85,33,85,38.7,185,"shortness of breath, fever, cough, dizziness, vomiting, headache, abdominal pain",1,8,0.925,0.803,1.0,27.0,89.03
+69.2,Male,27.8,0,125,176,98,24,89,37.7,264,"chest pain, dizziness, vomiting, confusion, headache",5,7,0.732,0.735,1.0,22.9,82.03
+75.9,Female,34.8,1,140,185,93,32,84,37.6,257,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",10,9,1.0,1.0,1.0,33.7,99.46
+40.2,Male,27.7,0,106,162,92,27,91,37.4,160,"chest pain, fever, fatigue, confusion, abdominal pain",3,6,0.585,0.554,0.962,16.6,65.24
+72.3,Female,18.5,0,117,157,84,21,93,37.9,181,"fever, dizziness, headache",12,4,0.586,0.648,0.92,18.4,70.88
+62.4,Male,35.6,0,129,149,95,27,93,37.9,271,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",10,8,0.748,0.785,1.0,22.2,82.36
+69.8,Female,22.6,0,148,169,88,26,88,37.7,149,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",27,10,0.835,0.787,1.0,25.4,87.69
+89.1,Male,24.1,1,139,154,78,31,85,38.2,170,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",3,10,1.0,1.0,1.0,29.6,98.29
+50.6,Male,24.4,1,159,155,91,34,85,39.0,161,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",14,8,1.0,0.937,1.0,31.6,95.71
+41.4,Female,36.2,1,131,151,84,31,84,37.9,218,"chest pain, shortness of breath, fever, cough, dizziness, fatigue",20,8,0.93,0.852,1.0,28.4,95.13
+39.0,Male,18.5,0,113,136,87,26,90,36.5,156,"chest pain, dizziness, fatigue",2,8,0.646,0.603,1.0,17.4,75.63
+40.3,Female,45.0,0,110,141,83,27,87,37.1,221,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",14,7,0.812,0.853,1.0,24.2,88.05
+53.6,Male,34.3,0,117,141,97,23,91,37.5,192,"shortness of breath, fever, cough, dizziness, vomiting, headache",5,5,0.624,0.588,0.914,17.8,70.91
+61.1,Male,29.3,1,148,160,86,39,84,39.2,165,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",1,10,1.0,0.998,1.0,35.4,100.0
+60.0,Male,27.7,0,106,141,82,20,92,37.0,206,"dizziness, vomiting, headache",1,8,0.541,0.57,0.765,14.8,61.69
+69.9,Male,29.7,0,146,166,89,29,88,39.3,221,"chest pain, shortness of breath, cough, vomiting, fatigue, confusion, headache",21,8,0.938,0.897,1.0,26.9,91.99
+55.2,Male,31.1,0,138,154,73,29,91,39.2,217,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",2,9,0.774,0.784,0.926,22.5,82.86
+81.2,Female,31.9,0,136,150,90,29,87,37.6,176,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, abdominal pain",1,10,0.965,0.892,1.0,26.0,97.35
+50.2,Female,31.3,1,136,138,84,30,87,38.9,179,"shortness of breath, fever, dizziness, vomiting, fatigue",7,8,0.887,0.812,1.0,26.3,91.04
+95.0,Male,28.5,0,131,160,79,25,89,37.1,188,"chest pain, shortness of breath, dizziness, fatigue, headache",3,8,0.825,0.863,1.0,25.6,89.03
+66.3,Male,26.8,0,134,174,88,23,93,36.8,203,"chest pain, dizziness, confusion, headache",13,10,0.685,0.717,1.0,21.7,80.03
+39.6,Male,27.1,0,129,158,83,24,90,38.7,253,"chest pain, shortness of breath, fever, cough, vomiting, fatigue, confusion, abdominal pain",1,8,0.718,0.717,0.84,22.7,74.98
+35.7,Male,26.8,0,106,145,81,21,92,37.5,159,"chest pain, shortness of breath, headache",1,5,0.455,0.436,0.782,13.6,56.81
+63.7,Female,34.8,0,126,174,93,19,92,37.2,228,"shortness of breath, dizziness, fatigue, confusion, headache",6,9,0.778,0.757,1.0,22.6,86.49
+51.0,Male,31.6,0,118,154,81,29,90,37.7,214,"cough, dizziness, fatigue, headache, abdominal pain",8,7,0.717,0.704,0.871,22.0,73.33
+67.9,Female,18.5,1,132,139,78,28,84,38.5,112,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",12,10,1.0,0.948,1.0,28.8,100.0
+63.5,Male,31.9,1,117,136,87,26,87,38.1,158,"shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache",7,5,0.748,0.731,1.0,21.6,86.34
+53.7,Female,29.2,0,124,160,91,19,92,37.6,234,"chest pain, dizziness, fatigue, headache",28,6,0.715,0.746,1.0,21.0,82.02
+39.8,Female,27.9,0,105,146,81,25,88,36.4,147,"cough, dizziness, headache, abdominal pain",1,7,0.607,0.563,1.0,15.8,73.13
+27.7,Female,25.7,1,119,124,76,32,87,37.6,140,"chest pain, shortness of breath, fever, cough, dizziness, confusion",6,7,0.729,0.704,1.0,20.9,79.0
+47.0,Female,34.7,0,136,146,88,25,91,38.0,263,"chest pain, dizziness, fatigue, confusion, headache",15,10,0.722,0.812,1.0,22.3,82.24
+70.4,Male,33.7,0,134,157,87,35,84,38.5,223,"shortness of breath, cough, dizziness, fatigue, confusion, headache",15,10,0.931,0.887,1.0,26.3,93.45
+58.9,Female,23.4,0,116,137,84,22,90,38.6,140,"shortness of breath, dizziness, fatigue, headache",30,5,0.627,0.545,0.77,18.0,63.7
+32.6,Female,30.4,0,117,137,73,19,92,37.6,169,"shortness of breath, dizziness, confusion, headache",5,10,0.536,0.638,0.767,16.8,60.97
+58.1,Female,22.2,0,135,128,77,25,90,38.3,180,"dizziness, headache, abdominal pain",4,9,0.777,0.837,1.0,23.4,85.87
+61.9,Female,19.7,1,133,166,78,29,86,37.2,200,"chest pain, shortness of breath, dizziness, fatigue, headache",20,6,0.839,0.854,1.0,26.1,90.84
+39.1,Female,24.2,0,105,162,81,20,90,36.4,215,"chest pain, shortness of breath, dizziness, confusion",2,6,0.537,0.566,0.766,17.9,58.86
+57.8,Female,33.2,0,139,147,93,27,87,38.0,174,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",1,10,0.865,0.863,1.0,23.3,90.87
+56.0,Male,33.7,0,132,138,75,25,91,38.4,197,"chest pain, cough, dizziness, vomiting, fatigue, confusion, headache",6,6,0.82,0.834,1.0,24.3,88.09
+34.4,Male,31.1,0,131,149,83,29,85,38.5,172,"shortness of breath, dizziness, fatigue, confusion, headache",2,7,0.958,0.857,1.0,25.7,93.42
+61.4,Male,32.4,0,135,161,89,28,84,36.9,203,"shortness of breath, cough",4,10,0.888,0.839,1.0,23.0,91.72
+65.1,Female,31.1,0,125,147,88,27,85,38.4,190,"chest pain, shortness of breath, fatigue, confusion",30,9,0.812,0.737,1.0,26.2,85.39
+74.5,Female,24.2,0,131,146,76,25,93,37.7,203,"cough, confusion",4,8,0.75,0.792,1.0,23.5,83.0
+74.0,Male,30.6,0,125,153,83,25,91,37.8,193,"cough, dizziness, fatigue, confusion",10,7,0.696,0.73,1.0,19.7,81.88
+30.2,Male,32.8,1,122,147,73,23,90,38.1,169,"chest pain, fever, dizziness",2,6,0.614,0.565,0.927,19.4,70.45
+38.1,Female,32.5,1,114,152,90,27,85,37.2,183,"chest pain, shortness of breath, cough, fatigue",3,5,0.732,0.66,1.0,22.3,82.23
+64.3,Female,35.1,0,142,176,94,27,88,38.5,264,"chest pain, dizziness, fatigue, confusion, headache",4,8,0.874,0.839,1.0,24.5,90.02
+64.2,Female,32.2,0,119,168,85,23,92,37.5,214,"shortness of breath, vomiting, fatigue, confusion",8,8,0.71,0.713,1.0,22.0,79.15
+64.3,Female,30.1,0,139,139,83,35,85,38.1,179,"shortness of breath, cough, dizziness, vomiting, headache, abdominal pain",2,8,0.929,0.861,1.0,26.1,92.57
+95.0,Female,34.4,0,127,170,90,24,92,37.2,284,"chest pain, dizziness, vomiting, fatigue, confusion, abdominal pain",17,10,0.728,0.788,1.0,22.8,85.09
+65.3,Male,27.8,0,120,131,80,22,92,37.1,186,"shortness of breath, fever, cough, fatigue, confusion",11,6,0.587,0.641,0.778,20.8,65.75
+75.4,Male,22.7,0,114,143,85,27,88,38.3,163,"shortness of breath, fatigue",5,5,0.693,0.64,0.828,22.2,71.56
+72.2,Male,27.0,0,153,187,94,26,86,38.1,195,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",1,10,1.0,0.989,1.0,28.9,100.0
+66.7,Male,23.5,1,152,150,78,34,83,39.1,155,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, headache",1,8,1.0,0.934,1.0,31.5,95.34
+49.3,Male,23.9,1,136,148,83,25,87,38.8,155,"chest pain, fever, dizziness, vomiting, confusion, headache",6,6,0.815,0.742,1.0,21.5,85.57
+68.7,Male,27.1,1,131,178,89,29,86,37.1,145,"chest pain, shortness of breath, cough, dizziness, confusion",12,8,0.898,0.815,1.0,25.4,90.23
+41.1,Male,23.2,0,137,122,72,25,92,39.4,116,"cough, vomiting, fatigue, abdominal pain",7,6,0.662,0.563,0.913,20.2,70.23
+50.7,Female,26.2,0,121,145,75,30,86,38.8,183,"chest pain, shortness of breath, cough, vomiting, fatigue, headache, abdominal pain",7,7,0.773,0.712,0.924,24.1,78.1
+46.3,Female,18.5,0,107,124,76,23,88,37.9,143,"shortness of breath, cough, dizziness, confusion, headache",17,7,0.691,0.67,1.0,19.5,76.39
+56.5,Female,29.3,0,112,128,77,25,88,37.8,179,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",1,7,0.703,0.631,1.0,20.4,76.23
+95.0,Male,28.0,0,143,166,98,28,86,39.0,252,"chest pain, cough, dizziness, fatigue, confusion, headache, abdominal pain",6,10,1.0,1.0,1.0,32.1,100.0
+21.4,Male,23.1,0,113,140,94,22,95,38.0,184,"shortness of breath, fatigue, headache",8,5,0.49,0.482,0.735,13.0,57.83
+67.4,Female,32.0,0,124,163,97,26,89,37.2,191,"shortness of breath, cough, dizziness",3,8,0.738,0.697,1.0,21.0,76.86
+26.0,Male,33.6,1,121,176,99,27,90,38.4,232,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",30,8,0.737,0.691,1.0,21.6,77.82
+46.5,Female,18.5,0,147,155,86,31,87,39.0,172,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",6,10,1.0,1.0,1.0,32.9,100.0
+74.6,Male,23.4,0,138,176,90,36,82,37.8,175,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion",1,10,1.0,0.964,1.0,31.1,100.0
+56.2,Female,23.4,0,131,136,74,23,92,39.3,111,"chest pain, fever, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",1,7,0.769,0.663,1.0,21.8,77.74
+35.6,Female,22.4,0,114,152,78,24,92,38.3,168,"chest pain, shortness of breath, cough, dizziness, vomiting, confusion, headache",6,5,0.57,0.532,0.767,16.0,63.54
+42.1,Female,33.0,0,141,157,97,29,87,38.5,200,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",8,7,0.947,0.876,1.0,27.3,94.13
+67.2,Female,26.8,0,135,146,76,27,92,38.7,170,"shortness of breath, cough, dizziness, fatigue",30,8,0.679,0.682,0.993,19.2,78.88
+41.9,Female,26.4,0,104,140,90,22,93,37.2,177,"shortness of breath, fatigue, confusion",8,4,0.518,0.511,0.871,15.6,60.49
+58.9,Female,18.5,0,120,157,90,30,85,38.0,182,"chest pain, dizziness, vomiting, fatigue, confusion, headache",10,8,0.778,0.77,1.0,22.2,81.44
+55.8,Male,31.8,0,137,173,93,26,85,37.6,202,"chest pain, shortness of breath, fatigue, headache",2,8,0.845,0.808,1.0,24.8,87.42
+43.3,Male,20.6,0,109,123,67,22,96,37.7,123,"chest pain, shortness of breath, vomiting, fatigue, headache",1,4,0.499,0.482,0.911,15.1,61.23
+93.6,Female,28.4,0,119,157,88,25,89,37.4,189,"shortness of breath, cough, dizziness, confusion, headache, abdominal pain",7,8,0.714,0.701,1.0,20.8,78.97
+66.4,Male,29.7,1,127,177,97,30,87,38.0,269,"chest pain, shortness of breath, cough, dizziness, fatigue",28,10,0.878,0.844,1.0,27.8,89.68
+18.5,Male,36.2,0,113,150,87,23,93,38.2,185,"chest pain, shortness of breath, vomiting, headache",7,6,0.509,0.425,0.818,15.7,61.04
+58.4,Female,20.1,0,135,151,72,29,86,38.6,152,"fever, cough, dizziness, fatigue, confusion, headache",5,9,0.983,0.935,1.0,27.8,93.97
+43.1,Female,18.5,0,100,158,85,20,94,37.1,132,"chest pain, dizziness",5,6,0.427,0.407,0.877,12.4,53.88
+70.3,Female,29.1,1,132,173,94,23,88,37.8,216,"chest pain, shortness of breath, cough, dizziness, abdominal pain",7,9,0.849,0.792,1.0,24.1,86.88
+40.7,Female,38.8,1,127,154,78,26,88,37.6,217,"shortness of breath, fever, cough, dizziness, vomiting, confusion, headache",1,8,0.807,0.782,1.0,22.7,85.81
+52.9,Male,35.4,0,128,167,87,28,88,37.7,205,"shortness of breath, cough, dizziness, fatigue, confusion, abdominal pain",15,8,0.875,0.784,1.0,24.2,89.96
+64.1,Female,29.3,0,115,172,80,31,86,38.1,232,"chest pain, shortness of breath, fever, dizziness, fatigue, abdominal pain",9,7,0.837,0.826,1.0,25.8,90.01
+70.6,Male,25.1,1,126,154,82,26,87,38.1,206,"chest pain, dizziness, confusion, headache, abdominal pain",5,10,0.94,0.9,1.0,26.7,96.78
+33.4,Male,32.8,0,105,152,85,20,92,36.3,208,headache,7,6,0.45,0.486,0.748,14.4,55.95
+49.0,Female,22.2,0,105,149,84,18,92,37.3,166,"shortness of breath, dizziness, vomiting, confusion",2,5,0.491,0.491,0.808,14.6,55.16
+46.5,Male,30.9,0,137,134,91,28,88,38.6,243,"fever, cough, fatigue, headache",7,7,0.757,0.732,1.0,23.2,78.9
+43.2,Female,31.0,1,142,156,80,33,84,37.7,197,"shortness of breath, cough, dizziness, vomiting, fatigue, headache",10,7,0.958,0.892,1.0,28.7,97.39
+86.8,Male,34.4,1,157,157,96,34,85,38.4,259,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",3,10,1.0,1.0,1.0,33.9,100.0
+62.3,Female,44.6,0,124,182,96,24,91,37.5,271,"chest pain, dizziness, vomiting, fatigue, confusion",19,10,0.737,0.751,1.0,21.8,83.31
+32.3,Male,30.4,0,104,146,82,26,91,37.1,153,"chest pain, shortness of breath, cough, headache, abdominal pain",5,5,0.491,0.463,0.79,14.0,55.6
+71.5,Male,24.9,0,106,148,85,18,93,37.6,164,"shortness of breath, cough, confusion, headache",14,5,0.507,0.512,0.857,16.1,60.68
+93.2,Female,27.8,0,128,167,81,26,90,37.9,205,"chest pain, cough, dizziness, vomiting, fatigue",22,5,0.857,0.842,1.0,25.7,88.77
+73.6,Male,18.5,1,130,162,84,26,90,37.7,181,"chest pain, cough, fatigue, confusion, headache",8,7,0.751,0.798,1.0,23.4,81.94
+27.7,Male,23.8,0,111,119,78,29,88,38.2,143,"chest pain, shortness of breath, fever, cough, fatigue, headache",1,5,0.627,0.589,0.95,18.0,71.77
+46.3,Male,25.5,0,104,146,77,17,94,37.5,201,"chest pain, fatigue, confusion",12,5,0.474,0.534,0.679,13.4,59.68
+77.8,Male,24.9,0,134,168,89,24,90,36.9,172,"chest pain, dizziness, fatigue, confusion",5,9,0.854,0.892,1.0,25.3,89.94
+42.3,Male,28.9,0,103,149,80,27,90,37.2,140,"chest pain, dizziness, fatigue, headache",5,3,0.501,0.465,0.7,14.9,57.58
+63.0,Female,23.1,0,111,144,86,23,92,38.2,197,"chest pain, dizziness, fatigue, confusion, headache",1,8,0.724,0.683,1.0,22.1,77.67
+68.9,Female,34.7,0,135,155,83,30,88,38.3,182,"chest pain, shortness of breath, cough, dizziness, confusion, abdominal pain",11,7,0.824,0.753,0.965,23.0,81.45
+38.3,Male,28.0,0,100,125,82,21,90,37.9,180,"fever, dizziness, vomiting, fatigue, confusion",4,7,0.671,0.7,1.0,19.1,79.81
+53.9,Female,27.9,0,95,137,87,22,92,37.3,137,"chest pain, fatigue, headache",2,6,0.558,0.527,1.0,15.2,67.69
+18.0,Male,26.0,0,118,133,80,23,90,37.1,138,"shortness of breath, dizziness, confusion",26,6,0.671,0.649,0.929,19.5,76.74
+36.6,Male,28.9,0,131,134,84,23,90,38.8,179,"shortness of breath, cough, dizziness, fatigue, confusion",6,7,0.788,0.72,1.0,24.1,86.07
+50.5,Female,33.0,0,114,158,87,21,92,37.7,196,"dizziness, fatigue, confusion",11,6,0.497,0.542,0.854,15.5,61.21
+32.5,Female,22.8,1,113,126,69,28,89,37.7,134,"dizziness, vomiting, fatigue, headache, abdominal pain",7,8,0.766,0.742,1.0,23.0,85.57
+84.4,Male,24.1,1,135,168,84,28,85,37.7,179,"chest pain, shortness of breath, dizziness, fatigue, confusion",1,10,0.898,0.843,1.0,27.0,89.47
+29.3,Female,26.2,1,119,137,87,22,90,37.1,208,"chest pain, shortness of breath, fever, dizziness, fatigue, headache",13,7,0.593,0.644,0.967,18.1,70.24
+47.1,Male,19.9,0,112,122,75,25,94,38.5,165,"dizziness, vomiting, confusion, headache",3,6,0.631,0.617,1.0,19.9,75.92
+57.4,Female,23.1,1,163,132,80,31,85,38.9,151,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache",14,10,0.977,0.899,1.0,27.2,92.95
+80.9,Male,25.1,0,127,149,81,29,88,39.0,163,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, confusion, headache",9,9,0.892,0.822,1.0,25.2,90.34
+29.2,Female,33.2,0,127,144,88,31,89,38.3,219,"shortness of breath, fever, cough, dizziness, fatigue, headache",5,6,0.746,0.683,0.977,23.7,82.14
+75.9,Male,29.6,0,145,180,91,23,91,38.0,220,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",5,7,0.791,0.812,1.0,22.5,88.64
+55.2,Female,29.2,0,112,151,78,19,94,37.3,214,"fever, cough, vomiting, fatigue, confusion",13,6,0.627,0.678,1.0,19.8,74.55
+37.3,Male,33.1,0,113,134,89,23,90,37.2,205,"vomiting, confusion",7,5,0.528,0.513,0.895,17.8,65.36
+63.3,Female,27.2,0,133,143,81,24,90,38.2,172,"shortness of breath, cough, vomiting, fatigue, confusion, headache",10,8,0.787,0.793,1.0,23.7,83.03
+58.6,Male,30.3,0,137,164,86,22,90,37.8,182,"chest pain, dizziness, fatigue, abdominal pain",1,9,0.677,0.676,1.0,19.5,76.0
+44.2,Male,27.4,0,142,146,77,24,89,39.0,223,"chest pain, shortness of breath, cough, fatigue, headache, abdominal pain",18,8,0.779,0.779,1.0,22.1,85.01
+56.3,Female,29.6,0,126,151,99,23,91,37.4,179,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion",3,5,0.693,0.686,1.0,20.1,79.08
+48.1,Female,24.5,0,107,142,86,22,91,36.5,174,"chest pain, shortness of breath, cough, dizziness",8,6,0.536,0.529,0.976,17.0,64.49
+57.0,Female,18.5,0,129,159,79,29,90,38.5,164,"fever, dizziness, vomiting, fatigue, confusion",1,7,0.87,0.817,1.0,25.3,93.03
+66.9,Male,27.2,1,150,147,86,38,81,39.3,150,"chest pain, shortness of breath, fever, cough, fatigue, headache",3,10,1.0,0.943,1.0,31.5,94.53
+83.5,Male,36.5,1,144,165,93,33,85,37.6,246,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",12,8,1.0,1.0,1.0,31.7,100.0
+32.7,Male,33.6,0,117,151,80,32,86,38.0,233,"shortness of breath, fever, confusion, headache",3,8,0.811,0.745,1.0,24.2,85.17
+93.4,Female,33.8,0,135,149,86,26,91,38.8,221,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",28,5,0.842,0.814,1.0,25.2,84.62
+19.9,Female,35.4,0,131,129,80,23,91,37.5,185,"chest pain, dizziness, confusion",8,9,0.663,0.654,1.0,17.7,78.77
+52.3,Male,28.5,1,134,173,106,27,87,38.3,239,"chest pain, shortness of breath, dizziness, vomiting, confusion",26,8,1.0,0.946,1.0,29.4,96.91
+65.6,Female,29.2,0,121,158,93,17,91,37.5,190,"chest pain, dizziness, fatigue",4,10,0.672,0.668,1.0,19.3,77.11
+60.1,Male,24.3,0,120,128,77,28,88,38.0,159,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",1,6,0.692,0.707,1.0,20.5,79.55
+43.8,Female,26.1,0,126,183,99,24,91,37.4,227,"fever, cough, dizziness, fatigue, abdominal pain",9,9,0.708,0.686,1.0,21.1,75.99
+51.3,Male,31.7,0,135,124,77,24,92,38.9,177,"chest pain, fever, dizziness, fatigue, confusion, headache",4,9,0.736,0.76,1.0,23.0,80.08
+46.1,Female,35.2,0,133,177,94,27,88,36.8,212,"chest pain, shortness of breath, dizziness, fatigue, abdominal pain",6,8,0.767,0.788,1.0,22.6,87.44
+44.4,Female,27.2,1,150,150,101,36,84,39.2,176,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",13,10,1.0,0.966,1.0,32.5,98.85
+70.3,Male,25.3,0,130,136,90,24,91,37.9,181,"dizziness, fatigue, headache",10,9,0.772,0.739,1.0,21.5,77.66
+61.4,Male,28.0,0,115,149,85,23,91,38.5,176,"cough, dizziness, fatigue",1,7,0.668,0.611,1.0,18.9,74.44
+42.5,Male,31.6,1,142,184,90,34,85,38.5,242,"chest pain, shortness of breath, fever, cough, dizziness, fatigue",20,8,1.0,0.931,1.0,31.0,97.87
+71.2,Female,19.3,1,114,150,79,25,87,37.4,174,"chest pain, shortness of breath, fever, dizziness",5,7,0.768,0.742,1.0,21.6,83.41
+60.5,Female,18.5,0,121,198,94,28,84,37.5,182,"shortness of breath, cough, fatigue, headache",8,9,0.878,0.775,1.0,24.1,84.39
+69.6,Male,24.7,0,134,157,81,28,89,38.9,144,"chest pain, shortness of breath, cough, dizziness, confusion",2,8,0.825,0.695,1.0,24.6,83.78
+66.3,Male,20.7,0,143,165,96,31,83,39.2,184,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",6,10,1.0,0.978,1.0,30.9,97.67
+40.1,Female,25.0,1,132,143,89,30,84,37.9,200,"cough, dizziness, fatigue, abdominal pain",14,9,1.0,0.995,1.0,31.1,100.0
+44.9,Female,27.1,0,124,150,81,17,92,37.9,174,"chest pain, dizziness, fatigue, abdominal pain",15,5,0.628,0.651,1.0,18.2,75.67
+68.5,Female,25.3,1,147,157,83,32,84,39.1,161,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",5,9,1.0,0.923,1.0,28.7,98.5
+66.0,Male,36.7,0,126,158,93,22,90,37.8,196,"chest pain, shortness of breath, dizziness, headache",12,7,0.705,0.687,1.0,20.9,81.62
+54.6,Female,30.0,0,118,148,80,29,86,37.9,211,"cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",3,8,0.941,0.913,1.0,24.9,99.4
+57.1,Female,29.8,0,121,146,74,22,92,38.3,194,"chest pain, cough, dizziness, fatigue, headache",18,7,0.721,0.706,1.0,22.3,77.72
+78.0,Female,31.7,0,134,140,83,27,86,38.0,176,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",9,8,0.845,0.909,1.0,23.8,90.28
+44.4,Female,21.2,0,118,171,84,18,93,37.9,191,"dizziness, vomiting, headache",16,6,0.545,0.551,0.921,16.6,67.41
+64.8,Female,34.2,0,140,159,85,31,89,37.7,213,"dizziness, vomiting, confusion, headache",6,8,0.89,0.796,1.0,26.2,89.22
+51.4,Male,27.5,0,132,142,77,19,90,38.4,221,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue",3,7,0.671,0.717,0.782,20.7,66.35
+51.1,Female,32.0,1,127,156,99,31,84,37.4,178,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",5,8,0.997,0.913,1.0,26.7,96.87
+74.8,Male,21.6,0,116,160,80,22,92,38.1,159,"chest pain, cough, dizziness, fatigue, confusion, headache",4,5,0.601,0.583,0.875,19.8,70.25
+69.9,Female,18.7,0,136,158,85,24,91,38.7,171,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion",5,10,0.95,0.92,1.0,26.5,92.8
+69.6,Male,32.9,0,128,149,82,25,89,38.3,193,"cough, dizziness, fatigue, confusion, headache",2,8,0.804,0.779,1.0,21.4,85.98
+78.5,Male,30.3,0,134,138,80,23,89,37.8,181,"chest pain, cough, dizziness, vomiting, fatigue, confusion, headache",14,8,0.818,0.793,1.0,24.7,82.71
+55.4,Male,22.6,0,109,131,71,26,92,37.6,154,"shortness of breath, fever, cough, dizziness, vomiting, confusion, headache",1,7,0.64,0.651,1.0,17.7,76.9
+67.3,Male,22.8,0,118,149,78,21,90,37.6,169,"shortness of breath, fatigue",19,8,0.691,0.684,0.961,21.4,77.48
+49.4,Female,34.8,1,132,167,99,25,85,37.3,262,"shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",2,10,1.0,1.0,1.0,31.7,98.86
+60.8,Female,20.9,0,121,127,79,19,92,37.4,112,"shortness of breath, dizziness, fatigue",23,7,0.553,0.549,1.0,16.2,67.74
+52.7,Male,37.9,0,118,172,101,26,89,37.7,214,"chest pain, cough, dizziness, fatigue",30,8,0.689,0.636,1.0,20.0,73.65
+56.7,Male,22.6,0,136,151,77,32,83,39.4,148,"chest pain, shortness of breath, cough, vomiting, fatigue, confusion, headache",5,9,0.953,0.862,1.0,26.6,96.0
+65.7,Male,31.8,0,116,172,83,29,86,37.4,216,"cough, vomiting, fatigue, confusion, headache",30,8,0.783,0.775,1.0,22.7,82.99
+40.3,Male,26.0,0,120,133,80,21,93,37.6,178,"fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",17,8,0.588,0.696,1.0,16.8,75.41
+92.7,Male,31.6,1,133,176,96,25,88,37.8,190,"chest pain, shortness of breath, dizziness, fatigue, headache",1,10,0.858,0.81,1.0,25.7,86.72
+36.9,Female,24.7,1,111,140,90,23,91,37.9,171,"shortness of breath, fatigue",23,7,0.61,0.557,1.0,17.0,75.52
+33.1,Female,27.0,0,119,150,73,23,91,38.1,173,"dizziness, fatigue, confusion, headache",1,5,0.565,0.507,0.7,17.3,61.93
+75.8,Male,28.2,0,123,161,101,28,90,37.2,224,"shortness of breath, fever, cough",2,7,0.729,0.744,1.0,22.8,85.66
+69.2,Male,22.0,0,127,159,88,25,91,38.4,226,"shortness of breath, fever, vomiting, fatigue, abdominal pain",12,10,0.734,0.744,1.0,21.7,86.05
+66.2,Female,32.4,0,139,166,86,31,88,37.8,211,"shortness of breath, dizziness, fatigue, confusion, abdominal pain",1,8,0.906,0.884,1.0,26.9,91.47
+66.3,Male,24.9,0,126,166,93,31,85,37.6,144,"shortness of breath, cough, dizziness, headache",1,9,0.888,0.777,1.0,23.9,87.07
+54.8,Female,26.6,0,117,153,83,22,91,38.5,146,"chest pain, shortness of breath, cough",25,7,0.572,0.526,1.0,16.8,72.7
+38.8,Male,22.0,0,134,128,72,26,88,39.4,148,"fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",30,9,0.909,0.808,1.0,26.1,90.32
+56.4,Female,18.5,0,105,150,88,21,92,37.1,196,"chest pain, shortness of breath",16,7,0.606,0.625,1.0,17.6,74.67
+42.8,Female,26.9,0,108,155,73,25,88,37.6,156,"chest pain, shortness of breath, dizziness, vomiting, confusion, headache",5,6,0.659,0.648,0.832,19.2,69.49
+72.6,Male,42.5,0,155,165,75,27,90,39.1,226,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",30,10,0.924,0.831,1.0,26.3,90.7
+52.4,Female,32.7,0,121,135,74,23,91,38.2,174,"shortness of breath, cough",1,3,0.57,0.528,0.762,18.0,63.19
+40.1,Male,27.9,0,124,141,83,24,87,38.5,186,"shortness of breath, fatigue, confusion, headache, abdominal pain",30,6,0.778,0.684,0.969,21.8,76.77
+49.2,Male,26.4,1,141,154,81,33,88,38.7,143,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",3,9,0.887,0.726,1.0,24.0,88.81
+62.4,Male,28.1,0,136,151,86,29,85,37.9,151,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",18,9,0.915,0.856,1.0,25.9,93.34
+44.9,Female,31.3,0,136,163,89,20,91,38.2,215,"chest pain, shortness of breath, fatigue, headache",14,6,0.721,0.709,1.0,21.6,79.02
+40.2,Female,20.9,0,125,152,88,26,87,38.9,175,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",30,8,0.69,0.612,1.0,20.7,76.04
+59.4,Female,34.7,1,121,172,80,25,88,37.3,220,"shortness of breath, cough, dizziness, fatigue, confusion, headache",22,8,0.9,0.925,1.0,26.3,94.12
+59.4,Male,32.3,0,128,133,83,28,89,37.3,174,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache, abdominal pain",20,8,0.914,0.967,1.0,24.4,96.04
+45.9,Male,32.3,0,142,161,85,27,89,39.1,235,"chest pain, cough, dizziness, vomiting, fatigue, confusion",14,8,0.876,0.834,1.0,27.6,91.41
+46.5,Male,30.6,0,128,135,70,29,88,39.4,218,"chest pain, shortness of breath, cough, vomiting, fatigue, confusion, headache, abdominal pain",24,7,0.794,0.795,0.952,23.9,82.52
+59.2,Male,28.1,0,129,148,88,26,87,38.1,206,"shortness of breath, cough, dizziness, confusion, headache",14,5,0.736,0.744,1.0,22.0,87.15
+28.9,Male,32.0,1,130,137,80,26,88,38.2,163,"chest pain, dizziness, vomiting, fatigue, confusion, headache",1,7,0.808,0.748,1.0,25.2,84.36
+29.7,Male,31.6,0,103,143,96,19,92,37.5,259,"cough, vomiting, fatigue, confusion",12,8,0.521,0.566,0.777,17.8,60.88
+42.1,Female,25.9,1,151,120,82,26,88,38.4,145,"chest pain, cough, dizziness, vomiting, fatigue, confusion",1,8,0.841,0.828,1.0,24.1,92.34
+51.2,Male,24.6,1,117,165,96,26,87,36.8,197,"chest pain, shortness of breath",17,9,0.728,0.665,1.0,19.4,75.43
+60.6,Female,28.6,1,132,146,85,27,86,37.5,165,"shortness of breath, dizziness, headache, abdominal pain",1,8,0.797,0.794,1.0,21.0,89.57
+81.6,Male,37.3,0,136,198,97,28,87,38.2,271,"chest pain, shortness of breath, fatigue, confusion, abdominal pain",30,10,1.0,1.0,1.0,32.3,100.0
+70.4,Male,20.6,0,118,146,79,20,92,38.0,176,"fatigue, headache",4,6,0.618,0.608,0.97,18.2,71.0
+52.1,Male,19.2,0,111,130,84,25,88,37.7,133,"cough, fatigue, confusion",1,8,0.712,0.633,1.0,20.1,75.26
+54.7,Female,29.0,0,122,131,83,20,92,37.8,162,"shortness of breath, vomiting, confusion",20,6,0.549,0.524,1.0,15.1,65.14
+37.0,Female,28.3,0,116,153,91,18,91,36.7,236,"shortness of breath, dizziness, fatigue",1,10,0.567,0.558,1.0,17.7,68.74
+54.7,Female,29.0,0,135,126,83,32,88,39.2,170,"shortness of breath, fever, cough, dizziness, fatigue, confusion",6,7,0.95,0.895,1.0,28.6,95.4
+49.8,Female,29.5,0,117,161,71,26,91,37.1,138,"shortness of breath, fever, fatigue",9,6,0.62,0.591,1.0,19.3,73.77
+60.8,Female,26.7,0,125,141,85,28,89,38.0,170,"chest pain, cough, vomiting, fatigue, confusion",3,6,0.732,0.731,0.929,21.1,79.61
+40.1,Male,36.9,1,149,164,103,35,84,39.1,285,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion",12,9,1.0,1.0,1.0,34.5,98.98
+64.3,Male,18.5,0,133,137,88,29,88,38.2,155,"shortness of breath, fever, cough, fatigue, headache",10,7,0.88,0.803,1.0,25.0,91.99
+82.6,Female,23.0,1,147,170,101,35,86,38.7,241,"shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",30,10,1.0,1.0,1.0,33.4,100.0
+53.0,Female,27.4,0,119,153,89,20,90,37.3,210,"chest pain, shortness of breath, fatigue, confusion",1,5,0.695,0.719,0.922,21.2,80.01
+62.2,Female,18.5,1,125,171,87,35,82,37.2,167,"chest pain, shortness of breath, dizziness, vomiting, fatigue, headache",1,9,0.937,0.831,1.0,25.6,91.68
+67.4,Male,26.9,0,129,140,72,22,90,39.0,156,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",7,6,0.801,0.776,1.0,24.9,86.35
+47.8,Male,38.0,0,126,156,105,32,88,37.4,235,"chest pain, shortness of breath, fever, dizziness, fatigue",6,10,0.935,0.875,1.0,27.3,94.75
+59.0,Male,28.1,1,111,166,78,25,87,37.8,171,"chest pain, shortness of breath, dizziness, fatigue, headache",4,5,0.764,0.781,1.0,21.7,87.21
+55.2,Female,29.4,0,121,139,87,39,85,39.3,182,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",4,9,1.0,0.87,1.0,30.1,95.42
+56.8,Male,20.4,1,120,124,76,30,89,37.6,156,"shortness of breath, dizziness, confusion, headache",5,8,0.753,0.769,1.0,20.6,81.25
+41.1,Male,24.3,0,127,149,73,23,91,37.3,144,"fever, dizziness, headache, abdominal pain",17,3,0.571,0.532,0.837,17.4,66.21
+55.4,Female,25.7,0,116,151,75,24,91,37.9,207,"chest pain, shortness of breath, dizziness, fatigue",1,6,0.721,0.729,1.0,21.2,81.54
+64.0,Male,26.1,0,119,154,88,29,85,38.0,189,"fever, dizziness, fatigue, confusion, headache, abdominal pain",2,7,0.852,0.763,1.0,24.0,84.75
+81.1,Female,35.7,0,121,145,83,23,90,37.2,174,"shortness of breath, cough, dizziness, confusion",9,7,0.711,0.669,1.0,23.1,79.92
+72.3,Male,31.3,0,145,145,85,23,89,37.5,239,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",1,8,0.923,1.0,1.0,26.0,100.0
+93.8,Female,21.3,0,127,154,92,26,87,37.6,168,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, confusion, abdominal pain",10,6,0.927,0.875,1.0,26.7,91.94
+41.2,Male,29.5,0,136,126,76,26,90,39.0,162,"shortness of breath, fever, cough, dizziness, confusion, headache",3,10,0.779,0.752,0.93,23.1,79.84
+70.7,Male,31.0,0,135,179,100,27,85,38.2,243,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",6,9,0.996,0.935,1.0,28.3,97.96
+58.3,Male,34.8,1,130,156,91,27,90,37.7,200,"chest pain, fatigue, headache, abdominal pain",5,8,0.863,0.833,1.0,24.7,90.86
+94.4,Male,37.5,1,140,175,91,30,87,37.8,216,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",5,10,1.0,0.999,1.0,28.1,99.81
+40.5,Female,21.9,0,132,136,80,29,87,38.6,178,"chest pain, shortness of breath, cough, vomiting",20,5,0.866,0.776,1.0,27.5,90.18
+39.9,Female,23.1,0,110,141,82,22,92,37.7,162,"shortness of breath, confusion, abdominal pain",22,5,0.521,0.509,0.884,15.3,63.15
+44.2,Female,20.5,0,99,140,75,18,92,37.4,105,"dizziness, headache",4,4,0.404,0.367,0.583,11.9,46.67
+18.0,Female,26.6,0,125,130,85,24,90,37.0,143,"chest pain, fever, dizziness, fatigue, confusion, headache",5,6,0.686,0.694,1.0,21.3,76.83
+45.5,Male,30.8,1,121,157,90,34,83,37.1,242,"chest pain, shortness of breath, cough, fatigue, abdominal pain",1,9,0.893,0.85,1.0,24.9,88.78
+41.3,Female,33.9,1,139,154,87,26,87,38.3,173,"shortness of breath, dizziness",10,8,0.913,0.831,1.0,27.2,90.77
+57.7,Male,27.5,0,140,173,89,29,87,38.9,202,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",10,7,0.899,0.801,1.0,27.0,87.3
+61.2,Male,26.1,0,110,143,81,24,88,37.5,193,"dizziness, fatigue, confusion, headache",1,8,0.691,0.709,1.0,18.3,79.72
+88.8,Male,28.9,0,129,187,99,28,90,38.2,214,"shortness of breath, fever, dizziness, vomiting, fatigue, headache",2,9,0.796,0.775,1.0,23.3,81.07
+72.1,Female,23.0,1,109,158,90,26,88,37.3,162,"chest pain, dizziness, fatigue, confusion, headache, abdominal pain",2,7,0.74,0.71,1.0,22.0,80.01
+44.6,Male,40.5,0,132,160,85,24,91,37.6,194,"fever, dizziness, headache",1,9,0.717,0.673,1.0,21.0,78.3
+38.8,Male,18.5,0,102,151,86,18,90,37.4,138,"chest pain, shortness of breath, cough, fatigue, confusion",7,5,0.443,0.394,0.745,13.3,49.77
+63.9,Female,29.1,0,119,150,81,27,88,37.9,193,"shortness of breath, dizziness",25,7,0.791,0.714,1.0,22.2,82.45
+31.2,Male,40.1,0,146,171,101,26,90,38.7,276,"chest pain, shortness of breath, cough, vomiting, fatigue, confusion, headache, abdominal pain",22,10,0.952,0.912,1.0,28.0,95.45
+88.0,Male,28.0,0,127,169,85,29,86,37.6,221,"shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",7,8,0.99,0.993,1.0,28.4,100.0
+76.2,Female,26.9,1,136,148,88,27,87,38.6,177,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",5,7,0.894,0.778,1.0,27.6,87.01
+46.6,Male,25.9,0,129,156,77,23,91,38.2,200,"chest pain, shortness of breath, cough, dizziness, confusion, headache",5,7,0.746,0.735,1.0,21.3,82.62
+24.2,Female,26.9,0,119,119,66,25,89,39.1,136,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",7,5,0.632,0.575,0.714,18.3,65.05
+79.4,Female,36.2,0,125,163,92,27,89,37.3,200,"chest pain, shortness of breath, dizziness, vomiting, fatigue, headache",5,7,0.828,0.879,1.0,24.3,89.42
+52.9,Female,18.5,0,116,149,77,23,91,37.1,144,"shortness of breath, cough, headache",1,6,0.619,0.65,1.0,16.4,73.27
+77.3,Female,37.2,0,119,152,82,24,90,37.8,193,"dizziness, confusion",9,9,0.809,0.796,1.0,24.1,83.97
+26.3,Female,19.5,0,120,134,86,30,87,38.2,115,"shortness of breath, fever, cough, headache",2,7,0.628,0.525,0.947,16.4,73.07
+44.2,Female,26.4,0,121,138,92,26,89,37.8,153,"dizziness, fatigue, confusion",1,6,0.73,0.659,1.0,20.1,79.14
+55.1,Male,25.4,0,122,141,88,23,90,37.1,143,"chest pain, dizziness",1,8,0.665,0.653,1.0,18.0,75.59
+55.8,Male,31.5,0,116,148,76,22,89,37.3,179,"chest pain, fever, cough, dizziness",2,6,0.588,0.624,1.0,15.5,76.47
+46.9,Male,18.5,0,133,138,90,24,91,39.6,152,"chest pain, shortness of breath, fever, dizziness, confusion, headache",8,7,0.882,0.768,1.0,27.6,88.76
+66.2,Female,30.8,1,143,142,79,30,87,37.7,151,"chest pain, dizziness, fatigue, confusion, headache",3,9,0.9,0.832,1.0,25.7,96.05
+35.8,Female,40.1,0,124,131,86,22,91,38.7,254,"dizziness, vomiting, headache",1,8,0.677,0.681,0.8,22.4,68.7
+52.4,Male,19.8,0,108,142,78,22,91,37.3,134,"chest pain, fatigue, confusion, headache",1,5,0.492,0.48,0.739,15.2,55.79
+57.2,Female,29.1,0,109,136,93,23,91,37.5,216,"fatigue, headache",1,6,0.594,0.607,0.842,18.0,64.5
+64.3,Female,24.0,0,111,164,94,28,88,37.4,188,"chest pain, shortness of breath, confusion",29,7,0.699,0.683,1.0,20.5,78.19
+67.8,Male,30.6,0,140,157,84,25,88,39.4,249,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",5,7,0.919,0.877,1.0,28.9,92.82
+34.8,Female,28.1,0,124,145,82,27,88,37.3,200,"chest pain, shortness of breath, cough, dizziness, confusion, headache, abdominal pain",1,7,0.669,0.664,1.0,21.5,75.76
+27.4,Male,24.2,0,107,148,83,28,88,37.6,148,"chest pain, shortness of breath, vomiting, fatigue, abdominal pain",7,5,0.649,0.611,0.999,17.3,74.38
+78.0,Male,30.9,0,128,163,85,24,89,37.6,185,"shortness of breath, dizziness, fatigue, headache",2,8,0.732,0.705,1.0,23.7,79.61
+61.0,Female,38.8,0,127,171,92,27,88,37.8,250,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",10,8,0.732,0.733,1.0,20.9,81.06
+41.5,Female,26.9,1,121,163,85,30,88,38.6,209,"chest pain, fever, cough, dizziness, vomiting, fatigue, abdominal pain",1,9,0.796,0.713,1.0,23.1,81.73
+82.9,Male,32.3,1,128,163,92,27,87,38.4,222,"shortness of breath, fever, dizziness, fatigue, confusion, headache",30,7,0.918,0.863,1.0,26.8,95.49
+57.1,Female,20.2,0,130,148,86,26,90,38.8,123,"shortness of breath, dizziness, fatigue",28,7,0.76,0.648,1.0,22.1,77.64
+76.2,Female,22.3,0,128,168,77,27,89,38.3,167,"chest pain, dizziness, fatigue, headache",9,7,0.787,0.793,1.0,24.5,85.68
+56.2,Male,30.8,1,130,180,100,29,86,37.5,228,"chest pain, shortness of breath, dizziness, headache, abdominal pain",13,9,0.911,0.849,1.0,27.2,89.49
+92.1,Female,36.9,1,150,187,92,37,83,38.0,208,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",6,10,1.0,1.0,1.0,31.7,98.33
+86.6,Male,30.1,0,147,173,95,33,84,38.8,221,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",30,9,1.0,1.0,1.0,33.8,98.54
+50.5,Male,26.1,0,130,143,84,27,88,37.8,174,"chest pain, shortness of breath, fever, dizziness, fatigue",4,9,0.747,0.684,1.0,21.9,80.14
+72.5,Female,28.0,0,113,156,89,18,93,37.1,171,"shortness of breath, dizziness, fatigue, confusion, headache",2,8,0.642,0.636,1.0,18.1,75.1
+66.6,Female,20.5,0,132,142,86,27,87,37.7,162,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",1,7,0.856,0.796,1.0,25.1,85.88
+79.6,Female,31.6,0,121,164,84,23,90,37.9,252,"chest pain, shortness of breath, fever, dizziness, fatigue, headache",3,9,0.73,0.808,0.994,22.4,82.41
+37.6,Female,33.3,0,125,140,86,20,92,37.3,232,"shortness of breath, fever, dizziness, confusion, headache",9,8,0.727,0.761,1.0,21.1,79.96
+67.3,Female,25.3,0,137,121,90,27,87,37.8,170,"cough, dizziness, confusion",3,8,0.853,0.866,1.0,26.0,88.02
+74.1,Male,25.2,0,122,178,89,22,92,37.8,242,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",15,10,0.664,0.787,0.885,20.9,78.99
+23.3,Female,29.6,0,117,140,81,24,94,37.6,204,"chest pain, cough, fatigue",5,7,0.588,0.581,0.902,17.1,65.24
+33.7,Male,25.4,0,128,127,84,23,90,38.0,167,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",21,5,0.662,0.634,0.911,18.9,72.99
+18.3,Male,27.6,0,92,143,84,15,94,36.6,153,"headache, abdominal pain",6,6,0.286,0.315,0.458,10.0,38.05
+50.2,Male,40.6,0,129,155,93,27,90,37.4,264,"chest pain, shortness of breath, cough, dizziness, fatigue",12,9,0.897,0.897,1.0,27.6,95.21
+67.9,Male,26.5,0,120,168,89,24,91,37.5,201,"shortness of breath, dizziness, fatigue",8,7,0.649,0.671,1.0,19.9,76.96
+82.0,Female,25.8,1,139,151,87,32,85,37.8,167,"chest pain, shortness of breath, cough, dizziness, fatigue",17,9,1.0,0.953,1.0,28.5,98.55
+56.3,Male,24.1,0,124,122,73,24,92,37.9,165,"chest pain, fever, dizziness, fatigue, confusion, headache",1,4,0.617,0.648,0.926,17.5,73.36
+84.3,Male,32.5,0,116,173,82,26,89,37.1,191,"chest pain, shortness of breath, fever, cough, dizziness, confusion, headache",1,7,0.782,0.775,1.0,22.6,85.29
+30.2,Female,26.9,0,113,138,81,25,91,38.0,143,"shortness of breath, cough, dizziness, headache",9,5,0.639,0.59,0.782,18.2,69.54
+24.3,Female,24.1,0,117,142,78,26,89,37.3,144,"shortness of breath, fever, confusion",10,5,0.639,0.57,0.879,18.3,68.74
+54.0,Male,35.9,1,119,157,92,26,89,36.6,205,"shortness of breath, fever, dizziness, fatigue, headache",5,6,0.628,0.641,1.0,18.6,76.36
+61.9,Female,36.5,0,135,166,95,29,87,37.6,193,"chest pain, dizziness, vomiting, fatigue",4,8,0.731,0.723,1.0,20.9,80.29
+54.4,Female,24.4,0,108,123,84,21,93,36.9,167,,2,5,0.455,0.502,0.722,14.4,58.7
+18.0,Female,18.5,0,99,138,93,24,89,37.5,145,"chest pain, shortness of breath, cough, dizziness",1,6,0.509,0.463,0.808,14.0,58.17
+53.4,Female,34.0,0,128,155,92,27,89,37.6,192,"chest pain, shortness of breath, cough, dizziness, fatigue",25,9,0.743,0.699,1.0,20.5,77.47
+31.5,Male,23.9,1,111,126,84,24,89,37.9,207,"shortness of breath, dizziness, vomiting",3,6,0.649,0.69,0.839,18.7,71.96
+67.1,Male,32.7,1,132,175,96,34,82,37.0,227,"chest pain, shortness of breath, cough, fatigue, headache",11,9,0.978,0.95,1.0,28.7,99.17
+61.6,Male,18.5,0,115,164,85,22,92,37.4,144,"shortness of breath, fatigue, confusion",13,8,0.674,0.682,1.0,20.1,80.65
+38.1,Female,33.4,0,133,144,89,24,90,37.5,215,"shortness of breath, dizziness, fatigue, headache",1,8,0.796,0.866,1.0,21.9,85.85
+45.8,Female,20.7,1,129,140,74,30,86,39.1,123,"chest pain, shortness of breath, cough, dizziness",1,8,0.843,0.677,1.0,24.6,80.53
+35.9,Female,32.4,1,129,134,86,26,87,38.2,216,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",4,6,0.774,0.722,1.0,23.0,83.63
+53.9,Female,28.1,0,129,151,78,28,87,38.1,176,"chest pain, dizziness, confusion",10,8,0.86,0.803,1.0,24.1,89.43
+72.2,Female,22.3,0,134,164,81,27,88,38.0,217,"chest pain, shortness of breath, dizziness, fatigue, confusion",3,8,0.832,0.851,1.0,24.6,85.97
+37.3,Male,25.6,0,126,149,87,26,89,38.7,182,"dizziness, vomiting, fatigue, confusion, headache",1,6,0.804,0.722,0.974,22.5,82.41
+64.1,Female,32.1,1,129,166,88,22,91,37.2,189,"chest pain, shortness of breath, fatigue, confusion, headache",3,7,0.709,0.694,1.0,20.7,78.6
+45.5,Male,28.6,0,137,155,95,28,90,39.3,248,"shortness of breath, fever, cough, dizziness, fatigue, confusion",1,8,0.894,0.847,1.0,25.7,92.81
+40.7,Female,31.5,0,116,148,88,21,90,37.5,219,"shortness of breath, fever, dizziness, vomiting, headache",2,8,0.729,0.682,1.0,21.7,78.78
+53.1,Female,39.9,0,140,164,94,29,89,38.5,225,"chest pain, fever, cough, dizziness, fatigue, confusion",4,6,0.908,0.853,1.0,26.4,91.04
+36.4,Female,18.6,0,106,151,83,20,92,37.0,206,"chest pain, shortness of breath, fatigue",1,8,0.398,0.463,0.645,13.9,49.38
+45.0,Male,37.7,0,142,163,84,27,88,36.9,264,"chest pain, shortness of breath, cough, dizziness, confusion",17,8,0.838,0.882,1.0,25.1,87.2
+33.4,Male,28.6,0,120,112,72,23,92,38.3,176,"dizziness, vomiting, headache, abdominal pain",2,8,0.663,0.723,1.0,20.8,81.99
+90.4,Male,22.6,0,143,160,68,25,86,37.5,120,"shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",8,8,0.895,0.88,1.0,24.0,94.08
+55.6,Female,20.0,0,110,134,71,22,94,36.9,145,"shortness of breath, fatigue, headache, abdominal pain",7,6,0.514,0.512,0.731,15.4,56.44
+42.4,Female,26.9,0,124,160,83,29,91,38.7,214,"vomiting, confusion, abdominal pain",27,10,0.951,0.861,1.0,28.5,91.65
+58.9,Male,33.5,0,113,147,78,22,92,37.6,200,"shortness of breath, dizziness, fatigue, confusion, headache",1,7,0.698,0.686,1.0,22.0,76.42
+53.0,Female,27.2,0,103,121,73,23,91,37.9,157,"cough, dizziness, fatigue, confusion",1,3,0.533,0.509,0.701,15.0,58.8
+51.0,Male,37.1,1,150,183,89,39,82,38.9,234,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",26,10,1.0,0.974,1.0,31.7,97.21
+66.1,Female,19.3,0,135,132,67,30,89,38.8,146,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",16,7,0.844,0.797,1.0,25.1,87.18
+68.6,Female,27.9,0,128,159,99,24,88,37.9,209,"chest pain, shortness of breath, fever, dizziness, fatigue, headache",2,9,0.799,0.827,1.0,25.1,83.39
+45.5,Female,20.5,0,108,119,74,25,90,37.6,118,"shortness of breath, cough, dizziness, fatigue, confusion, headache",1,5,0.549,0.503,0.894,16.1,64.98
+44.6,Female,30.2,0,134,148,81,24,91,38.7,222,"chest pain, shortness of breath, cough, dizziness, fatigue",26,9,0.827,0.8,1.0,23.8,88.21
+50.0,Male,33.3,0,134,151,86,28,85,38.6,237,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion",2,9,0.953,0.896,1.0,27.4,94.62
+18.0,Female,25.5,0,101,144,71,20,94,36.9,120,dizziness,10,4,0.346,0.35,0.735,10.6,46.79
+27.7,Female,18.5,0,114,117,71,27,86,38.5,125,"chest pain, fever, cough, vomiting, fatigue",22,5,0.618,0.524,0.982,18.2,71.49
+79.6,Female,29.2,0,116,169,88,23,90,37.8,190,"shortness of breath, cough, dizziness, fatigue, headache, abdominal pain",2,7,0.75,0.751,1.0,22.0,82.86
+84.6,Female,30.6,0,147,157,83,25,89,38.7,242,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",28,9,0.884,0.912,1.0,26.0,94.27
+50.5,Male,30.4,0,114,133,77,24,89,36.8,174,"cough, dizziness, fatigue, headache, abdominal pain",4,6,0.603,0.567,0.847,18.7,64.2
+65.4,Male,35.4,0,142,147,87,28,90,39.1,216,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",19,8,0.834,0.821,1.0,24.6,88.74
+60.6,Male,21.6,0,143,149,96,36,84,38.5,178,"chest pain, shortness of breath, fever, vomiting, fatigue, confusion, headache",6,7,1.0,0.97,1.0,30.5,99.48
+95.0,Male,32.1,0,140,148,86,28,89,37.9,217,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",1,9,0.812,0.888,1.0,22.3,91.5
+75.2,Female,35.2,0,129,162,80,30,86,37.1,219,"chest pain, shortness of breath, cough, vomiting, confusion, headache",13,8,0.908,0.883,1.0,27.2,92.88
+52.7,Male,18.5,1,113,122,75,30,88,37.8,139,"shortness of breath, fatigue, headache",1,6,0.772,0.654,1.0,21.2,80.32
+37.8,Female,29.9,1,125,167,88,25,86,37.7,183,"chest pain, shortness of breath, cough, vomiting, fatigue",28,8,0.801,0.773,1.0,24.8,84.12
+26.1,Female,25.0,0,96,151,87,24,90,36.5,214,"chest pain, shortness of breath, dizziness, confusion, headache",5,7,0.657,0.652,0.795,20.2,72.68
+58.7,Male,27.5,0,135,145,84,31,90,38.7,204,"chest pain, shortness of breath, fever, dizziness, confusion, headache",1,7,0.781,0.717,0.956,22.3,76.72
+41.4,Female,30.1,0,132,144,78,25,88,37.9,182,"chest pain, shortness of breath, cough, dizziness, headache",2,7,0.73,0.75,1.0,21.5,82.75
+29.4,Male,25.1,0,116,113,67,29,89,38.1,170,"vomiting, fatigue, confusion",21,6,0.654,0.652,0.763,21.6,68.57
+43.4,Female,23.9,0,121,111,90,25,89,38.4,154,"shortness of breath, dizziness, vomiting, headache",3,5,0.678,0.634,0.879,19.4,72.12
+35.5,Male,28.2,1,121,169,82,23,87,39.3,205,"dizziness, confusion, abdominal pain",23,7,0.853,0.794,0.991,27.1,87.01
+85.4,Male,21.5,0,116,163,90,21,92,37.4,182,"chest pain, shortness of breath, vomiting, fatigue",1,8,0.589,0.641,1.0,18.1,72.68
+70.9,Male,21.5,1,148,153,87,32,87,38.2,195,"shortness of breath, fever, dizziness, fatigue, confusion, headache",6,9,0.93,0.886,1.0,28.0,94.71
+54.9,Male,32.1,0,149,134,87,32,85,39.2,199,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",25,10,0.99,0.862,1.0,29.0,93.84
+81.6,Male,21.1,0,115,143,85,25,90,37.3,173,"cough, dizziness",1,7,0.677,0.645,1.0,19.8,76.7
+56.4,Female,32.0,0,113,163,77,21,90,37.3,184,"cough, dizziness, fatigue, confusion",3,6,0.633,0.583,0.786,20.8,67.09
+39.5,Male,30.8,0,102,155,74,16,94,37.1,212,"chest pain, dizziness, vomiting, fatigue, confusion, headache",23,4,0.453,0.497,0.812,15.0,55.47
+82.4,Female,18.5,0,120,146,77,25,92,39.3,168,"chest pain, fatigue, confusion, headache",10,8,0.724,0.669,0.967,21.8,79.04
+64.7,Male,23.9,0,137,145,88,26,88,37.5,153,"cough, dizziness, fatigue, confusion, headache",10,9,0.808,0.789,1.0,23.5,86.7
+36.3,Male,35.2,0,148,178,98,31,87,37.9,258,"shortness of breath, fever, cough, fatigue, confusion, headache",27,9,0.887,0.906,1.0,26.0,91.04
+51.6,Male,22.1,1,129,149,86,29,88,37.8,130,"chest pain, shortness of breath, dizziness",4,7,0.764,0.662,1.0,21.4,78.02
+39.2,Female,25.2,0,117,137,73,20,91,38.2,192,"shortness of breath, cough, dizziness, vomiting, fatigue, headache",20,5,0.506,0.507,0.544,17.3,50.14
+30.1,Female,30.8,1,115,137,85,23,91,37.9,151,"shortness of breath, cough, dizziness, vomiting, headache",6,6,0.657,0.655,1.0,18.7,76.2
+71.7,Male,32.7,1,127,150,94,33,84,38.0,202,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",12,8,0.99,0.915,1.0,27.4,96.88
+89.4,Female,26.5,0,127,146,88,22,89,38.2,219,"shortness of breath, cough, dizziness, fatigue, headache",2,7,0.82,0.867,1.0,23.5,91.6
+29.8,Female,24.4,0,95,133,94,21,93,37.0,154,"shortness of breath, dizziness, fatigue",16,5,0.431,0.387,0.804,12.7,52.22
+65.1,Female,36.5,0,134,170,101,25,88,37.2,187,"chest pain, dizziness, confusion",12,10,0.778,0.742,1.0,21.2,81.6
+43.3,Male,38.4,1,142,152,98,24,91,37.8,223,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",3,9,0.869,0.83,1.0,24.3,91.0
+46.2,Male,33.9,0,130,155,92,24,91,37.2,186,"chest pain, dizziness, vomiting, headache",7,9,0.683,0.687,1.0,18.4,75.97
+44.3,Female,28.5,0,109,137,86,18,93,37.6,166,"fatigue, headache",3,2,0.451,0.424,0.738,14.9,51.31
+39.4,Female,23.2,0,106,134,72,20,93,36.9,152,"chest pain, confusion",7,6,0.432,0.5,0.673,13.1,50.88
+55.9,Female,23.0,0,134,164,85,25,90,37.9,239,"chest pain, cough, fatigue",30,8,0.722,0.762,1.0,22.1,75.73
+40.0,Male,31.1,0,130,131,86,27,90,38.3,191,"fatigue, headache",1,6,0.755,0.707,0.967,21.4,81.54
+59.9,Male,30.5,0,128,166,81,26,88,39.1,182,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion",30,9,0.861,0.783,1.0,24.4,89.83
+54.1,Female,36.4,0,125,133,85,24,89,38.1,208,"shortness of breath, cough, dizziness, vomiting, confusion, headache",1,5,0.807,0.798,0.995,23.1,87.88
+50.7,Female,31.9,1,120,151,81,27,89,38.5,153,"shortness of breath, fever, dizziness, fatigue, headache",5,7,0.72,0.698,1.0,20.6,83.53
+38.7,Female,19.0,0,125,121,71,25,88,38.8,148,"cough, dizziness, vomiting, fatigue, confusion, headache",5,5,0.656,0.622,0.831,17.6,72.83
+44.6,Male,34.3,1,136,170,96,33,87,38.0,245,"shortness of breath, fatigue, abdominal pain",4,9,0.888,0.841,1.0,27.5,90.09
+68.6,Male,22.0,0,116,156,91,28,89,37.4,140,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",6,5,0.762,0.691,1.0,21.5,83.44
+64.0,Female,25.7,1,123,164,90,29,84,36.6,152,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",13,10,0.889,0.807,1.0,24.8,89.56
+37.4,Female,29.5,0,119,127,73,22,93,38.4,167,"chest pain, fever, dizziness, confusion, headache",3,7,0.563,0.568,0.727,18.2,60.53
+56.8,Female,40.0,0,139,147,83,27,88,39.6,191,"shortness of breath, cough, dizziness, fatigue, confusion, headache",1,6,0.852,0.765,1.0,26.2,85.53
+68.5,Male,45.0,0,124,184,98,24,92,37.5,270,"dizziness, fatigue, confusion",14,10,0.699,0.714,1.0,21.0,78.82
+25.0,Female,31.6,1,117,154,87,26,88,37.6,215,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",15,6,0.748,0.746,1.0,22.6,82.93
+64.8,Male,26.9,0,125,132,83,32,83,37.4,179,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion",30,9,0.93,0.891,1.0,27.2,97.08
+43.1,Male,31.2,1,113,155,83,26,88,38.1,227,"chest pain, shortness of breath, cough, dizziness, confusion, headache",2,9,0.876,0.854,1.0,26.3,92.12
+65.3,Female,33.3,1,127,160,87,29,86,38.0,190,"chest pain, shortness of breath, cough",22,7,0.881,0.801,1.0,26.2,87.73
+41.3,Female,26.1,0,131,108,68,23,90,38.4,181,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",6,8,0.714,0.734,0.77,22.2,71.61
+22.5,Female,38.8,0,136,152,94,27,88,38.4,228,"chest pain, shortness of breath, vomiting, fatigue, headache",3,10,0.758,0.698,1.0,23.4,82.4
+25.7,Male,29.4,0,103,128,78,22,91,38.1,183,"dizziness, fatigue, headache",29,7,0.611,0.62,0.895,19.6,71.66
+55.9,Male,31.0,0,134,170,93,34,82,38.8,217,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",3,10,1.0,1.0,1.0,31.7,100.0
+59.7,Male,32.0,1,128,175,95,31,87,38.1,261,"cough, dizziness, fatigue, confusion, abdominal pain",17,9,0.892,0.84,1.0,26.6,90.36
+38.7,Male,30.5,0,126,151,83,26,92,37.9,152,"chest pain, dizziness, vomiting, fatigue, headache, abdominal pain",11,6,0.597,0.576,1.0,18.3,72.09
+66.5,Female,33.0,0,152,180,96,29,83,39.2,249,"shortness of breath, cough, dizziness, fatigue, confusion",8,10,1.0,1.0,1.0,32.2,100.0
+25.1,Male,24.3,1,118,138,75,24,89,37.2,172,"chest pain, cough",9,5,0.544,0.556,0.776,16.5,59.03
+53.8,Male,24.7,0,145,135,73,27,89,38.8,161,"chest pain, cough, dizziness, fatigue, confusion, headache",7,8,0.887,0.886,1.0,25.0,92.62
+33.2,Female,21.4,1,101,143,73,20,91,37.4,142,"chest pain, shortness of breath, fatigue, confusion, abdominal pain",1,6,0.511,0.487,0.753,13.0,59.46
+43.3,Male,30.6,0,118,158,89,24,91,37.9,229,"shortness of breath, fever, dizziness, vomiting, confusion, headache, abdominal pain",15,7,0.689,0.673,1.0,21.3,78.74
+55.9,Male,32.7,0,133,154,83,24,90,38.4,200,"chest pain, shortness of breath, fever, dizziness, confusion",28,8,0.754,0.687,1.0,20.9,80.59
+39.5,Male,30.7,0,120,176,87,23,90,37.6,208,"chest pain, fatigue, confusion, headache",7,7,0.642,0.628,1.0,18.7,79.74
+48.1,Male,38.0,0,108,139,82,19,91,37.6,235,"chest pain, dizziness, fatigue, headache",30,6,0.517,0.537,0.743,16.8,62.92
+73.1,Male,28.0,0,136,175,93,25,90,37.3,258,"shortness of breath, dizziness, headache",7,10,0.803,0.885,1.0,25.1,88.69
+44.6,Male,32.0,0,108,120,83,28,89,37.9,180,"shortness of breath, fatigue, confusion",6,5,0.63,0.613,0.849,19.9,68.66
+70.0,Female,21.4,0,116,151,79,25,89,37.6,183,"fatigue, confusion, headache",9,6,0.72,0.747,0.997,18.8,82.53
+34.7,Female,25.7,0,144,175,99,22,90,38.7,211,"cough, dizziness, fatigue, headache",2,9,0.744,0.705,1.0,22.6,80.8
+64.5,Male,32.2,0,142,150,83,25,89,37.7,246,"chest pain, fever, dizziness, fatigue, confusion, headache",30,9,1.0,0.995,1.0,29.5,100.0
+80.9,Female,33.1,0,127,163,97,24,91,38.0,209,"chest pain, fever, dizziness, fatigue, headache",17,6,0.688,0.716,1.0,21.5,76.48
+18.0,Female,26.2,0,102,153,91,21,91,37.3,220,"shortness of breath, cough, vomiting, fatigue",24,9,0.451,0.448,0.594,16.1,48.81
+40.7,Female,27.6,0,136,154,88,25,91,38.7,141,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",7,10,0.789,0.672,1.0,21.4,83.09
+65.4,Female,18.9,0,133,171,88,28,85,38.0,171,"chest pain, dizziness, fatigue, confusion, headache",18,10,0.926,0.818,1.0,26.1,93.59
+51.3,Male,25.9,0,112,142,78,18,92,37.8,151,"chest pain, dizziness",9,4,0.486,0.502,0.77,15.6,54.6
+61.7,Male,33.3,0,114,134,85,23,91,37.4,222,"chest pain, dizziness, fatigue, headache",7,7,0.602,0.654,0.882,18.0,68.21
+44.1,Female,31.5,0,119,166,86,25,90,38.3,168,"shortness of breath, fever, cough, dizziness, vomiting, abdominal pain",26,8,0.703,0.628,0.925,22.6,71.36
+56.6,Female,31.0,0,111,144,87,22,93,37.7,200,"chest pain, shortness of breath, cough, confusion, headache",6,7,0.571,0.569,0.899,17.2,65.12
+52.2,Female,28.3,0,96,144,76,20,95,37.3,154,"chest pain, shortness of breath, cough, dizziness, fatigue",5,6,0.455,0.454,0.764,13.5,52.2
+76.0,Male,28.0,1,140,146,79,31,86,39.0,188,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",2,10,1.0,0.965,1.0,28.6,100.0
+59.6,Male,24.0,0,126,119,81,25,90,38.9,174,"shortness of breath, cough, dizziness, fatigue, confusion, headache",30,5,0.727,0.646,0.808,21.9,73.19
+61.1,Female,32.2,0,123,149,92,28,87,37.5,210,"chest pain, dizziness, fatigue, headache, abdominal pain",2,7,0.814,0.752,1.0,20.9,84.81
+47.6,Male,30.5,0,112,146,91,19,91,37.1,183,"dizziness, vomiting",2,7,0.563,0.538,1.0,16.6,68.73
+46.2,Male,31.0,0,128,144,85,27,87,37.7,183,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",1,8,0.85,0.865,1.0,25.8,92.36
+47.2,Male,24.8,1,113,139,83,25,89,37.6,140,"shortness of breath, cough, confusion",4,6,0.671,0.582,0.967,17.9,71.25
+62.1,Male,18.5,0,116,136,79,21,92,37.7,161,"cough, fatigue",2,5,0.551,0.589,0.774,15.1,59.07
+47.4,Female,34.6,0,129,139,89,26,90,37.0,182,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",12,10,0.724,0.784,1.0,22.0,83.91
+60.2,Male,25.1,0,125,146,88,27,86,37.6,194,"shortness of breath, fever, cough, dizziness, fatigue, headache, abdominal pain",3,5,0.86,0.874,1.0,26.3,89.84
+92.4,Female,22.8,0,120,143,73,24,90,38.5,173,"shortness of breath, cough, vomiting, confusion, headache, abdominal pain",13,5,0.733,0.675,0.822,20.5,72.17
+70.7,Male,32.2,0,143,161,78,28,88,37.9,183,"chest pain, shortness of breath, dizziness, confusion",2,10,0.92,0.927,1.0,27.9,95.7
+49.1,Male,25.6,0,117,139,77,22,94,38.5,160,"shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",2,5,0.569,0.497,0.758,17.5,56.48
+76.6,Male,34.4,0,138,149,100,26,88,39.2,229,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, headache",19,8,0.823,0.755,1.0,25.6,83.86
+47.7,Male,31.7,0,110,169,90,25,90,38.0,244,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache, abdominal pain",6,9,0.676,0.697,0.988,19.9,72.8
+18.3,Female,32.1,0,103,134,81,21,94,37.1,147,"chest pain, dizziness",1,4,0.355,0.331,0.732,12.4,46.6
+36.9,Male,19.8,0,102,135,83,26,89,37.4,134,"shortness of breath, dizziness, fatigue, confusion, headache",18,7,0.608,0.57,0.978,16.9,73.88
+21.3,Male,35.3,0,113,134,94,23,93,36.9,200,dizziness,1,6,0.606,0.572,1.0,17.7,70.26
+48.7,Male,29.6,0,144,134,79,29,85,38.4,186,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",1,10,1.0,1.0,1.0,30.4,98.42
+55.3,Female,25.8,1,150,160,94,40,81,39.1,180,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",5,10,1.0,1.0,1.0,34.8,100.0
+85.2,Female,28.9,0,126,169,78,31,87,38.1,212,"chest pain, shortness of breath, fever, cough, fatigue",1,7,0.895,0.894,1.0,24.9,93.86
+60.9,Female,18.5,1,121,133,76,24,89,37.3,197,"chest pain, dizziness, fatigue, confusion, headache, abdominal pain",1,6,0.702,0.795,1.0,21.3,86.69
+51.1,Male,30.5,0,134,172,91,21,91,38.4,184,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",18,9,0.77,0.738,1.0,22.4,83.26
+69.9,Male,21.8,0,133,152,82,25,92,38.1,223,"dizziness, vomiting, fatigue, confusion, headache",2,10,0.766,0.87,1.0,22.7,87.17
+18.0,Female,19.9,0,129,120,76,22,93,39.1,192,"cough, dizziness, headache",1,8,0.609,0.609,0.989,20.0,75.2
+59.2,Male,18.9,0,112,121,68,26,89,38.1,125,"cough, dizziness",16,6,0.63,0.604,0.906,20.8,70.18
+68.9,Male,34.7,0,128,187,91,18,91,37.7,268,"cough, fatigue, headache",7,10,0.651,0.702,1.0,19.1,77.6
+28.4,Male,24.2,0,91,144,79,18,92,37.5,121,"dizziness, fatigue",1,2,0.359,0.328,0.54,11.1,35.57
+75.6,Male,37.2,0,129,158,89,25,91,37.5,199,"shortness of breath, fever, dizziness, fatigue, confusion",8,10,0.868,0.855,1.0,24.6,93.84
+61.1,Male,24.8,1,124,158,86,30,84,37.4,147,"chest pain, shortness of breath, dizziness, confusion, headache, abdominal pain",1,8,0.805,0.716,1.0,24.8,84.45
+47.5,Male,18.5,0,130,120,79,26,90,37.9,125,"dizziness, fatigue, headache",4,7,0.667,0.67,0.982,20.0,76.05
+66.4,Female,21.3,0,114,154,77,23,92,37.2,105,"chest pain, dizziness",5,5,0.483,0.456,0.805,15.0,58.95
+95.0,Male,35.4,0,137,145,89,24,92,38.4,192,"shortness of breath, dizziness, fatigue",30,9,0.831,0.818,1.0,25.9,85.42
+58.3,Male,27.1,0,124,142,89,23,91,37.7,148,"shortness of breath, cough, dizziness, fatigue, confusion, headache",2,8,0.657,0.656,0.951,19.2,73.39
+59.5,Male,24.7,0,140,191,96,27,89,37.7,228,"dizziness, fatigue, headache, abdominal pain",19,9,0.844,0.809,1.0,24.9,89.14
+46.7,Male,29.0,0,129,141,84,26,90,38.1,163,"chest pain, confusion",1,7,0.657,0.632,0.956,21.0,74.02
+39.7,Male,31.0,1,116,156,87,25,90,38.3,226,"shortness of breath, fever, dizziness, fatigue, confusion, headache, abdominal pain",6,7,0.691,0.659,0.845,21.8,73.66
+69.9,Female,34.7,0,137,167,83,27,91,38.4,190,"chest pain, dizziness, vomiting, headache",2,9,0.776,0.771,1.0,22.2,84.67
+39.6,Female,36.7,0,127,159,93,29,86,38.4,216,"chest pain, shortness of breath, fever, dizziness, vomiting, headache",7,10,1.0,0.927,1.0,28.8,99.08
+56.3,Female,25.8,0,149,134,80,25,89,38.1,136,"chest pain, cough, dizziness, fatigue, confusion, headache",4,9,0.867,0.866,1.0,24.2,88.03
+46.4,Female,20.0,1,134,151,84,27,86,37.6,122,"chest pain, shortness of breath, fatigue, confusion",24,10,0.778,0.719,1.0,22.7,85.22
+63.6,Male,25.5,0,138,137,88,24,91,37.5,179,"cough, dizziness, fatigue",25,9,0.757,0.806,1.0,23.8,83.48
+61.0,Male,29.6,0,125,127,78,26,87,38.1,166,"chest pain, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",7,8,0.738,0.732,0.901,23.4,78.63
+73.7,Female,22.2,0,127,149,78,31,87,38.8,140,"shortness of breath, cough, fatigue, confusion, headache",1,5,0.796,0.711,0.95,22.5,80.47
+45.8,Female,22.3,0,120,135,92,28,88,37.5,166,"shortness of breath, dizziness, fatigue, confusion, headache",7,6,0.782,0.775,1.0,22.7,83.97
+50.1,Male,30.1,0,131,134,75,23,90,38.3,155,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",14,9,0.795,0.792,1.0,22.8,86.04
+37.4,Female,27.7,0,124,128,85,33,85,38.3,214,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue",1,5,0.872,0.869,1.0,25.6,92.43
+47.0,Male,28.2,0,121,134,79,20,90,38.2,181,"fatigue, confusion, headache",5,5,0.652,0.641,0.796,20.3,71.0
+61.8,Male,23.4,0,119,169,88,26,93,36.7,208,"cough, dizziness, confusion, headache",1,7,0.631,0.625,1.0,18.7,74.87
+68.6,Male,26.6,0,113,132,82,21,91,37.6,169,"chest pain, dizziness",2,8,0.694,0.741,1.0,21.8,78.79
+38.4,Female,22.5,0,125,138,77,24,89,38.1,176,"chest pain, fever, cough, dizziness, headache",1,8,0.66,0.641,0.973,19.2,75.57
+70.7,Female,33.3,0,139,141,90,26,89,38.5,193,"fever, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",30,8,0.795,0.745,1.0,24.0,84.61
+79.4,Male,34.2,0,131,157,83,25,89,37.1,185,"chest pain, cough, dizziness, fatigue, confusion, headache",1,9,0.773,0.716,1.0,21.9,82.53
+62.4,Male,18.5,0,122,160,78,27,86,37.8,135,"chest pain, shortness of breath, fatigue, headache, abdominal pain",1,8,0.782,0.734,1.0,19.7,84.37
+88.8,Female,22.4,0,105,155,94,21,93,37.2,182,"confusion, headache",30,6,0.648,0.666,1.0,18.5,73.32
+41.1,Male,19.0,0,97,146,69,26,93,38.4,128,"shortness of breath, confusion",5,5,0.545,0.51,0.643,16.5,52.33
+32.6,Female,24.1,1,125,151,77,30,84,37.2,148,"chest pain, dizziness, fatigue, confusion, headache, abdominal pain",9,9,0.925,0.859,1.0,27.4,95.18
+23.0,Male,27.5,1,129,144,77,28,86,38.7,158,"shortness of breath, fever, cough, vomiting, fatigue, headache, abdominal pain",3,7,0.838,0.679,1.0,23.6,83.61
+81.9,Female,19.3,0,143,133,87,31,87,39.9,162,"shortness of breath, cough, dizziness, vomiting, fatigue, headache, abdominal pain",8,7,0.903,0.773,1.0,26.5,90.14
+66.8,Male,22.5,0,133,164,83,30,85,38.0,153,"shortness of breath, dizziness, headache",1,10,0.935,0.824,1.0,26.9,90.37
+54.0,Female,22.0,0,114,125,72,20,95,37.9,171,"chest pain, vomiting, headache, abdominal pain",5,6,0.589,0.612,0.917,17.7,71.97
+60.0,Female,29.2,0,113,133,74,24,91,38.3,216,"chest pain, shortness of breath, fatigue, headache",9,5,0.612,0.643,0.806,18.5,68.67
+34.7,Female,28.4,0,123,155,85,28,87,38.4,230,"chest pain, fever, cough, dizziness, fatigue, confusion, headache",9,8,0.799,0.746,0.948,24.0,82.44
+95.0,Female,23.7,0,150,156,76,27,91,39.7,151,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",5,10,0.945,0.884,1.0,27.0,94.88
+57.3,Male,29.1,0,120,155,83,27,89,38.0,193,"shortness of breath, cough, dizziness, headache, abdominal pain",16,6,0.758,0.724,0.997,20.6,78.45
+57.0,Male,24.7,0,150,139,93,30,84,38.7,180,"shortness of breath, fever, cough, fatigue",7,9,1.0,0.869,1.0,27.9,96.83
+68.1,Female,26.4,0,117,145,73,20,92,37.8,180,"shortness of breath, fever, cough, vomiting, fatigue, confusion, headache",10,7,0.646,0.653,1.0,20.3,78.39
+63.7,Female,38.0,0,144,148,92,28,88,39.1,206,"chest pain, shortness of breath, dizziness, fatigue, confusion",2,10,0.881,0.769,1.0,26.6,88.93
+59.0,Male,36.0,0,115,165,87,26,87,37.3,177,"shortness of breath, headache",15,7,0.672,0.64,1.0,20.6,76.45
+40.8,Male,20.2,0,123,122,74,23,91,39.3,119,"shortness of breath, fatigue, confusion, headache, abdominal pain",4,6,0.686,0.559,0.868,21.6,69.63
+63.5,Male,33.0,1,146,148,91,34,87,39.5,230,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",8,8,1.0,0.923,1.0,29.7,99.87
+88.9,Female,32.9,1,160,167,87,33,83,39.0,237,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",5,10,1.0,1.0,1.0,31.6,100.0
+79.2,Female,21.1,0,101,159,87,20,91,37.7,174,"cough, dizziness, confusion, headache",21,6,0.587,0.578,0.833,16.9,64.96
+83.7,Male,32.9,0,116,150,81,27,91,37.4,205,"chest pain, shortness of breath, fatigue, confusion, headache, abdominal pain",22,5,0.676,0.666,0.976,20.0,77.01
+45.8,Female,37.2,0,112,140,76,20,90,36.6,221,"chest pain, shortness of breath, dizziness, vomiting, confusion, headache",2,7,0.555,0.562,0.901,16.4,66.56
+37.2,Male,21.3,0,116,147,86,23,92,38.5,168,"chest pain, shortness of breath, fatigue",13,6,0.536,0.545,0.894,16.2,65.4
+52.7,Female,22.5,0,106,126,92,17,95,36.9,159,"fever, cough, dizziness, vomiting, confusion",1,4,0.412,0.428,0.698,12.0,48.72
+56.0,Male,34.1,0,144,128,80,29,87,38.5,164,"chest pain, shortness of breath, dizziness, headache",1,9,0.867,0.803,1.0,25.8,91.05
+74.7,Female,29.6,0,135,166,86,23,90,37.7,200,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",19,6,0.788,0.751,1.0,22.1,85.18
+24.5,Male,31.3,0,103,107,81,15,93,37.0,152,"confusion, abdominal pain",1,3,0.332,0.4,0.436,9.9,40.77
+82.5,Female,30.0,0,126,164,92,24,91,37.6,185,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",1,8,0.693,0.729,1.0,21.0,77.35
+52.2,Male,30.3,0,130,147,89,22,91,37.2,225,"shortness of breath, cough, dizziness, vomiting, fatigue",10,7,0.645,0.675,1.0,20.4,73.93
+47.3,Female,20.0,0,107,157,81,28,88,37.7,190,"shortness of breath, dizziness, fatigue",17,5,0.62,0.6,0.826,18.4,71.7
+36.8,Male,34.3,0,122,168,91,20,93,37.1,182,"chest pain, fatigue, confusion",1,6,0.537,0.514,1.0,16.8,69.2
+25.2,Male,35.0,1,131,155,77,34,87,37.9,200,"shortness of breath, cough, dizziness, vomiting, confusion, headache, abdominal pain",1,7,0.797,0.722,1.0,23.9,81.91
+69.8,Male,26.6,0,121,153,74,22,91,37.3,139,"chest pain, dizziness",1,6,0.568,0.622,0.88,18.7,69.5
+56.3,Male,27.7,0,136,153,95,28,89,38.5,164,"dizziness, vomiting, fatigue, confusion, headache",1,10,0.78,0.666,1.0,23.2,80.25
+31.8,Male,18.8,1,129,127,81,27,86,38.8,161,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",1,7,0.91,0.865,1.0,28.1,88.97
+31.7,Male,31.1,1,148,147,82,27,86,38.9,233,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, headache",30,7,0.852,0.849,1.0,25.6,85.34
+49.0,Female,31.4,0,125,155,93,31,85,38.1,232,"chest pain, shortness of breath, fever, cough, headache",1,8,0.916,0.848,1.0,28.3,92.0
+85.0,Male,27.6,1,131,166,89,28,88,38.7,255,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue",13,10,0.943,0.94,1.0,29.6,99.05
+50.3,Female,34.7,0,136,138,79,27,88,39.0,217,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",30,10,0.801,0.835,0.968,24.0,89.2
+27.9,Female,26.0,0,95,121,69,18,95,37.7,150,"chest pain, cough, dizziness, confusion, headache",8,6,0.464,0.455,0.822,13.9,59.39
+50.6,Female,31.4,0,136,141,80,27,87,37.8,198,"chest pain, shortness of breath, dizziness, headache",1,8,0.787,0.779,1.0,22.8,86.51
+50.1,Female,21.9,0,112,137,84,22,93,38.2,175,"cough, dizziness, fatigue, headache",8,5,0.619,0.585,0.963,19.3,71.85
+18.0,Male,27.9,0,115,130,78,22,91,39.4,172,"shortness of breath, dizziness, vomiting, confusion, headache",25,5,0.634,0.579,0.746,18.4,67.39
+54.0,Male,27.0,0,131,147,75,28,90,39.2,179,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion",4,6,0.786,0.706,1.0,23.3,78.59
+50.8,Male,29.4,0,107,128,83,17,94,36.5,175,"chest pain, fatigue, confusion",3,6,0.54,0.573,0.817,17.5,65.27
+67.5,Male,25.8,0,132,144,79,28,87,38.5,209,"shortness of breath, fever, dizziness, fatigue, confusion, headache",3,7,0.859,0.847,1.0,26.2,87.52
+88.3,Female,27.2,0,122,153,79,30,88,36.8,158,"chest pain, shortness of breath, dizziness, confusion, headache, abdominal pain",5,10,0.89,0.873,1.0,22.9,89.96
+75.3,Female,33.0,0,141,161,99,24,92,37.7,245,"chest pain, shortness of breath, fever, fatigue, headache",3,10,0.791,0.798,1.0,22.5,86.98
+50.2,Female,25.4,0,104,148,89,24,94,37.1,179,"dizziness, vomiting, fatigue",12,7,0.567,0.564,0.816,19.3,65.92
+35.1,Female,18.5,0,107,112,68,21,90,37.5,115,"chest pain, cough, dizziness, headache",5,7,0.597,0.623,1.0,18.1,71.37
+95.0,Female,38.5,0,143,177,91,27,90,37.6,251,"shortness of breath, dizziness, vomiting, fatigue",6,10,0.859,0.953,1.0,24.8,94.24
+56.1,Female,36.3,1,138,160,89,33,87,38.8,245,"shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",18,7,1.0,1.0,1.0,29.2,100.0
+55.3,Male,20.2,0,152,130,82,24,89,37.9,151,"cough, dizziness, vomiting, fatigue, confusion, headache",1,9,0.803,0.802,1.0,21.6,85.56
+54.6,Male,32.1,0,139,166,79,31,85,39.3,222,"fever, cough, dizziness, fatigue, headache, abdominal pain",19,6,0.972,0.912,1.0,29.5,96.53
+58.6,Male,25.0,0,127,173,96,28,91,38.6,216,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion",12,8,0.794,0.728,1.0,26.1,87.77
+52.4,Male,29.6,0,120,173,96,28,89,37.0,205,"vomiting, fatigue, confusion",9,10,0.697,0.65,1.0,22.2,76.82
+44.7,Male,29.8,0,129,161,85,24,88,38.7,191,"shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",1,10,0.951,0.881,1.0,26.5,94.0
+45.2,Female,26.6,0,108,127,71,20,92,36.8,122,"vomiting, confusion",6,6,0.537,0.565,0.887,15.5,65.34
+54.4,Male,23.3,0,120,166,91,25,90,37.7,203,"shortness of breath, cough, dizziness, fatigue, confusion, abdominal pain",7,6,0.677,0.621,0.91,19.5,72.62
+45.2,Male,23.9,0,108,146,83,18,90,37.1,162,"chest pain, shortness of breath, dizziness",5,6,0.622,0.628,0.991,18.4,75.02
+42.2,Female,22.5,1,134,135,76,31,86,38.1,202,"fever, fatigue, headache",4,7,0.883,0.836,1.0,24.9,93.31
+56.9,Female,23.0,0,103,153,81,27,89,37.6,195,"fatigue, confusion, headache",1,7,0.604,0.611,0.762,17.7,64.85
+50.4,Male,27.6,0,127,173,93,23,89,37.0,175,"chest pain, shortness of breath, cough, confusion",5,9,0.785,0.76,1.0,21.8,82.49
+82.1,Female,23.7,1,145,175,78,36,82,39.2,191,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",6,9,1.0,1.0,1.0,35.8,100.0
+18.0,Male,32.1,0,103,127,74,17,94,37.6,171,"headache, abdominal pain",4,2,0.309,0.359,0.442,9.7,36.62
+74.6,Male,36.9,0,121,168,94,30,87,37.8,219,"chest pain, shortness of breath, dizziness, fatigue",11,8,0.897,0.879,1.0,26.0,88.83
+77.4,Female,24.5,0,136,165,85,24,91,38.6,214,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",4,7,0.813,0.854,1.0,25.1,91.84
+18.0,Female,29.4,0,120,145,84,31,88,39.0,159,"chest pain, shortness of breath, fever, cough, headache, abdominal pain",3,5,0.714,0.615,0.914,22.9,76.66
+48.8,Female,31.0,0,114,166,93,19,91,37.3,243,"dizziness, vomiting, fatigue, headache",8,7,0.536,0.601,0.821,19.2,67.3
+48.3,Female,30.8,0,121,163,98,28,86,37.1,228,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",10,9,0.88,0.88,1.0,26.2,94.48
+29.7,Female,28.5,0,105,151,80,22,91,37.3,157,"shortness of breath, cough, vomiting, headache",5,5,0.572,0.566,0.879,16.5,71.54
+41.0,Male,32.5,0,118,148,84,26,88,37.6,191,"chest pain, cough, dizziness, vomiting, headache",20,6,0.729,0.706,0.993,22.6,78.07
+35.0,Female,30.9,0,119,138,83,25,87,37.8,163,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",12,5,0.754,0.761,0.952,22.8,79.95
+86.5,Male,20.6,0,127,179,93,27,89,37.6,187,"chest pain, dizziness, vomiting, fatigue, headache",1,7,0.823,0.774,1.0,25.5,85.18
+71.8,Female,33.2,0,136,168,88,26,87,38.4,239,"chest pain, dizziness, vomiting, fatigue, confusion, headache",9,8,0.846,0.808,1.0,23.5,87.05
+77.9,Male,33.3,1,129,180,92,29,85,37.4,218,"chest pain, shortness of breath, dizziness, vomiting, fatigue",6,8,0.991,0.915,1.0,29.8,97.34
+68.0,Female,23.4,0,116,157,90,29,90,38.2,218,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion",5,6,0.798,0.741,1.0,24.1,83.16
+34.7,Female,28.2,0,111,169,96,25,91,38.3,251,"cough, dizziness, vomiting, fatigue, headache",30,10,0.667,0.655,0.886,20.0,70.52
+45.6,Male,32.1,0,128,161,94,27,89,37.9,254,"chest pain, shortness of breath, dizziness, vomiting, fatigue, headache",8,8,0.737,0.815,1.0,21.7,82.16
+63.8,Male,26.7,0,124,155,89,26,88,37.2,181,"chest pain, shortness of breath, fever, dizziness, fatigue, headache",11,8,0.771,0.754,1.0,22.8,82.87
+33.0,Female,34.4,0,112,175,89,19,94,36.8,249,"dizziness, fatigue, confusion",30,8,0.603,0.645,1.0,16.1,75.76
+67.8,Male,42.2,0,127,202,95,29,85,37.8,286,"chest pain, cough, fatigue",2,10,0.98,0.942,1.0,28.7,96.32
+50.7,Female,23.3,1,133,148,89,27,89,37.7,197,"chest pain, shortness of breath, fever, dizziness",1,9,0.833,0.801,1.0,23.6,88.94
+48.3,Female,19.7,1,123,150,97,28,87,38.3,209,"vomiting, fatigue, confusion",4,7,0.843,0.828,1.0,24.4,85.91
+67.8,Female,29.8,0,122,175,81,25,88,37.6,175,"chest pain, shortness of breath, vomiting, fatigue",1,6,0.683,0.658,0.972,19.4,69.85
+63.0,Female,32.3,0,108,154,90,20,93,37.9,207,"chest pain, shortness of breath, fever, confusion",1,6,0.564,0.549,0.758,15.9,61.5
+48.5,Male,26.6,0,115,159,86,25,91,37.8,210,"shortness of breath, fever, dizziness, confusion",30,10,0.692,0.685,0.922,22.1,74.65
+75.9,Female,36.7,0,138,158,84,29,86,37.9,225,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue",30,7,0.955,0.966,1.0,25.4,95.43
+35.5,Female,20.0,0,130,162,90,24,89,37.2,176,"chest pain, fever, dizziness, fatigue",10,7,0.76,0.713,1.0,21.9,79.81
+66.1,Male,32.2,0,128,182,94,22,89,38.4,184,"shortness of breath, cough, dizziness, confusion, headache, abdominal pain",15,8,0.85,0.78,1.0,24.1,86.01
+65.7,Male,24.4,0,119,135,78,26,89,38.0,161,"shortness of breath, fever, dizziness, vomiting, fatigue",1,4,0.711,0.69,0.918,23.0,74.71
+49.4,Female,38.3,0,125,156,77,26,85,37.3,254,"shortness of breath, cough, dizziness, fatigue, confusion",10,8,0.836,0.857,1.0,24.5,87.38
+60.9,Male,40.0,0,139,175,90,23,92,37.6,256,"chest pain, shortness of breath, fever, dizziness, fatigue",2,9,0.736,0.745,1.0,20.0,79.08
+32.5,Female,23.4,1,129,153,87,25,88,36.9,139,"chest pain, dizziness, confusion",3,7,0.698,0.636,1.0,20.3,72.74
+71.6,Male,24.7,0,132,178,83,24,91,37.1,214,"chest pain, fever, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",4,8,0.726,0.729,1.0,20.5,76.49
+51.7,Male,33.2,0,115,170,83,24,87,37.6,207,"chest pain, vomiting",9,6,0.652,0.615,1.0,20.4,79.46
+45.6,Male,25.7,0,127,169,92,33,85,36.8,198,"shortness of breath, cough",1,10,0.834,0.801,1.0,24.3,87.25
+73.9,Female,27.7,0,114,179,72,24,91,37.6,206,"chest pain, dizziness, vomiting, headache",1,7,0.599,0.598,0.851,19.7,70.47
+42.3,Female,28.2,0,125,157,91,29,87,37.7,206,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion",9,9,0.735,0.659,1.0,21.7,78.82
+29.6,Female,18.5,0,103,121,72,23,91,37.0,140,fatigue,7,3,0.457,0.415,0.616,14.7,48.9
+27.0,Female,27.9,0,114,139,68,24,93,38.3,163,"chest pain, fever, cough, dizziness, vomiting, headache",3,8,0.641,0.613,1.0,18.9,74.63
+65.9,Female,23.9,0,110,153,80,28,89,37.0,184,"chest pain, dizziness, confusion, abdominal pain",1,7,0.776,0.725,1.0,21.6,84.09
+32.0,Male,25.0,0,109,130,79,27,90,37.4,153,"fatigue, confusion, headache",19,7,0.601,0.577,0.982,18.8,68.33
+86.6,Female,36.7,0,131,170,95,24,89,37.2,219,"chest pain, fatigue",1,9,0.824,0.837,1.0,22.9,87.34
+18.0,Female,20.5,0,119,153,96,21,90,37.8,183,"shortness of breath, cough, fatigue, headache",15,9,0.611,0.566,0.921,18.9,69.63
+85.5,Male,32.9,1,135,151,83,21,90,38.0,239,"chest pain, shortness of breath, dizziness, fatigue, confusion",1,8,0.87,0.982,1.0,25.1,90.39
+58.8,Female,26.3,0,117,139,81,29,88,37.9,181,"chest pain, dizziness, confusion, headache",10,7,0.687,0.666,0.861,21.3,75.89
+53.3,Male,26.3,0,120,143,81,26,90,37.8,177,"chest pain, cough, dizziness, fatigue, headache, abdominal pain",10,7,0.733,0.75,1.0,20.5,83.94
+45.2,Female,32.7,0,118,128,75,27,90,38.2,176,"cough, dizziness",14,5,0.672,0.612,0.963,19.3,69.94
+62.2,Female,30.0,1,130,166,82,30,87,37.4,185,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",5,9,0.846,0.852,1.0,24.3,87.63
+54.3,Female,31.4,0,106,130,76,21,88,37.3,223,"chest pain, fever, dizziness, vomiting, fatigue",1,7,0.632,0.686,0.857,20.6,71.79
+74.9,Female,33.8,0,116,154,77,28,86,37.8,202,"shortness of breath, cough, dizziness, vomiting, abdominal pain",17,6,0.8,0.772,1.0,22.7,86.84
+57.1,Male,26.0,0,120,158,94,26,87,37.8,164,"shortness of breath, cough, dizziness, confusion, headache",4,6,0.68,0.611,1.0,19.2,78.58
+57.7,Female,24.3,0,145,144,79,25,90,38.2,149,"chest pain, dizziness, fatigue, headache",15,8,0.771,0.764,1.0,20.8,82.47
+48.5,Male,21.5,0,104,140,61,20,94,39.0,114,"vomiting, confusion, headache",11,3,0.481,0.436,0.569,13.8,54.08
+54.0,Female,23.0,0,119,147,88,21,92,38.1,238,"cough, vomiting, fatigue, confusion, headache",9,9,0.744,0.753,1.0,23.4,82.23
+60.5,Female,45.0,1,145,165,87,28,85,37.5,295,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",30,9,1.0,1.0,1.0,31.0,99.55
+24.2,Male,35.5,0,118,152,92,26,89,36.9,204,"shortness of breath, cough, dizziness, fatigue, confusion",6,7,0.719,0.722,1.0,21.0,81.55
+30.7,Female,19.9,0,136,146,82,26,90,39.1,176,"shortness of breath, fever, cough, dizziness, confusion, abdominal pain",12,8,0.818,0.722,1.0,25.8,84.99
+68.4,Male,20.1,0,117,164,90,22,90,37.7,204,"shortness of breath, fever, cough, dizziness, fatigue, headache",14,8,0.677,0.694,0.988,19.1,78.02
+58.1,Male,30.9,0,138,180,89,28,88,38.3,220,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",9,10,0.911,0.939,1.0,29.3,98.62
+51.7,Male,31.3,1,110,138,82,24,89,37.4,151,"chest pain, shortness of breath, dizziness, confusion",6,6,0.677,0.622,0.919,20.4,73.8
+55.3,Male,31.3,0,124,143,81,19,91,36.7,190,"dizziness, vomiting, fatigue, headache",13,10,0.647,0.641,1.0,18.4,73.12
+61.3,Female,26.5,0,112,172,86,17,93,38.1,194,"shortness of breath, fatigue, confusion",9,6,0.565,0.568,0.853,17.9,63.52
+45.3,Female,27.2,0,121,128,87,20,93,37.2,190,"fever, dizziness, fatigue, headache",5,5,0.579,0.625,0.917,16.8,72.37
+41.0,Female,30.0,0,127,142,89,25,90,37.2,194,"shortness of breath, cough, dizziness, confusion",10,8,0.679,0.754,0.992,20.3,80.9
+58.5,Male,28.5,0,120,133,80,23,91,37.5,161,"chest pain, fever, dizziness",1,8,0.622,0.617,1.0,20.4,70.29
+37.4,Male,18.5,0,113,105,74,25,92,38.9,151,"shortness of breath, fever, cough, confusion, headache, abdominal pain",1,5,0.614,0.547,0.907,17.9,64.98
+62.3,Female,26.6,1,134,159,93,30,82,37.6,213,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",1,10,1.0,1.0,1.0,30.9,100.0
+24.4,Male,22.9,1,119,137,85,26,88,38.3,131,"fatigue, confusion, abdominal pain",4,9,0.893,0.785,1.0,24.8,90.51
+73.5,Female,29.1,0,150,146,84,32,89,39.0,164,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",21,9,0.993,0.881,1.0,28.0,94.79
+63.5,Male,45.0,1,138,183,101,28,88,37.1,297,"fatigue, confusion, headache",14,9,0.904,0.904,1.0,26.5,89.92
+59.6,Female,30.2,0,112,157,80,27,89,37.4,169,"shortness of breath, dizziness, vomiting, fatigue, confusion, headache",28,5,0.74,0.673,1.0,20.2,77.54
+72.7,Male,26.1,0,128,132,82,20,92,37.0,198,"dizziness, confusion, headache",1,7,0.638,0.752,1.0,19.2,81.38
+85.0,Male,33.5,0,123,160,92,22,90,37.7,203,"chest pain, cough, fatigue, headache",14,8,0.702,0.724,1.0,21.2,80.78
+73.3,Female,30.9,0,130,165,76,26,89,38.5,211,"chest pain, shortness of breath, fever, cough, dizziness, confusion, headache",4,9,0.845,0.832,1.0,24.6,90.75
+21.9,Female,30.5,0,106,137,77,24,92,37.6,212,"shortness of breath, fatigue, confusion",1,6,0.514,0.586,0.705,13.7,61.61
+32.0,Female,31.6,0,123,123,81,28,87,38.5,171,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",16,7,0.669,0.672,0.889,19.7,72.34
+43.8,Female,40.3,0,126,162,94,27,88,38.7,278,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",2,10,0.766,0.746,0.946,23.7,80.66
+55.5,Female,21.2,0,110,127,82,23,93,37.4,159,"cough, dizziness, confusion, headache",1,4,0.549,0.542,0.714,18.1,59.32
+64.3,Male,30.8,0,138,182,98,26,89,38.2,233,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",5,10,0.868,0.817,1.0,25.7,90.04
+41.9,Male,22.4,0,112,137,73,27,88,37.5,162,"chest pain, cough, dizziness, fatigue, confusion, headache",11,7,0.728,0.732,1.0,21.8,83.27
+58.4,Male,31.3,0,142,142,91,30,86,38.3,215,"chest pain, fever, cough, dizziness, fatigue, headache",12,8,0.921,0.908,1.0,26.8,97.8
+41.4,Female,22.5,0,120,143,83,29,85,37.9,170,"shortness of breath, cough, confusion",3,8,0.808,0.7,1.0,24.9,84.94
+44.0,Male,25.5,0,142,126,64,31,86,39.2,183,"shortness of breath, fever, cough, dizziness, fatigue, headache",2,9,0.956,0.916,1.0,27.1,97.38
+29.7,Male,26.2,0,108,116,77,22,91,38.2,142,"shortness of breath, fever, vomiting, headache",1,4,0.537,0.458,0.675,16.6,59.33
+38.4,Female,33.9,1,121,159,91,25,88,37.4,226,"fatigue, confusion",1,8,0.728,0.719,1.0,22.5,80.28
+30.7,Male,33.5,0,135,151,93,30,88,39.6,223,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",29,7,0.905,0.781,1.0,28.0,92.0
+37.4,Male,20.5,0,119,144,77,22,88,37.8,179,"shortness of breath, fever, fatigue, confusion, headache",25,4,0.704,0.666,0.886,23.1,75.88
+74.0,Female,28.3,1,148,175,96,28,87,38.6,163,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",30,10,0.932,0.83,1.0,26.3,93.41
+37.9,Female,23.7,0,89,133,80,19,93,37.5,131,"chest pain, shortness of breath, fatigue",13,8,0.563,0.552,0.961,18.0,67.5
+95.0,Female,20.4,0,130,188,88,23,90,37.7,215,"chest pain, dizziness, fatigue, confusion",25,8,0.868,0.886,1.0,26.6,88.49
+63.9,Female,26.7,0,104,136,81,26,89,38.4,158,"shortness of breath, fever, fatigue, confusion",14,5,0.663,0.598,0.863,19.6,71.06
+58.3,Male,26.1,1,121,166,83,29,85,37.0,150,"shortness of breath, vomiting, fatigue, confusion",25,10,0.826,0.787,1.0,25.0,87.33
+39.5,Male,42.6,0,127,156,95,28,90,38.4,275,"chest pain, shortness of breath, cough, dizziness, fatigue, abdominal pain",27,9,0.72,0.679,0.936,22.2,76.09
+67.6,Male,30.6,0,117,164,80,21,91,37.3,190,"shortness of breath, cough, dizziness, vomiting, confusion, headache",5,7,0.524,0.544,0.912,16.1,64.43
+44.6,Female,19.7,0,126,138,81,24,88,37.5,159,"shortness of breath, dizziness, vomiting, headache",3,8,0.788,0.791,1.0,22.9,83.49
+57.2,Female,24.6,0,118,116,76,24,93,37.9,175,"chest pain, fever, dizziness, fatigue, confusion",7,6,0.538,0.58,0.825,15.1,61.92
+95.0,Male,34.1,0,145,190,96,24,89,37.9,250,"shortness of breath, fever, dizziness, fatigue, confusion, headache",13,9,0.908,0.912,1.0,28.0,92.69
+53.3,Male,40.5,0,119,183,108,29,89,37.8,273,"chest pain, shortness of breath, fever, cough, fatigue, headache, abdominal pain",12,10,0.828,0.804,1.0,25.5,84.55
+75.7,Female,18.5,0,133,152,84,25,89,38.6,196,"chest pain, dizziness, fatigue, confusion, headache",14,8,0.881,0.891,1.0,25.9,90.8
+42.3,Male,18.5,1,127,134,71,25,89,38.7,156,"chest pain, shortness of breath, dizziness, vomiting, fatigue, headache",11,6,0.784,0.732,1.0,24.8,84.75
+54.4,Male,39.2,0,121,156,94,23,91,37.2,216,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion",1,7,0.723,0.764,1.0,21.0,84.76
+86.9,Female,30.3,0,140,147,94,26,87,38.2,228,"shortness of breath, cough, dizziness, fatigue, headache, abdominal pain",4,6,0.902,0.879,1.0,25.2,96.59
+43.7,Female,22.8,1,113,121,74,24,92,36.4,190,"shortness of breath, dizziness",20,7,0.576,0.635,0.922,19.1,68.95
+87.6,Male,31.2,0,139,185,88,24,88,37.9,217,"chest pain, shortness of breath, fever, cough, dizziness, confusion, headache",10,7,0.981,0.941,1.0,29.3,99.86
+67.7,Female,18.5,0,121,148,88,29,87,38.5,205,"shortness of breath, cough, dizziness, vomiting, confusion",4,9,0.768,0.732,1.0,23.5,83.35
+44.9,Female,28.0,0,106,162,86,23,90,37.2,201,"shortness of breath, cough, dizziness, fatigue",18,6,0.573,0.568,0.776,16.9,62.78
+66.4,Female,30.0,1,138,169,86,33,84,37.7,172,"chest pain, shortness of breath, cough, dizziness",2,7,0.935,0.861,1.0,26.4,94.03
+72.5,Female,33.5,0,129,168,84,27,89,39.0,213,"chest pain, dizziness, vomiting, fatigue, headache, abdominal pain",5,8,0.798,0.756,1.0,22.4,86.79
+66.2,Male,21.9,0,145,137,75,29,88,39.0,180,"shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache",3,7,0.866,0.858,1.0,25.2,89.38
+26.7,Male,28.5,1,114,123,71,24,88,37.4,210,"chest pain, shortness of breath, confusion",19,5,0.681,0.711,0.989,19.1,77.23
+41.9,Female,22.4,0,98,124,89,21,93,37.2,187,"dizziness, vomiting, headache",11,3,0.405,0.453,0.536,13.0,45.08
+50.5,Male,29.5,1,136,174,95,30,85,37.0,238,"shortness of breath, dizziness, fatigue, confusion",8,8,1.0,0.93,1.0,29.9,96.63
+53.7,Male,22.6,1,143,118,82,29,85,38.0,155,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",20,9,0.964,0.898,1.0,25.8,97.9
+66.2,Male,25.6,0,147,157,89,25,87,37.8,198,"chest pain, shortness of breath, dizziness, vomiting, abdominal pain",28,10,0.847,0.828,1.0,25.3,87.21
+58.2,Female,22.0,0,120,153,92,25,90,37.4,224,"chest pain, fever, dizziness, headache",14,8,0.69,0.653,0.877,20.9,72.31
+31.0,Female,31.9,0,110,125,83,20,90,37.3,208,"chest pain, cough, dizziness, vomiting, fatigue, confusion",22,5,0.604,0.654,0.843,18.9,69.71
+61.8,Male,33.2,0,106,143,87,23,93,38.0,190,"chest pain, shortness of breath, fever, vomiting, fatigue, headache",12,6,0.605,0.592,0.937,17.9,70.52
+66.0,Male,26.6,0,113,144,69,25,90,38.6,155,"chest pain, dizziness, fatigue, headache",8,3,0.697,0.627,0.864,21.2,71.78
+65.1,Female,28.2,0,125,149,77,22,89,37.8,160,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, headache, abdominal pain",4,6,0.617,0.594,0.966,17.5,74.86
+74.5,Female,19.3,1,144,129,80,29,86,38.1,146,"chest pain, shortness of breath, cough, dizziness, confusion, headache",2,10,0.874,0.907,1.0,23.1,90.93
+70.0,Female,26.2,0,145,172,96,25,88,37.9,213,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, abdominal pain",1,7,0.839,0.78,1.0,23.2,86.6
+63.3,Male,27.7,0,125,139,73,25,90,38.4,187,"chest pain, shortness of breath, dizziness, vomiting, confusion, headache",16,8,0.83,0.87,1.0,23.8,85.44
+53.7,Male,43.7,1,138,173,88,25,86,36.6,261,"chest pain, shortness of breath, dizziness, vomiting, headache, abdominal pain",1,10,0.877,0.915,1.0,24.2,91.91
+25.1,Female,21.3,1,110,129,82,25,86,37.6,122,"chest pain, shortness of breath, fatigue, confusion",2,7,0.633,0.538,0.947,19.3,67.23
+62.7,Female,36.8,0,143,149,76,29,90,38.7,221,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",3,9,0.986,0.935,1.0,28.7,95.67
+58.7,Male,34.0,1,141,161,76,25,90,37.6,183,"chest pain, fever, dizziness, fatigue, confusion, headache",5,9,0.785,0.816,1.0,23.7,81.97
+59.9,Male,29.7,0,137,141,86,25,91,38.6,164,"shortness of breath, fever, cough, dizziness, fatigue, headache",3,5,0.722,0.686,0.893,22.1,74.49
+32.0,Female,38.6,1,104,173,102,24,89,37.0,269,"chest pain, dizziness, vomiting, fatigue",24,10,0.708,0.707,0.941,21.8,77.65
+35.5,Male,30.2,0,118,153,92,32,83,38.3,234,"chest pain, shortness of breath, fever, cough, fatigue",30,9,0.911,0.798,1.0,30.6,89.9
+74.0,Male,30.3,0,125,150,85,27,89,37.1,213,"shortness of breath, cough, dizziness, confusion",30,8,0.806,0.826,1.0,26.5,86.2
+54.3,Female,27.7,0,128,157,76,26,90,38.7,217,"chest pain, shortness of breath, dizziness, vomiting, confusion",12,7,0.708,0.673,0.911,23.1,75.17
+67.3,Male,35.3,0,127,136,82,28,89,38.7,187,"chest pain, cough, vomiting, headache, abdominal pain",30,8,0.89,0.836,1.0,25.0,89.67
+55.5,Female,34.6,0,127,144,86,20,92,37.1,211,"chest pain, cough, dizziness, fatigue, confusion, abdominal pain",4,8,0.758,0.724,1.0,23.6,81.96
+55.5,Male,24.2,0,110,136,78,21,91,37.6,116,"shortness of breath, dizziness, headache",4,8,0.555,0.534,1.0,14.0,68.0
+71.9,Male,20.1,0,141,148,82,25,89,39.1,185,"fever, cough, dizziness, vomiting, fatigue, confusion, headache",3,7,0.918,0.847,1.0,28.6,92.65
+45.7,Male,26.8,1,120,149,96,35,84,38.3,208,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, headache",29,9,0.971,0.873,1.0,25.7,94.65
+56.7,Male,23.2,0,125,142,76,23,92,37.4,164,"chest pain, shortness of breath, cough, dizziness, vomiting, confusion, headache",1,5,0.566,0.58,0.908,16.7,66.42
+46.7,Female,27.6,0,122,132,75,25,89,38.4,152,"chest pain, shortness of breath, cough, abdominal pain",7,5,0.751,0.722,0.917,22.8,80.79
+47.2,Male,35.4,0,110,178,97,24,87,37.1,233,"chest pain, cough, dizziness, vomiting, fatigue, headache",18,7,0.687,0.681,1.0,20.9,79.13
+49.4,Male,25.3,0,123,185,84,18,92,37.7,204,"chest pain, shortness of breath, fatigue, confusion",8,10,0.676,0.656,1.0,18.5,76.65
+59.0,Female,27.7,1,129,133,78,36,82,39.1,218,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",1,9,0.998,0.953,1.0,29.2,100.0
+46.4,Male,28.3,1,133,148,80,34,86,39.4,165,"chest pain, shortness of breath, dizziness, fatigue, headache, abdominal pain",9,8,0.932,0.785,1.0,27.2,90.98
+77.6,Male,33.1,0,121,155,84,28,89,37.2,218,"chest pain, shortness of breath, fatigue, headache",15,7,0.713,0.741,0.99,21.3,80.13
+38.9,Female,18.5,0,108,132,76,27,90,37.9,202,"cough, dizziness, fatigue, headache",2,7,0.625,0.671,0.711,18.7,66.31
+51.6,Male,24.4,0,94,125,77,22,90,37.7,160,"shortness of breath, dizziness, abdominal pain",10,6,0.557,0.501,0.745,17.4,59.98
+47.1,Male,29.3,0,116,146,85,27,90,38.7,216,"chest pain, cough, dizziness, vomiting, confusion",26,5,0.746,0.705,1.0,23.8,79.17
+81.0,Female,35.2,1,143,177,89,35,83,37.8,211,"chest pain, shortness of breath, fever, cough",30,9,0.992,0.924,1.0,28.3,93.63
+58.5,Male,25.0,0,131,143,89,26,87,38.7,189,"chest pain, fever, cough, dizziness, fatigue, headache",5,6,0.859,0.787,1.0,26.6,88.54
+73.6,Female,18.5,0,120,145,78,25,93,39.0,190,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",1,7,0.795,0.79,1.0,23.8,87.18
+28.3,Female,31.7,0,119,153,94,25,90,37.1,240,"shortness of breath, vomiting, fatigue, headache",7,9,0.759,0.75,0.941,22.6,79.08
+59.8,Female,24.2,0,122,140,73,26,90,38.8,176,"chest pain, fever, cough, dizziness",11,6,0.7,0.689,0.873,22.4,77.0
+71.0,Male,20.9,1,115,126,72,21,88,37.7,135,"dizziness, vomiting, fatigue, headache",15,8,0.655,0.649,0.912,20.0,69.77
+56.5,Male,24.3,0,149,133,74,30,90,38.5,146,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",22,10,0.817,0.808,1.0,22.7,85.8
+74.2,Female,26.9,0,135,159,91,23,90,37.4,241,"chest pain, cough, dizziness, vomiting, fatigue, confusion",28,9,0.782,0.846,1.0,22.3,90.08
+45.7,Female,24.4,0,120,128,78,26,90,38.6,168,"fever, fatigue, confusion, headache",10,6,0.625,0.604,0.743,20.6,66.1
+80.4,Male,18.5,0,144,168,82,28,88,38.9,165,"chest pain, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",12,6,0.917,0.85,1.0,26.6,91.56
+95.0,Female,33.4,0,135,163,88,26,91,38.2,198,"chest pain, shortness of breath, fatigue",1,8,0.836,0.797,1.0,24.4,87.84
+48.5,Male,35.6,0,123,143,83,21,88,38.0,197,"dizziness, fatigue, confusion, headache",4,6,0.729,0.738,1.0,21.1,83.7
+47.0,Male,31.9,0,131,171,92,22,93,37.5,191,"chest pain, shortness of breath, cough, dizziness, fatigue",22,9,0.83,0.796,1.0,25.2,84.21
+81.2,Male,21.2,0,127,151,84,30,89,38.4,224,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",14,8,0.999,0.948,1.0,31.4,100.0
+83.4,Male,26.8,0,115,176,90,25,90,37.3,179,"shortness of breath, dizziness, vomiting",5,5,0.669,0.658,0.993,19.6,75.3
+45.6,Female,28.0,0,108,146,85,19,90,38.3,237,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",1,7,0.647,0.672,0.943,22.3,75.75
+47.4,Male,31.6,0,123,153,83,28,88,38.0,182,"shortness of breath, dizziness, confusion, headache, abdominal pain",2,6,0.77,0.677,0.949,21.8,78.33
+49.9,Male,32.0,0,120,153,83,22,90,37.5,166,"shortness of breath, dizziness, vomiting, fatigue, confusion, abdominal pain",6,8,0.681,0.653,1.0,19.4,80.2
+30.8,Male,23.6,0,103,124,78,20,92,37.3,167,"chest pain, shortness of breath, cough, fatigue",18,4,0.481,0.471,0.629,15.3,52.19
+38.5,Female,28.5,0,128,156,83,23,90,37.7,187,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",1,6,0.766,0.722,1.0,21.4,79.64
+36.9,Male,30.7,0,113,145,78,26,89,38.0,176,"shortness of breath, fatigue, confusion, headache",1,5,0.655,0.618,0.948,19.9,74.11
+41.2,Female,36.7,0,106,160,74,24,94,37.3,227,"shortness of breath, cough, confusion, headache, abdominal pain",11,6,0.498,0.567,0.696,15.0,60.43
+54.4,Female,32.2,0,113,143,88,25,93,37.7,195,"dizziness, headache, abdominal pain",3,5,0.536,0.564,0.747,15.0,63.12
+59.2,Female,32.7,0,122,142,78,23,89,38.4,200,"chest pain, cough, dizziness, vomiting, confusion, headache",1,9,0.867,0.856,1.0,23.6,90.55
+82.9,Male,28.5,0,133,157,87,26,93,38.8,230,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",2,10,0.887,0.904,1.0,26.5,94.24
+37.0,Male,36.5,0,130,126,83,26,92,38.8,234,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion",9,7,0.731,0.719,0.855,23.1,75.63
+72.7,Male,30.5,0,130,149,89,22,91,37.8,221,"cough, confusion",11,8,0.709,0.733,0.94,20.4,79.76
+51.1,Male,22.8,0,119,164,103,22,90,37.2,239,"chest pain, cough, dizziness, fatigue, confusion",28,7,0.763,0.786,1.0,22.9,84.82
+54.1,Female,36.4,0,152,147,83,27,89,39.5,187,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",9,8,0.94,0.897,1.0,28.0,88.73
+67.1,Male,32.2,1,138,150,90,30,85,38.3,220,"chest pain, shortness of breath, cough, dizziness, confusion, headache",15,10,1.0,1.0,1.0,31.1,98.0
+34.8,Female,25.3,0,105,148,82,21,93,37.4,232,"chest pain, shortness of breath, cough, dizziness, fatigue",2,8,0.494,0.492,0.776,14.8,58.2
+61.9,Male,25.1,0,119,160,79,25,90,38.0,195,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache, abdominal pain",13,5,0.657,0.643,0.934,20.0,73.92
+58.0,Male,29.8,0,134,176,85,27,88,38.2,234,"chest pain, shortness of breath, dizziness, fatigue, headache",14,10,0.858,0.854,1.0,25.6,89.88
+63.9,Male,30.8,0,112,132,80,25,87,37.3,196,"shortness of breath, cough, dizziness, fatigue, headache",2,7,0.754,0.726,1.0,22.7,82.1
+60.2,Male,29.2,0,131,173,82,21,91,36.9,194,"fatigue, headache",11,9,0.818,0.816,1.0,22.4,89.62
+95.0,Female,29.9,0,126,169,96,27,91,38.3,201,"chest pain, shortness of breath, cough, dizziness, fatigue",2,8,0.775,0.748,1.0,23.4,84.16
+43.5,Female,38.2,1,141,141,85,34,82,39.6,197,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",10,7,1.0,1.0,1.0,32.8,95.33
+45.4,Male,34.4,0,121,129,86,26,88,38.4,203,"chest pain, dizziness, fatigue, headache",12,5,0.749,0.676,0.978,22.2,83.45
+43.8,Female,29.1,1,115,148,84,23,87,36.5,169,"chest pain, shortness of breath, cough, dizziness",9,7,0.766,0.787,1.0,20.7,80.45
+45.0,Female,33.6,0,95,155,82,22,94,36.9,239,,27,8,0.446,0.502,0.732,13.5,56.77
+43.5,Female,21.8,0,103,115,72,19,90,37.1,139,confusion,19,4,0.479,0.483,0.671,14.1,50.65
+76.4,Male,30.4,0,130,178,85,22,89,38.0,238,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache",24,9,0.836,0.82,1.0,24.9,90.86
+80.6,Female,38.9,0,136,190,104,29,87,38.0,270,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue",30,10,0.965,0.923,1.0,30.0,95.73
+44.7,Female,26.7,0,115,147,75,31,88,38.8,149,"chest pain, fever, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",1,6,0.769,0.664,0.945,23.4,79.82
+40.0,Male,22.9,0,105,130,79,21,91,37.4,127,"chest pain, fever, cough, abdominal pain",3,5,0.471,0.46,0.726,14.8,50.44
+63.5,Male,24.1,0,113,152,90,28,86,38.1,147,"chest pain, shortness of breath, fever, vomiting, confusion",1,6,0.792,0.702,1.0,23.5,84.21
+45.1,Female,21.5,1,147,134,88,34,86,38.4,166,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",2,9,0.996,0.963,1.0,28.8,99.58
+66.4,Female,23.3,1,125,171,91,27,88,37.3,224,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, abdominal pain",5,7,0.801,0.8,1.0,24.9,87.27
+58.7,Female,25.8,0,125,152,91,30,86,37.5,165,"chest pain, shortness of breath, cough, fatigue, confusion, headache",19,7,0.954,0.879,1.0,26.7,96.45
+27.7,Female,19.6,0,105,123,75,18,95,37.5,206,"chest pain, cough",8,6,0.496,0.576,0.786,18.0,61.07
+82.9,Female,28.1,0,129,158,94,22,88,38.4,196,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",11,7,0.8,0.775,1.0,22.7,84.85
+87.3,Male,33.4,0,136,157,90,29,87,37.8,221,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",5,10,1.0,0.995,1.0,27.9,98.23
+44.0,Male,22.6,0,108,158,83,22,91,37.5,142,"dizziness, fatigue",6,3,0.535,0.517,0.745,14.4,58.41
+48.0,Male,37.1,0,116,169,83,18,95,37.0,251,"chest pain, shortness of breath, cough, dizziness, confusion, abdominal pain",22,10,0.548,0.666,0.842,16.4,69.57
+60.1,Female,31.1,0,125,153,94,22,89,38.3,202,"chest pain, shortness of breath, dizziness, fatigue, confusion",3,7,0.727,0.69,1.0,19.8,78.09
+61.0,Male,34.2,0,117,152,93,24,87,38.2,267,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",30,9,0.78,0.79,1.0,23.7,81.21
+66.9,Female,24.1,1,136,158,90,32,84,38.7,178,"chest pain, shortness of breath, fever, cough, vomiting, fatigue",2,8,0.981,0.898,1.0,29.4,94.22
+91.2,Male,33.1,0,156,151,85,36,84,39.6,211,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",30,8,1.0,1.0,1.0,32.5,100.0
+51.8,Male,21.4,1,136,165,86,29,88,38.7,178,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, abdominal pain",1,8,0.981,0.887,1.0,26.9,95.24
+40.6,Female,33.3,0,115,134,88,25,88,37.5,193,"chest pain, shortness of breath, cough, fatigue, abdominal pain",7,4,0.719,0.713,0.931,20.4,79.31
+30.2,Male,29.0,0,137,141,83,24,89,38.7,198,"chest pain, dizziness, vomiting, fatigue, headache",30,6,0.755,0.744,0.884,23.8,75.06
+41.8,Female,31.3,0,134,163,88,29,90,37.5,224,"chest pain, shortness of breath, cough",11,7,0.754,0.703,1.0,22.3,75.28
+54.4,Male,20.9,0,115,150,83,23,92,36.5,211,"chest pain, shortness of breath, dizziness, confusion",8,8,0.65,0.649,1.0,18.8,76.0
+87.3,Female,22.6,0,133,158,84,33,85,37.9,198,"chest pain, shortness of breath, cough, dizziness, confusion, headache, abdominal pain",13,8,1.0,1.0,1.0,28.7,100.0
+45.7,Female,31.6,0,129,148,86,24,92,38.2,200,"chest pain, shortness of breath, confusion, headache",3,3,0.636,0.633,0.912,18.7,68.36
+59.0,Male,22.3,0,125,140,87,29,85,39.4,173,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",1,9,0.957,0.874,1.0,27.2,95.56
+54.7,Female,30.8,0,126,138,70,23,89,38.4,168,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",2,7,0.752,0.728,0.963,22.0,83.17
+76.4,Male,19.8,0,114,166,95,27,86,37.4,228,"shortness of breath, cough, dizziness, confusion, abdominal pain",2,10,0.975,0.955,1.0,28.6,97.63
+95.0,Female,33.1,0,147,172,87,30,88,39.1,235,"shortness of breath, cough, dizziness, vomiting, fatigue, confusion, headache",30,7,0.922,0.859,1.0,27.3,94.48
+45.4,Male,20.6,0,111,163,89,23,89,37.0,169,"shortness of breath, dizziness, fatigue",17,6,0.675,0.651,1.0,19.9,76.88
+46.2,Male,31.3,0,122,140,88,29,85,37.9,171,"shortness of breath, fatigue, headache",2,7,0.902,0.838,1.0,25.7,90.69
+73.8,Male,31.8,0,128,164,93,23,88,37.0,216,"chest pain, shortness of breath, fever, fatigue",20,8,0.784,0.76,1.0,21.9,85.79
+67.3,Female,23.8,0,118,139,66,22,90,38.0,127,"chest pain, shortness of breath, cough, dizziness, fatigue",1,6,0.689,0.712,1.0,21.9,82.74
+88.2,Female,31.5,1,151,156,84,28,87,37.9,244,"chest pain, shortness of breath, dizziness, fatigue, headache",3,9,1.0,1.0,1.0,30.1,98.88
+65.5,Female,29.6,0,103,154,84,22,95,37.7,184,"chest pain, dizziness, vomiting",13,5,0.436,0.465,0.721,14.2,52.83
+48.5,Female,24.8,0,143,140,88,26,92,39.0,194,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion, headache",4,6,0.764,0.704,1.0,22.1,79.7
+65.6,Male,21.9,0,123,168,84,25,89,37.7,192,"shortness of breath, dizziness, fatigue, confusion",1,7,0.83,0.836,1.0,24.1,88.6
+75.0,Male,18.5,0,131,140,69,26,91,38.2,114,"chest pain, dizziness, fatigue, confusion",9,5,0.645,0.626,0.935,18.9,72.32
+69.8,Male,30.1,0,111,160,77,21,92,36.9,195,"chest pain, vomiting, abdominal pain",30,5,0.57,0.593,0.832,18.9,67.85
+64.1,Male,18.6,0,120,139,85,34,84,37.1,146,"chest pain, shortness of breath, cough, fatigue, confusion",6,9,0.852,0.804,1.0,23.5,91.01
+74.2,Male,28.6,0,121,136,80,25,91,37.0,157,"chest pain, shortness of breath, dizziness, headache",2,7,0.579,0.609,1.0,18.1,73.01
+76.0,Male,26.4,0,137,146,82,28,89,39.0,211,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, abdominal pain",5,7,0.859,0.863,1.0,26.0,92.37
+79.9,Female,32.1,0,143,151,86,23,91,38.3,193,"chest pain, cough, dizziness, fatigue, confusion, headache, abdominal pain",9,9,0.751,0.778,1.0,23.8,81.96
+66.7,Male,26.2,0,113,141,76,23,92,37.7,211,"fever, fatigue, headache",13,6,0.629,0.694,0.935,17.6,72.11
+52.0,Male,26.0,0,111,161,85,25,88,37.0,177,"chest pain, shortness of breath, cough, dizziness, vomiting, confusion, headache",21,8,0.665,0.649,1.0,20.1,76.92
+57.6,Male,32.4,1,132,174,95,24,87,37.6,238,"chest pain, shortness of breath, dizziness, fatigue, abdominal pain",29,8,0.859,0.822,1.0,22.5,89.03
+76.7,Female,30.0,0,115,130,85,24,89,37.4,171,"chest pain, shortness of breath, fatigue, confusion",14,7,0.689,0.657,1.0,19.6,81.27
+40.3,Female,29.9,0,108,156,91,24,89,36.7,250,"shortness of breath, dizziness, vomiting, fatigue, confusion",13,7,0.665,0.702,0.884,21.3,70.34
+61.6,Female,30.8,0,127,145,79,22,91,37.1,164,chest pain,4,5,0.643,0.574,1.0,20.0,74.17
+47.9,Male,18.8,0,110,139,82,23,94,37.5,162,"shortness of breath, dizziness, headache",10,4,0.501,0.527,0.8,16.1,61.06
+55.5,Male,32.5,1,155,157,85,35,85,38.7,156,"shortness of breath, cough, dizziness, fatigue, confusion, headache",11,7,1.0,1.0,1.0,30.2,98.48
+78.0,Female,31.7,0,140,160,69,27,90,38.4,209,"chest pain, dizziness, fatigue, headache",2,10,0.807,0.892,1.0,24.2,87.12
+58.4,Male,21.9,1,130,138,81,30,87,37.4,119,"chest pain, shortness of breath, fever, cough, headache",4,8,0.808,0.738,1.0,25.0,83.76
+55.8,Female,26.5,1,133,171,86,30,83,37.3,174,"chest pain, shortness of breath, dizziness, confusion",1,10,1.0,0.888,1.0,28.4,93.36
+30.5,Female,27.8,0,112,126,76,33,87,38.8,197,"chest pain, shortness of breath, fever, cough, dizziness, confusion",26,8,0.838,0.768,1.0,25.7,89.47
+68.4,Female,27.2,0,114,156,75,26,91,37.2,195,"shortness of breath, cough, headache",4,6,0.721,0.699,1.0,20.9,85.2
+66.6,Male,30.0,0,116,143,90,18,91,36.8,187,"chest pain, dizziness",15,5,0.635,0.64,0.904,20.0,71.05
+93.9,Male,36.6,1,143,165,94,28,88,37.3,269,"shortness of breath, cough, dizziness, fatigue, confusion, headache",6,9,0.905,0.945,1.0,27.6,93.3
+49.5,Female,34.5,0,114,144,78,24,87,37.2,170,"shortness of breath, fever, cough, dizziness, confusion, headache",11,6,0.722,0.703,1.0,20.1,77.35
+58.9,Male,20.1,0,124,134,76,17,92,37.2,110,"chest pain, dizziness, confusion",1,5,0.506,0.557,0.931,15.4,62.71
+59.5,Female,31.7,0,135,152,83,30,88,37.7,168,"chest pain, shortness of breath, dizziness, vomiting, fatigue, confusion",12,9,0.81,0.709,1.0,23.8,82.48
+83.4,Male,36.0,0,120,167,79,26,87,38.6,224,"chest pain, cough, dizziness, fatigue, confusion, headache",2,6,0.83,0.805,1.0,25.5,89.75
+53.3,Male,30.3,0,133,152,96,22,92,38.0,171,chest pain,4,9,0.727,0.666,1.0,20.6,85.44
+60.0,Male,34.5,0,124,143,93,26,90,37.4,207,"chest pain, shortness of breath, fever, dizziness, fatigue, headache, abdominal pain",1,9,0.662,0.694,0.974,21.1,75.08
+65.9,Female,40.1,1,128,181,93,27,90,37.2,246,"chest pain, shortness of breath, vomiting, fatigue, headache",8,9,0.839,0.788,1.0,23.4,85.43
+58.4,Male,34.1,1,146,148,96,31,85,38.6,187,"shortness of breath, cough, dizziness, fatigue, confusion, headache, abdominal pain",20,10,1.0,0.893,1.0,30.1,94.45
+47.0,Male,29.5,1,129,140,78,27,89,38.8,143,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",12,8,0.842,0.766,1.0,24.6,87.57
+58.5,Female,34.3,0,137,171,90,30,86,38.5,236,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",1,10,0.957,0.858,1.0,29.4,94.69
+74.3,Male,28.9,0,133,157,77,25,89,38.3,189,"chest pain, shortness of breath, fever, dizziness, confusion, abdominal pain",7,8,0.814,0.83,1.0,23.2,87.67
+36.5,Female,28.1,0,116,152,90,21,93,37.3,161,,15,5,0.492,0.522,0.904,15.1,61.61
+57.4,Male,25.9,0,132,148,73,23,90,38.1,183,"shortness of breath, dizziness, fatigue, confusion",9,8,0.682,0.65,0.94,19.7,77.72
+42.4,Female,37.4,0,116,138,96,25,90,37.6,219,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion",1,6,0.693,0.679,0.893,21.2,76.45
+76.5,Male,23.1,0,145,161,91,32,86,38.4,251,"shortness of breath, fever, cough, dizziness, vomiting, fatigue, headache",5,9,1.0,1.0,1.0,32.8,100.0
+27.6,Male,37.2,0,116,137,97,25,92,36.8,180,fatigue,6,9,0.553,0.55,1.0,14.9,69.35
+44.9,Female,31.0,1,121,151,80,26,86,37.4,155,"shortness of breath, dizziness, fatigue, confusion",1,6,0.777,0.787,1.0,23.4,84.33
+61.8,Female,19.6,0,112,122,75,25,89,37.1,141,"shortness of breath, fatigue, headache",7,7,0.57,0.609,0.914,16.8,67.03
+83.2,Female,30.2,0,130,149,91,25,90,37.4,203,"chest pain, dizziness, headache",11,7,0.807,0.87,1.0,22.9,89.44
+53.8,Female,18.5,0,133,141,88,24,91,37.6,173,"dizziness, confusion, headache",2,8,0.713,0.773,1.0,20.7,82.59
+45.0,Female,31.8,0,130,157,82,23,89,37.8,156,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",6,9,0.703,0.669,1.0,21.9,79.33
+88.9,Male,33.3,0,133,175,85,29,85,38.8,216,"chest pain, shortness of breath, cough, vomiting, fatigue, headache",20,8,0.916,0.859,1.0,27.2,89.29
+28.9,Female,24.4,1,127,126,74,22,91,39.0,142,"shortness of breath, fever, cough, dizziness, fatigue, confusion, headache",4,6,0.712,0.68,0.841,20.1,74.81
+18.0,Female,28.7,1,122,144,77,25,90,37.4,182,"chest pain, dizziness, fatigue, headache",2,7,0.664,0.686,1.0,18.5,76.53
+62.9,Male,39.7,1,142,166,92,35,82,38.4,240,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion, headache",16,9,1.0,1.0,1.0,32.4,98.24
+46.0,Female,25.0,1,150,153,82,29,86,37.2,162,"chest pain, shortness of breath, dizziness, fatigue, confusion",1,10,0.923,0.863,1.0,26.7,94.26
+36.6,Male,21.6,0,101,137,85,18,94,36.7,130,"chest pain, shortness of breath, fatigue, confusion",9,5,0.347,0.348,0.824,10.7,49.39
+67.8,Male,36.9,0,139,149,80,27,88,37.8,198,"chest pain, shortness of breath, fever, dizziness, fatigue",28,8,0.843,0.83,1.0,24.0,93.33
+59.4,Male,39.8,0,132,157,75,23,90,38.7,217,"fever, dizziness, vomiting, headache",30,6,0.715,0.656,0.945,22.6,77.6
+44.8,Male,28.0,0,117,132,82,26,91,38.6,191,"shortness of breath, fever, cough, dizziness, vomiting, confusion, headache, abdominal pain",6,8,0.641,0.672,0.773,19.5,68.42
+32.0,Male,34.1,0,112,134,85,22,90,37.7,170,"chest pain, shortness of breath, fever, cough, fatigue, confusion, abdominal pain",7,6,0.605,0.565,1.0,16.9,70.94
+70.7,Female,36.0,0,124,173,92,28,87,37.9,233,"shortness of breath, fever, dizziness, confusion, headache",23,8,0.821,0.77,1.0,25.8,83.6
+66.7,Female,23.5,0,147,154,90,34,84,38.8,177,"chest pain, shortness of breath, fever, dizziness, fatigue, headache",2,10,1.0,1.0,1.0,30.8,100.0
+53.2,Female,25.1,0,146,165,94,22,92,38.1,242,"chest pain, shortness of breath, fever, dizziness, abdominal pain",1,9,0.761,0.804,1.0,22.7,85.19
+88.2,Male,35.4,0,137,170,87,28,88,38.2,269,"chest pain, fever, cough, vomiting, fatigue, confusion, abdominal pain",7,10,0.918,0.943,1.0,27.7,95.68
+35.7,Female,38.1,0,139,172,92,25,89,37.5,224,"cough, fatigue, abdominal pain",25,10,0.808,0.791,1.0,23.7,83.93
+27.5,Male,31.4,0,131,141,79,26,88,38.5,190,"chest pain, fever",6,8,0.73,0.654,1.0,21.2,80.37
+42.5,Male,22.7,0,121,144,73,25,86,37.8,147,"chest pain, shortness of breath, cough, confusion",5,5,0.739,0.716,1.0,21.2,79.16
+54.2,Male,39.9,0,143,165,98,33,84,38.8,241,"chest pain, shortness of breath, cough, fatigue, headache",15,10,1.0,0.947,1.0,29.9,97.3
+59.4,Male,24.8,0,131,155,91,25,89,36.9,145,vomiting,5,10,0.706,0.628,1.0,20.7,77.32
+50.7,Female,26.0,0,125,141,82,25,92,38.2,179,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue",1,9,0.729,0.756,1.0,21.6,80.67
+61.3,Male,30.1,0,130,154,94,21,91,37.2,242,"chest pain, shortness of breath, fever, dizziness, fatigue, confusion, headache",10,7,0.668,0.761,1.0,18.9,77.96
+32.5,Male,37.3,0,123,151,81,28,88,39.0,174,"shortness of breath, dizziness, vomiting, fatigue",9,7,0.755,0.737,0.958,21.8,80.95
+81.0,Female,33.1,0,162,157,87,32,86,38.9,204,"chest pain, cough, dizziness, vomiting, fatigue, headache",11,9,1.0,1.0,1.0,29.4,100.0
+53.5,Female,30.5,0,119,170,85,30,89,37.6,219,"shortness of breath, fever, cough, dizziness, fatigue, confusion, abdominal pain",18,10,0.983,0.941,1.0,26.0,99.32
+75.1,Male,30.8,0,137,170,87,27,89,38.5,239,"shortness of breath, dizziness, vomiting, fatigue, confusion, headache, abdominal pain",9,6,0.876,0.871,1.0,25.9,92.58
+61.2,Male,28.3,0,128,143,88,28,91,38.9,224,"chest pain, shortness of breath, cough, dizziness, fatigue, headache",30,6,0.799,0.773,0.971,25.3,85.25
+63.2,Male,31.3,0,127,154,76,26,89,38.7,203,"cough, fatigue, confusion, headache",8,8,0.786,0.786,0.879,23.7,80.44
+65.3,Male,18.5,0,107,146,78,19,91,37.4,138,"chest pain, cough, dizziness, headache",4,5,0.585,0.567,0.834,17.6,67.69
+63.1,Male,26.2,0,114,156,83,22,90,38.0,208,"dizziness, vomiting, fatigue, confusion, abdominal pain",16,5,0.673,0.732,0.917,20.3,72.9
+66.6,Male,29.4,0,149,146,86,36,84,38.8,182,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache, abdominal pain",19,10,1.0,1.0,1.0,32.2,100.0
+78.9,Female,21.1,0,125,138,84,22,89,37.8,173,"shortness of breath, dizziness, vomiting, fatigue, headache, abdominal pain",11,4,0.743,0.759,0.93,21.4,82.06
+58.5,Female,30.3,0,119,144,88,21,93,38.1,189,"chest pain, dizziness",1,7,0.634,0.575,0.924,17.9,70.15
+67.8,Female,26.8,0,129,171,96,23,89,37.9,251,"chest pain, dizziness, fatigue, confusion, headache",5,7,0.811,0.813,1.0,25.2,85.37
+53.4,Male,38.5,0,141,157,73,29,88,38.0,187,"chest pain, shortness of breath, cough, dizziness, confusion, headache, abdominal pain",1,6,0.823,0.838,1.0,24.4,87.98
+80.9,Male,37.4,0,140,172,84,34,87,38.9,210,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",4,8,0.972,0.917,1.0,28.2,94.89
+42.8,Male,25.2,0,107,133,77,20,93,37.3,190,"chest pain, shortness of breath, dizziness, vomiting, confusion, headache",8,6,0.596,0.683,1.0,16.3,75.37
+87.4,Female,27.1,0,129,170,83,33,85,38.6,199,"chest pain, shortness of breath, cough, fatigue, confusion",17,9,0.973,0.865,1.0,28.2,96.76
+54.3,Male,27.6,0,127,160,99,28,87,38.0,191,"chest pain, shortness of breath, cough, dizziness, fatigue",9,10,0.76,0.682,1.0,21.3,81.75
+29.2,Male,25.3,0,129,152,88,27,90,38.7,179,"chest pain, headache, abdominal pain",1,6,0.645,0.603,1.0,19.8,74.68
+57.3,Male,29.2,0,141,180,82,23,91,38.1,198,"chest pain, shortness of breath, cough, dizziness, fatigue, confusion",3,10,0.812,0.799,1.0,22.4,87.98
+42.7,Male,23.5,0,110,153,75,21,93,37.9,132,"chest pain, shortness of breath, fever, cough, dizziness, headache",6,7,0.666,0.674,1.0,19.3,78.6
+70.1,Female,21.2,0,126,167,83,20,94,36.9,151,"chest pain, shortness of breath, vomiting, fatigue, headache",9,9,0.56,0.56,1.0,16.3,67.65
+43.3,Male,31.7,1,120,152,79,32,83,38.1,173,"chest pain, shortness of breath, cough, dizziness, fatigue, abdominal pain",17,6,0.824,0.74,1.0,20.9,82.07
+47.0,Female,31.8,0,141,178,97,32,88,38.3,230,"dizziness, fatigue",30,10,0.9,0.807,1.0,28.2,90.76
+21.0,Female,23.2,0,112,140,80,20,91,37.5,187,"shortness of breath, dizziness, fatigue, headache",22,6,0.588,0.603,0.936,17.6,71.55
+46.9,Female,33.4,0,124,144,92,24,89,38.4,161,"shortness of breath, cough, confusion",5,7,0.787,0.696,1.0,22.5,79.2
+18.0,Male,24.2,0,118,123,82,17,95,37.6,168,"chest pain, fever, dizziness, vomiting",10,7,0.469,0.501,0.693,14.9,54.73
+26.5,Male,29.5,0,110,150,90,30,88,38.1,245,"shortness of breath, fever, dizziness, vomiting, fatigue, confusion, abdominal pain",3,7,0.762,0.738,0.88,23.1,81.28
+68.7,Male,32.9,0,130,133,82,27,87,38.5,214,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, headache",1,6,0.857,0.842,1.0,25.8,89.33
+69.1,Male,27.8,0,119,160,93,26,90,36.5,210,"chest pain, dizziness, vomiting",1,8,0.776,0.789,1.0,21.7,87.76
+62.7,Male,30.7,1,136,149,86,27,86,37.9,180,"chest pain, shortness of breath, cough, dizziness, vomiting, confusion",2,7,0.93,0.88,1.0,26.3,96.27
+37.6,Male,24.9,0,113,158,83,22,91,37.3,183,"chest pain, fever, dizziness, abdominal pain",1,6,0.616,0.585,0.97,16.5,70.9
+54.1,Female,26.8,0,137,157,97,26,90,38.4,197,"chest pain, shortness of breath, dizziness, fatigue, confusion, headache",20,10,0.815,0.764,1.0,23.6,84.79
+54.9,Female,26.8,1,134,178,99,29,85,37.3,233,"chest pain, shortness of breath, fever, cough, dizziness, vomiting, fatigue, confusion, headache",8,10,1.0,0.964,1.0,30.3,98.22
+34.1,Female,23.5,0,125,133,79,28,89,38.4,121,"chest pain, shortness of breath, fever, vomiting, fatigue, confusion, headache",11,7,0.681,0.573,1.0,17.9,74.71
+82.1,Female,26.9,1,139,188,91,30,87,37.1,262,"chest pain, shortness of breath, dizziness, fatigue, headache",30,9,0.985,1.0,1.0,28.6,97.05
+70.8,Female,18.7,0,133,143,84,31,88,38.2,196,"shortness of breath, cough, vomiting, fatigue, confusion, abdominal pain",30,9,0.871,0.833,1.0,23.3,87.1
+51.0,Female,25.1,1,139,166,101,31,84,38.1,166,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue, abdominal pain",26,8,0.99,0.892,1.0,27.9,91.81
+55.5,Female,26.3,0,117,133,83,21,94,37.7,208,"chest pain, shortness of breath, cough, dizziness, fatigue",13,7,0.477,0.539,0.724,15.6,56.95
+58.8,Male,26.5,0,110,139,82,19,93,37.2,177,"chest pain, shortness of breath, cough, dizziness, vomiting, fatigue",5,7,0.519,0.525,0.796,16.2,64.47
+18.2,Female,26.6,1,137,157,96,22,88,38.0,186,"chest pain, cough, fatigue, abdominal pain",10,10,0.817,0.742,1.0,23.4,80.98
+50.6,Female,27.6,0,116,143,75,23,91,37.7,171,"chest pain, dizziness, fatigue",13,6,0.615,0.628,1.0,15.8,73.04
+42.7,Female,30.9,0,138,162,97,28,87,38.1,203,"chest pain, shortness of breath, fever, cough, dizziness, fatigue, confusion, headache, abdominal pain",25,9,0.929,0.867,1.0,25.6,92.72
+37.0,Male,33.2,0,128,149,83,29,85,37.9,204,"chest pain, shortness of breath, cough, fatigue, confusion, headache",30,7,0.876,0.817,1.0,26.6,89.24
+49.9,Female,24.1,0,112,135,90,19,93,36.9,206,"chest pain, shortness of breath, headache",13,6,0.533,0.624,0.717,17.3,64.03
+87.4,Female,20.8,0,111,156,83,20,90,37.7,164,"chest pain, shortness of breath, dizziness, headache",6,6,0.704,0.679,1.0,20.2,76.76
+66.5,Male,21.7,0,129,158,93,26,87,38.1,140,"shortness of breath, dizziness, fatigue, confusion, headache",23,10,0.865,0.798,1.0,24.2,84.66
+44.7,Female,25.1,0,123,171,83,29,87,37.2,215,"fever, cough, dizziness",30,10,0.805,0.786,1.0,22.5,84.73
+65.3,Female,25.9,0,144,137,72,28,88,39.9,208,"chest pain, shortness of breath, fever, dizziness, vomiting, fatigue, confusion, headache",8,8,0.93,0.91,1.0,29.2,93.15
